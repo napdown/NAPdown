@@ -5,26 +5,29 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>An introduction to markdown</title>
-  <meta name="description" content="This is an introduction to NAPdown." />
+  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="An introduction to markdown" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is an introduction to NAPdown." />
+  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="An introduction to markdown" />
   
-  <meta name="twitter:description" content="This is an introduction to NAPdown." />
+  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   
 
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-14" />
+<meta name="date" content="2021-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,10 +204,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="github-github-pages.html"><a href="github-github-pages.html"><i class="fa fa-check"></i><b>4</b> GitHub &amp; GitHub Pages</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="github-github-pages.html"><a href="github-github-pages.html#sharing-on-github"><i class="fa fa-check"></i><b>4.1</b> Sharing on GitHub</a>
+<li class="chapter" data-level="4.1" data-path="github-github-pages.html"><a href="github-github-pages.html#sharing-repositories-on-github"><i class="fa fa-check"></i><b>4.1</b> Sharing Repositories on GitHub</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="github-github-pages.html"><a href="github-github-pages.html#via-direct-file-upload"><i class="fa fa-check"></i><b>4.1.1</b> Via direct file upload</a></li>
-<li class="chapter" data-level="4.1.2" data-path="github-github-pages.html"><a href="github-github-pages.html#via-git-bash"><i class="fa fa-check"></i><b>4.1.2</b> Via Git Bash</a></li>
+<li class="chapter" data-level="4.1.1" data-path="github-github-pages.html"><a href="github-github-pages.html#via-github-desktop"><i class="fa fa-check"></i><b>4.1.1</b> Via GitHub Desktop</a></li>
+<li class="chapter" data-level="4.1.2" data-path="github-github-pages.html"><a href="github-github-pages.html#via-direct-file-upload"><i class="fa fa-check"></i><b>4.1.2</b> Via direct file upload</a></li>
+<li class="chapter" data-level="4.1.3" data-path="github-github-pages.html"><a href="github-github-pages.html#via-git-bash"><i class="fa fa-check"></i><b>4.1.3</b> Via Git Bash</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="github-github-pages.html"><a href="github-github-pages.html#publishing-to-github-pages"><i class="fa fa-check"></i><b>4.2</b> Publishing to GitHub pages</a></li>
 </ul></li>
@@ -232,7 +236,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">An introduction to markdown</h1>
 <p class="author"><em>A Team</em></p>
-<p class="date"><em>2021-10-14</em></p>
+<p class="date"><em>2021-10-15</em></p>
 </div>
 <div id="prerequisites" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
@@ -283,23 +287,18 @@ This panel provides a shortcut/alternative to different functions such as to acc
 <div id="installing-packages" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Installing packages</h2>
 <p>Options:</p>
-<ol style="list-style-type: decimal">
-<li>From the console;<br />
+<p><strong>1. From the console;</strong><br />
 After the greater than (&gt;) sign, write command <code>install.packages("package name")</code> and hit enter on your keyboard.<br />
 See example;<br />
 <img src="tutorial_screenshots/install_rmkdn_consl.png" alt="install packages from console" /><br />
-</li>
-<li>In script window<br />
+<strong>2. In script window </strong>
 Inside your script write command <code>install.packages("package name")</code><br />
 Click on ‘Run’ (Run button is on the top right of your source panel).<br />
 Alternatively, if your write your command in a code chunk, you may hit the ‘Play’ button on far right of your code chunk. See example;<br />
-<img src="tutorial_screenshots/install_rmkdn_scrpt.png" alt="install packages from script wnindow" /></li>
-</ol>
+<img src="tutorial_screenshots/install_rmkdn_scrpt.png" alt="install packages from script wnindow" /></p>
 <p>We see more about code chunks in the next chapter.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>From the menu bar<br />
-From the menu bar, go the the tab ‘Tools’ and select ‘Install Packages.’</li>
-</ol>
+<p><strong>3. From the menu bar </strong>
+From the menu bar, go the the tab ‘Tools’ and select ‘Install Packages.’</p>
 <p>You should see a window like this one <img src="tutorial_screenshots/install_rmkdn_toolstab.png" alt="install packages from menu bar" /></p>
 <p>In the ‘Install from’ field, select ‘Repository (CRAN),’ then enter the name(s) of packages to be installed.<br />
 Leave everything else as default. Click Install.<br />
@@ -320,7 +319,6 @@ Leave everything else as default. Click Install.</p>
 So in general to load/call libraries use command <code>library(name of library)</code>.<br />
 You may load libraries in the console or in your script.</p>
 <p><strong>Note:</strong> <em>Unlike packages,library functions expire when you close a project or end a session. Therefore, each time you open an r session, you have to load/call relevant libraries</em></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">serve_book</span>()</span></code></pre></div>
 
 </div>
 </div>
@@ -361,7 +359,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/napdown/NAPdown/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {

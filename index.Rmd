@@ -8,7 +8,8 @@ bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is an introduction to NAPdown.
+  This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources. 
+  Additional chapters are provided further reading material and references.
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
@@ -57,11 +58,11 @@ This panel provides a shortcut/alternative to different functions such as to acc
 ## Installing packages
 Options:
 
-1. From the console;  
+__1. From the console;__  
 After the greater than (>) sign, write command `install.packages("package name")` and hit enter on your keyboard.  
 See example;  
 ![install packages from console](tutorial_screenshots/install_rmkdn_consl.png)     
-2. In script window  
+__2. In script window __ 
 Inside your script write command `install.packages("package name")`   
 Click on 'Run' (Run button is on the top right of your source panel).   
 Alternatively, if your write your command in a code chunk, you may hit the 'Play' button on far right of your code chunk. See example;  
@@ -69,7 +70,7 @@ Alternatively, if your write your command in a code chunk, you may hit the 'Play
 
 We see more about code chunks in the next chapter.   
 
-3. From the menu bar  
+__3. From the menu bar __ 
 From the menu bar, go the the tab 'Tools' and select 'Install Packages'.  
 
 You should see a window like this one ![install packages from menu bar](tutorial_screenshots/install_rmkdn_toolstab.png)  
@@ -97,9 +98,7 @@ __Note:__ _Unlike packages,library functions expire when you close a project or 
 
 
 
-```{r eval=FALSE}
-bookdown::serve_book()
-```
+
 
 
 ```{r include=FALSE}

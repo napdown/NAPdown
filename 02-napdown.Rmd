@@ -1,5 +1,5 @@
 # NAPdown
-## Setting up an Open NAP document
+## Setting up an eNAP
 We will use the package `bookdown` to generate NAP document in a book format. Journal articles or reports can be produced in the same way. 
 We will also use the package `tinytex` to build pdf format of the book document.
 

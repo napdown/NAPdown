@@ -5,26 +5,29 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 GitHub &amp; GitHub Pages | An introduction to markdown</title>
-  <meta name="description" content="This is an introduction to NAPdown." />
+  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 GitHub &amp; GitHub Pages | An introduction to markdown" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is an introduction to NAPdown." />
+  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 4 GitHub &amp; GitHub Pages | An introduction to markdown" />
   
-  <meta name="twitter:description" content="This is an introduction to NAPdown." />
+  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   
 
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-14" />
+<meta name="date" content="2021-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,10 +204,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="github-github-pages.html"><a href="github-github-pages.html"><i class="fa fa-check"></i><b>4</b> GitHub &amp; GitHub Pages</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="github-github-pages.html"><a href="github-github-pages.html#sharing-on-github"><i class="fa fa-check"></i><b>4.1</b> Sharing on GitHub</a>
+<li class="chapter" data-level="4.1" data-path="github-github-pages.html"><a href="github-github-pages.html#sharing-repositories-on-github"><i class="fa fa-check"></i><b>4.1</b> Sharing Repositories on GitHub</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="github-github-pages.html"><a href="github-github-pages.html#via-direct-file-upload"><i class="fa fa-check"></i><b>4.1.1</b> Via direct file upload</a></li>
-<li class="chapter" data-level="4.1.2" data-path="github-github-pages.html"><a href="github-github-pages.html#via-git-bash"><i class="fa fa-check"></i><b>4.1.2</b> Via Git Bash</a></li>
+<li class="chapter" data-level="4.1.1" data-path="github-github-pages.html"><a href="github-github-pages.html#via-github-desktop"><i class="fa fa-check"></i><b>4.1.1</b> Via GitHub Desktop</a></li>
+<li class="chapter" data-level="4.1.2" data-path="github-github-pages.html"><a href="github-github-pages.html#via-direct-file-upload"><i class="fa fa-check"></i><b>4.1.2</b> Via direct file upload</a></li>
+<li class="chapter" data-level="4.1.3" data-path="github-github-pages.html"><a href="github-github-pages.html#via-git-bash"><i class="fa fa-check"></i><b>4.1.3</b> Via Git Bash</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="github-github-pages.html"><a href="github-github-pages.html#publishing-to-github-pages"><i class="fa fa-check"></i><b>4.2</b> Publishing to GitHub pages</a></li>
 </ul></li>
@@ -231,15 +235,36 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="github-github-pages" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> GitHub &amp; GitHub Pages</h1>
-<div id="sharing-on-github" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Sharing on GitHub</h2>
-<div id="via-direct-file-upload" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Via direct file upload</h3>
 <p>Github is great for project collaboration, backup and version control.
-To use github as your repository manager;</p>
+To use github as your repository manager, Create an account at (<a href="https://github.com/" class="uri">https://github.com/</a>).</p>
+<div id="sharing-repositories-on-github" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Sharing Repositories on GitHub</h2>
+<div id="via-github-desktop" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Via GitHub Desktop</h3>
 <ol style="list-style-type: decimal">
-<li>Create an account at (<a href="https://github.com/" class="uri">https://github.com/</a>).</li>
-<li>Create a repository for your files. Click on the plus sign + located at the top right corner of your github account page.
+<li><p>Open GitHub desktop on your pc/laptop<br />
+</p></li>
+<li><p>On the main menu, click on <code>File</code> and select <code>Add local repository</code> from the dropdown list
+<img src="tutorial_screenshots/gh_desktop_add_repo.png" alt="add repository" /><br />
+</p></li>
+<li><p>Browse to your your repository is sitting in your pc, select it and click `Add Repository’</p></li>
+<li><p>A list of all your files and sub-directories appears from which you may select and deselect what you want to publish to GitHub.</p></li>
+<li><p>Enter a commit message on the ‘Summary’ text-box right below your listed files and optionally a brief description.
+<img src="tutorial_screenshots/gh_desktop_commit.png" alt="commit" /></p></li>
+<li><p>Hit ‘Commit to master’</p></li>
+<li><p>To the right of the GitHub desktop window, the app will notify you that this repository is only available on your local machine and if you would like to share/publish it to GitHub. Click on publish repository
+<img src="tutorial_screenshots/gh_desktop_publish_repo.png" alt="Publish new repo" /></p></li>
+<li><p>Uncheck the box for ‘keep the repository private’ and Click Publish repository
+<img src="tutorial_screenshots/gh_desktop_uncheck_private.png" alt="uncheck private" /></p></li>
+<li><p>From the menu bar on GitHub desktop, click on <code>Repository</code> and select <code>Push</code> from the dropdown list.</p></li>
+<li><p>Congratulations, you just published your repository to GitHub</p></li>
+</ol>
+</div>
+<div id="via-direct-file-upload" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Via direct file upload</h3>
+<ol style="list-style-type: decimal">
+<li>Log in to your GitHub.com account</li>
+<li>Click on the plus sign + located at the top right corner of your github account page.
 <img src="tutorial_screenshots/gh_create_repo.png" alt="open github repo" /></li>
 <li>Click on ‘New Repository’ from the drop-down menu.<br />
 </li>
@@ -272,8 +297,8 @@ When making changes to your files, you may use this field to briefly describe wh
 <li>Next, hit the ‘Commit changes’ button at the end. This is called commiting.</li>
 </ol>
 </div>
-<div id="via-git-bash" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Via Git Bash</h3>
+<div id="via-git-bash" class="section level3" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Via Git Bash</h3>
 <ol style="list-style-type: decimal">
 <li>Download and install Git Bash from this link (<a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a>).<br />
 </li>
@@ -379,7 +404,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-GitHub.Rmd",
+"link": "https://github.com/napdown/NAPdown/edit/master/03-GitHub.Rmd",
 "text": "Edit"
 },
 "history": {

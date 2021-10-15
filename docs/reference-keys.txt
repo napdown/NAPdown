@@ -33,7 +33,8 @@ setting-up-an-open-nap-document
 some-things-to-note
 some-troubleshooting
 github-github-pages
-sharing-on-github
+sharing-repositories-on-github
+via-github-desktop
 via-direct-file-upload
 via-git-bash
 publishing-to-github-pages

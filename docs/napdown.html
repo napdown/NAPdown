@@ -5,26 +5,29 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 NAPdown | An introduction to markdown</title>
-  <meta name="description" content="This is an introduction to NAPdown." />
+  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 NAPdown | An introduction to markdown" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is an introduction to NAPdown." />
+  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 3 NAPdown | An introduction to markdown" />
   
-  <meta name="twitter:description" content="This is an introduction to NAPdown." />
+  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
   
 
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-14" />
+<meta name="date" content="2021-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,10 +204,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="github-github-pages.html"><a href="github-github-pages.html"><i class="fa fa-check"></i><b>4</b> GitHub &amp; GitHub Pages</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="github-github-pages.html"><a href="github-github-pages.html#sharing-on-github"><i class="fa fa-check"></i><b>4.1</b> Sharing on GitHub</a>
+<li class="chapter" data-level="4.1" data-path="github-github-pages.html"><a href="github-github-pages.html#sharing-repositories-on-github"><i class="fa fa-check"></i><b>4.1</b> Sharing Repositories on GitHub</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="github-github-pages.html"><a href="github-github-pages.html#via-direct-file-upload"><i class="fa fa-check"></i><b>4.1.1</b> Via direct file upload</a></li>
-<li class="chapter" data-level="4.1.2" data-path="github-github-pages.html"><a href="github-github-pages.html#via-git-bash"><i class="fa fa-check"></i><b>4.1.2</b> Via Git Bash</a></li>
+<li class="chapter" data-level="4.1.1" data-path="github-github-pages.html"><a href="github-github-pages.html#via-github-desktop"><i class="fa fa-check"></i><b>4.1.1</b> Via GitHub Desktop</a></li>
+<li class="chapter" data-level="4.1.2" data-path="github-github-pages.html"><a href="github-github-pages.html#via-direct-file-upload"><i class="fa fa-check"></i><b>4.1.2</b> Via direct file upload</a></li>
+<li class="chapter" data-level="4.1.3" data-path="github-github-pages.html"><a href="github-github-pages.html#via-git-bash"><i class="fa fa-check"></i><b>4.1.3</b> Via Git Bash</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="github-github-pages.html"><a href="github-github-pages.html#publishing-to-github-pages"><i class="fa fa-check"></i><b>4.2</b> Publishing to GitHub pages</a></li>
 </ul></li>
@@ -362,19 +366,19 @@ We will learn about advanced numbering and re-ordering chapters later.<br />
 <p>Creating pdf documents using LaTeX engines and distributions such as TinyTeX is not a straightforward task and may produce errors as the process involves multiple processing activities. However, most errors can be solved using suggestions contained in the error messages produced in the Environment or Console windows.<br />
 If, in any case, the LaTeX error generated is not clear, you may use any the commands options below to solve the problem.</p>
 <p><em>Remove the # sign to run code</em></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="napdown.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ## 1 install the development version of tinytex</span></span>
-<span id="cb4-2"><a href="napdown.html#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="napdown.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) #3 2 update your r and</span></span>
-<span id="cb4-4"><a href="napdown.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
-<span id="cb4-5"><a href="napdown.html#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="napdown.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
-<span id="cb4-7"><a href="napdown.html#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="napdown.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tinytex.verbose = TRUE) ## 4 set this option in an r code chunk.This helps provide more info on your problems. Remember to remove it after solving your problem</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="napdown.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ## 1 install the development version of tinytex</span></span>
+<span id="cb3-2"><a href="napdown.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="napdown.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) #3 2 update your r and</span></span>
+<span id="cb3-4"><a href="napdown.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
+<span id="cb3-5"><a href="napdown.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="napdown.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
+<span id="cb3-7"><a href="napdown.html#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="napdown.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tinytex.verbose = TRUE) ## 4 set this option in an r code chunk.This helps provide more info on your problems. Remember to remove it after solving your problem</span></span></code></pre></div>
 <p>See more on <a href="https://yihui.org/tinytex/r/">TinyTex Debugging</a>.</p>
 <p>Additionally, quite often, LaTeX formatting is not very compatible with other output formats such as html. But with the use of <code>html widgets</code> and other advanced formatting options, this problem can be overcome.
 To produce a pdf document from a document with both LaTeX and html formats, it may be useful to install the package <code>webshot</code> from CRAN.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="napdown.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;webshot&quot;)  </span></span>
-<span id="cb5-2"><a href="napdown.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="napdown.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;webshot&quot;)  </span></span>
+<span id="cb4-2"><a href="napdown.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
 <p>Further reading on <a href="https://bookdown.org/yihui/bookdown/html-widgets.html">html widgets here</a></p>
 
 </div>
@@ -422,7 +426,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-napdown.Rmd",
+"link": "https://github.com/napdown/NAPdown/edit/master/02-napdown.Rmd",
 "text": "Edit"
 },
 "history": {
