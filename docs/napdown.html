@@ -176,7 +176,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About rmarkdown</a></li>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
 <li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
@@ -196,7 +196,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="napdown.html"><a href="napdown.html"><i class="fa fa-check"></i><b>3</b> NAPdown</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="napdown.html"><a href="napdown.html#setting-up-an-open-nap-document"><i class="fa fa-check"></i><b>3.1</b> Setting up an Open NAP document</a>
+<li class="chapter" data-level="3.1" data-path="napdown.html"><a href="napdown.html#setting-up-an-enap"><i class="fa fa-check"></i><b>3.1</b> Setting up an eNAP</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="napdown.html"><a href="napdown.html#some-things-to-note"><i class="fa fa-check"></i><b>3.1.1</b> Some things to note</a></li>
 </ul></li>
@@ -235,8 +235,8 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="napdown" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> NAPdown</h1>
-<div id="setting-up-an-open-nap-document" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Setting up an Open NAP document</h2>
+<div id="setting-up-an-enap" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Setting up an eNAP</h2>
 <p>We will use the package <code>bookdown</code> to generate NAP document in a book format. Journal articles or reports can be produced in the same way.
 We will also use the package <code>tinytex</code> to build pdf format of the book document.</p>
 <ol style="list-style-type: decimal">
@@ -366,19 +366,19 @@ We will learn about advanced numbering and re-ordering chapters later.<br />
 <p>Creating pdf documents using LaTeX engines and distributions such as TinyTeX is not a straightforward task and may produce errors as the process involves multiple processing activities. However, most errors can be solved using suggestions contained in the error messages produced in the Environment or Console windows.<br />
 If, in any case, the LaTeX error generated is not clear, you may use any the commands options below to solve the problem.</p>
 <p><em>Remove the # sign to run code</em></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="napdown.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ## 1 install the development version of tinytex</span></span>
-<span id="cb3-2"><a href="napdown.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="napdown.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) #3 2 update your r and</span></span>
-<span id="cb3-4"><a href="napdown.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
-<span id="cb3-5"><a href="napdown.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="napdown.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
-<span id="cb3-7"><a href="napdown.html#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="napdown.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tinytex.verbose = TRUE) ## 4 set this option in an r code chunk.This helps provide more info on your problems. Remember to remove it after solving your problem</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="napdown.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ## 1 install the development version of tinytex</span></span>
+<span id="cb1-2"><a href="napdown.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="napdown.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) #3 2 update your r and</span></span>
+<span id="cb1-4"><a href="napdown.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
+<span id="cb1-5"><a href="napdown.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="napdown.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
+<span id="cb1-7"><a href="napdown.html#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="napdown.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tinytex.verbose = TRUE) ## 4 set this option in an r code chunk.This helps provide more info on your problems. Remember to remove it after solving your problem</span></span></code></pre></div>
 <p>See more on <a href="https://yihui.org/tinytex/r/">TinyTex Debugging</a>.</p>
 <p>Additionally, quite often, LaTeX formatting is not very compatible with other output formats such as html. But with the use of <code>html widgets</code> and other advanced formatting options, this problem can be overcome.
 To produce a pdf document from a document with both LaTeX and html formats, it may be useful to install the package <code>webshot</code> from CRAN.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="napdown.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;webshot&quot;)  </span></span>
-<span id="cb4-2"><a href="napdown.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="napdown.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;webshot&quot;)  </span></span>
+<span id="cb2-2"><a href="napdown.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
 <p>Further reading on <a href="https://bookdown.org/yihui/bookdown/html-widgets.html">html widgets here</a></p>
 
 </div>

@@ -65,7 +65,8 @@ See example;
 __2. In script window __ 
 Inside your script write command `install.packages("package name")`   
 Click on 'Run' (Run button is on the top right of your source panel).   
-Alternatively, if your write your command in a code chunk, you may hit the 'Play' button on far right of your code chunk. See example;  
+Alternatively, if your write your command in a code chunk, you may hit the 'Play' button on far right of your code chunk. See example;
+
 ![install packages from script wnindow](tutorial_screenshots/install_rmkdn_scrpt.png)  
 
 We see more about code chunks in the next chapter.   
@@ -80,6 +81,9 @@ Leave everything else as default. Click Install.
 4. From Files/Plots/Packages/Help Panel  
 Click on the 'Packages' tab. There are 2 tabs under this, Install & Update.  
 Click on Install.  
+
+![install packages](tutorial_screenshots/install_packages_short.png)
+
 If the 'Install from' is not set to 'Repository (CRAN)', set it so, and enter name(s) of packages to be installed.  
 Leave everything else as default. Click Install.
 

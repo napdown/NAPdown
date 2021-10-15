@@ -176,7 +176,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About rmarkdown</a></li>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
 <li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
@@ -196,7 +196,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="napdown.html"><a href="napdown.html"><i class="fa fa-check"></i><b>3</b> NAPdown</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="napdown.html"><a href="napdown.html#setting-up-an-open-nap-document"><i class="fa fa-check"></i><b>3.1</b> Setting up an Open NAP document</a>
+<li class="chapter" data-level="3.1" data-path="napdown.html"><a href="napdown.html#setting-up-an-enap"><i class="fa fa-check"></i><b>3.1</b> Setting up an eNAP</a>
 <ul>
 <li class="chapter" data-level="3.1.1" data-path="napdown.html"><a href="napdown.html#some-things-to-note"><i class="fa fa-check"></i><b>3.1.1</b> Some things to note</a></li>
 </ul></li>
@@ -254,7 +254,7 @@ To use github as your repository manager, Create an account at (<a href="https:/
 <li><p>Hit ‘Commit to master’</p></li>
 <li><p>To the right of the GitHub desktop window, the app will notify you that this repository is only available on your local machine and if you would like to share/publish it to GitHub. Click on publish repository
 <img src="tutorial_screenshots/gh_desktop_publish_repo.png" alt="Publish new repo" /></p></li>
-<li><p>Uncheck the box for ‘keep the repository private’ and Click Publish repository
+<li><p>Uncheck the box for ‘keep the code private’ and Click <code>Publish repository</code>
 <img src="tutorial_screenshots/gh_desktop_uncheck_private.png" alt="uncheck private" /></p></li>
 <li><p>From the menu bar on GitHub desktop, click on <code>Repository</code> and select <code>Push</code> from the dropdown list.</p></li>
 <li><p>Congratulations, you just published your repository to GitHub</p></li>
@@ -291,7 +291,8 @@ If you scroll through the files you will notice that our ‘docs’ folder is mi
 <li>To add the folder, lets use the drag and drop method. From your file explorer, navigate to our NAPBook_tutorial folder, and click once on the ‘docs’ folder to select it.<br />
 </li>
 <li>Drag and drop this folder into your github repository. The files should start uploading.<br />
-14.. After your files finish uploading, scroll down to the ‘Commit changes’ field; here you may enter a short description for your files. Let’s enter the text ‘our first NAP book commit’<br />
+</li>
+<li>After your files finish uploading, scroll down to the ‘Commit changes’ field; here you may enter a short description for your files. Let’s enter the text ‘our first NAP book commit’<br />
 When making changes to your files, you may use this field to briefly describe what changes you made, otherwise commonly known as commits.<br />
 </li>
 <li>Next, hit the ‘Commit changes’ button at the end. This is called commiting.</li>
@@ -339,26 +340,19 @@ Below is a list of the above commands</li>
 <p>Github pages helps you to create/publish websites in very simple steps.
 We will publish the NAP book we just created with bookdown into a git-based website.
 To do this,</p>
-<ol style="list-style-type: decimal">
-<li>From the github repository you created in last step, click on the Settings tab (right side of your screen)<br />
-</li>
-<li>Scroll down the listed menu items on the left side of the screen until you find menu item ‘Pages.’ Click on it.<br />
-<img src="tutorial_screenshots/gh_pages_setup.png" alt="gh_pages" /></li>
-<li>Scroll down to the ‘Source’ field. Click on the drop-down arrow and select the <strong>main/master</strong> branch and <strong>docs</strong> folder as your source files for your website. Click Save.<br />
-</li>
-<li>Next, on the ‘Theme Chooser’ field, click to choose a theme for your website.<br />
-A page similar to this appears. <img src="tutorial_screenshots/gh_pages_theme.png" alt="choose theme" /></li>
-</ol>
-<p>You may scroll through to see the options. For this case, lets select the first theme ‘Cayman.’</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Once a theme is selected, a message with a link to your website appears just above your ‘Source’ field.</li>
-</ol>
+<p>1.In your github repository, click on the <code>Settings</code> tab (right side of your screen)<br />
+2. Scroll down the listed menu items on the left side of the screen until you find menu item <code>Pages</code>. Click on it.<br />
+<img src="tutorial_screenshots/gh_pages_setup.png" alt="gh_pages" />
+3. Scroll down to the ‘Source’ field. Click on the drop-down arrow and select the <strong>main/master</strong> branch and <strong>docs</strong> folder as your source files for your website. Click Save.<br />
+A message with a link to your website will appear, right above the <code>Source</code> field.</p>
 <blockquote>
 <p>Your site is ready to be published at <a href="https://yourusername.github.io/repositoryname/" class="uri">https://yourusername.github.io/repositoryname/</a></p>
 </blockquote>
 <p>or as seen here <img src="tutorial_screenshots/gh_pageslink.png" alt="gh pages link" /></p>
-<p>Use this link to view your newly created website.<br />
-Alternatively, navigate back to your main repository area, scroll down to your right to find your active ‘github-pages.’ Click to view your website deployments.</p>
+<p>Use this link to view your newly created website.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Alternatively, navigate back to your main repository area, scroll down to your right to find your active <code>github-pages</code>. Click to view your website deployments.</li>
+</ol>
 <div class="figure">
 <img src="tutorial_screenshots/gh_pages_deploy.png" alt="" />
 <p class="caption">gh pages deployment</p>

@@ -29,7 +29,7 @@ chapter-references
 table-figure-references
 pandoc-knitr
 napdown
-setting-up-an-open-nap-document
+setting-up-an-enap
 some-things-to-note
 some-troubleshooting
 github-github-pages
