@@ -61,7 +61,7 @@ Options:
 __1. From the console;__  
 After the greater than (>) sign, write command `install.packages("package name")` and hit enter on your keyboard.  
 See example;  
-![install packages from console](tutorial_screenshots/install_rmkdn_consl.png)     
+![install packages from console](tutorial_screenshots/install_rmkdn_console.png)     
 __2. In script window __ 
 Inside your script write command `install.packages("package name")`   
 Click on 'Run' (Run button is on the top right of your source panel).   
@@ -77,8 +77,9 @@ From the menu bar, go the the tab 'Tools' and select 'Install Packages'.
 You should see a window like this one ![install packages from menu bar](tutorial_screenshots/install_rmkdn_toolstab.png)  
 
 In the 'Install from' field, select 'Repository (CRAN)', then enter the name(s) of packages to be installed.  
-Leave everything else as default. Click Install.  
-4. From Files/Plots/Packages/Help Panel  
+Leave everything else as default. Click Install. 
+
+__4. From Files/Plots/Packages/Help Panel__    
 Click on the 'Packages' tab. There are 2 tabs under this, Install & Update.  
 Click on Install.  
 

@@ -4,12 +4,12 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Working excel data | An introduction to markdown</title>
+  <title>Chapter 5 Working Excel data | An introduction to markdown</title>
   <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Working excel data | An introduction to markdown" />
+  <meta property="og:title" content="Chapter 5 Working Excel data | An introduction to markdown" />
   <meta property="og:type" content="book" />
   
   
@@ -18,7 +18,7 @@ Additional chapters are provided further reading material and references.</p>" /
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Working excel data | An introduction to markdown" />
+  <meta name="twitter:title" content="Chapter 5 Working Excel data | An introduction to markdown" />
   
   <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
@@ -56,9 +56,15 @@ Additional chapters are provided further reading material and references.</p>" /
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
@@ -78,12 +84,6 @@ Additional chapters are provided further reading material and references.</p>" /
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
 <script src="libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -224,11 +224,12 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3" data-path="napdown.html"><a href="napdown.html"><i class="fa fa-check"></i><b>3</b> NAPdown</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="napdown.html"><a href="napdown.html#setting-up-an-enap"><i class="fa fa-check"></i><b>3.1</b> Setting up an eNAP</a>
+<li class="chapter" data-level="3.1" data-path="napdown.html"><a href="napdown.html#setting-up-an-enap"><i class="fa fa-check"></i><b>3.1</b> Setting up an eNAP</a></li>
+<li class="chapter" data-level="3.2" data-path="napdown.html"><a href="napdown.html#integrating-code-evaluations-within-your-text-chapters"><i class="fa fa-check"></i><b>3.2</b> Integrating code evaluations within your text/ chapters</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="napdown.html"><a href="napdown.html#some-things-to-note"><i class="fa fa-check"></i><b>3.1.1</b> Some things to note</a></li>
+<li class="chapter" data-level="3.2.1" data-path="napdown.html"><a href="napdown.html#some-things-to-note"><i class="fa fa-check"></i><b>3.2.1</b> Some things to note</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="napdown.html"><a href="napdown.html#some-troubleshooting"><i class="fa fa-check"></i><b>3.2</b> Some Troubleshooting</a></li>
+<li class="chapter" data-level="3.3" data-path="napdown.html"><a href="napdown.html#some-troubleshooting"><i class="fa fa-check"></i><b>3.3</b> Some Troubleshooting</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="github-github-pages.html"><a href="github-github-pages.html"><i class="fa fa-check"></i><b>4</b> GitHub &amp; GitHub Pages</a>
 <ul>
@@ -240,25 +241,28 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="github-github-pages.html"><a href="github-github-pages.html#publishing-to-github-pages"><i class="fa fa-check"></i><b>4.2</b> Publishing to GitHub pages</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="working-excel-data.html"><a href="working-excel-data.html"><i class="fa fa-check"></i><b>5</b> Working excel data</a>
+<li class="chapter" data-level="5" data-path="working-excel-data.html"><a href="working-excel-data.html"><i class="fa fa-check"></i><b>5</b> Working Excel data</a>
 <ul>
-<li class="chapter" data-level="5.0.1" data-path="working-excel-data.html"><a href="working-excel-data.html#install-packages"><i class="fa fa-check"></i><b>5.0.1</b> Install packages</a></li>
-<li class="chapter" data-level="5.0.2" data-path="working-excel-data.html"><a href="working-excel-data.html#call-libraries-for-the-installed-packages"><i class="fa fa-check"></i><b>5.0.2</b> Call libraries for the installed packages</a></li>
-<li class="chapter" data-level="5.0.3" data-path="working-excel-data.html"><a href="working-excel-data.html#import-excel-table-from-local-drive"><i class="fa fa-check"></i><b>5.0.3</b> Import excel table from local drive</a></li>
-<li class="chapter" data-level="5.1" data-path="working-excel-data.html"><a href="working-excel-data.html#build-tables"><i class="fa fa-check"></i><b>5.1</b> Build Tables</a>
+<li class="chapter" data-level="5.1" data-path="working-excel-data.html"><a href="working-excel-data.html#prep"><i class="fa fa-check"></i><b>5.1</b> Prep</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="working-excel-data.html"><a href="working-excel-data.html#static-table"><i class="fa fa-check"></i><b>5.1.1</b> Static table</a></li>
-<li class="chapter" data-level="5.1.2" data-path="working-excel-data.html"><a href="working-excel-data.html#interactive-table"><i class="fa fa-check"></i><b>5.1.2</b> Interactive table</a></li>
+<li class="chapter" data-level="5.1.1" data-path="working-excel-data.html"><a href="working-excel-data.html#install-packages"><i class="fa fa-check"></i><b>5.1.1</b> Install packages</a></li>
+<li class="chapter" data-level="5.1.2" data-path="working-excel-data.html"><a href="working-excel-data.html#call-libraries-for-the-installed-packages"><i class="fa fa-check"></i><b>5.1.2</b> Call libraries for the installed packages</a></li>
+<li class="chapter" data-level="5.1.3" data-path="working-excel-data.html"><a href="working-excel-data.html#import-excel-table-from-local-drive"><i class="fa fa-check"></i><b>5.1.3</b> Import excel table from local drive</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="working-excel-data.html"><a href="working-excel-data.html#generate-other-graphics"><i class="fa fa-check"></i><b>5.2</b> Generate Other Graphics</a>
+<li class="chapter" data-level="5.2" data-path="working-excel-data.html"><a href="working-excel-data.html#build-tables"><i class="fa fa-check"></i><b>5.2</b> Build Tables</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="working-excel-data.html"><a href="working-excel-data.html#a-bar-chart"><i class="fa fa-check"></i><b>5.2.1</b> A bar chart</a></li>
-<li class="chapter" data-level="5.2.2" data-path="working-excel-data.html"><a href="working-excel-data.html#a-donut-chart"><i class="fa fa-check"></i><b>5.2.2</b> A donut chart</a></li>
+<li class="chapter" data-level="5.2.1" data-path="working-excel-data.html"><a href="working-excel-data.html#static-table"><i class="fa fa-check"></i><b>5.2.1</b> Static table</a></li>
+<li class="chapter" data-level="5.2.2" data-path="working-excel-data.html"><a href="working-excel-data.html#interactive-table"><i class="fa fa-check"></i><b>5.2.2</b> Interactive table</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="working-excel-data.html"><a href="working-excel-data.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>5.3</b> Filter and plot select data</a>
+<li class="chapter" data-level="5.3" data-path="working-excel-data.html"><a href="working-excel-data.html#generate-other-graphics"><i class="fa fa-check"></i><b>5.3</b> Generate Other Graphics</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="working-excel-data.html"><a href="working-excel-data.html#pie-chart"><i class="fa fa-check"></i><b>5.3.1</b> Pie chart</a></li>
-<li class="chapter" data-level="5.3.2" data-path="working-excel-data.html"><a href="working-excel-data.html#build-treemap"><i class="fa fa-check"></i><b>5.3.2</b> Build Treemap</a></li>
+<li class="chapter" data-level="5.3.1" data-path="working-excel-data.html"><a href="working-excel-data.html#a-bar-chart"><i class="fa fa-check"></i><b>5.3.1</b> A bar chart</a></li>
+<li class="chapter" data-level="5.3.2" data-path="working-excel-data.html"><a href="working-excel-data.html#a-donut-chart"><i class="fa fa-check"></i><b>5.3.2</b> A donut chart</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="working-excel-data.html"><a href="working-excel-data.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>5.4</b> Filter and plot select data</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="working-excel-data.html"><a href="working-excel-data.html#pie-chart"><i class="fa fa-check"></i><b>5.4.1</b> Pie chart</a></li>
+<li class="chapter" data-level="5.4.2" data-path="working-excel-data.html"><a href="working-excel-data.html#build-treemap"><i class="fa fa-check"></i><b>5.4.2</b> Build Treemap</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>6</b> Working Climate data</a>
@@ -274,6 +278,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>6.1.7</b> Plot Annual data</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>7</b> Further Reads</a></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -296,26 +301,28 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="working-excel-data" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Working excel data</h1>
+<h1><span class="header-section-number">Chapter 5</span> Working Excel data</h1>
+<div id="prep" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Prep</h2>
 <p>Steps;</p>
-<div id="install-packages" class="section level3" number="5.0.1">
-<h3><span class="header-section-number">5.0.1</span> Install packages</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="working-excel-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(c(&quot;readxl&quot;, &quot;magrittr&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;DT&quot;, &quot;plotly&quot;, &quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;treemapify&quot;))</span></span></code></pre></div>
+<div id="install-packages" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Install packages</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="working-excel-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(c(&quot;readxl&quot;, &quot;magrittr&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;DT&quot;, &quot;plotly&quot;, &quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;treemapify&quot;))</span></span></code></pre></div>
 </div>
-<div id="call-libraries-for-the-installed-packages" class="section level3" number="5.0.2">
-<h3><span class="header-section-number">5.0.2</span> Call libraries for the installed packages</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="working-excel-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb4-2"><a href="working-excel-data.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb4-3"><a href="working-excel-data.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb4-4"><a href="working-excel-data.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb4-5"><a href="working-excel-data.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb4-6"><a href="working-excel-data.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
-<span id="cb4-7"><a href="working-excel-data.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb4-8"><a href="working-excel-data.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-9"><a href="working-excel-data.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemapify)</span></code></pre></div>
+<div id="call-libraries-for-the-installed-packages" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Call libraries for the installed packages</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="working-excel-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb5-2"><a href="working-excel-data.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb5-3"><a href="working-excel-data.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb5-4"><a href="working-excel-data.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb5-5"><a href="working-excel-data.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb5-6"><a href="working-excel-data.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb5-7"><a href="working-excel-data.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-8"><a href="working-excel-data.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-9"><a href="working-excel-data.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemapify)</span></code></pre></div>
 </div>
-<div id="import-excel-table-from-local-drive" class="section level3" number="5.0.3">
-<h3><span class="header-section-number">5.0.3</span> Import excel table from local drive</h3>
+<div id="import-excel-table-from-local-drive" class="section level3" number="5.1.3">
+<h3><span class="header-section-number">5.1.3</span> Import excel table from local drive</h3>
 <ol start="3" style="list-style-type: decimal">
 <li>From the Environment window, click ‘Import Dataset’</li>
 <li>From the drop down menu, select ‘From Excel’</li>
@@ -329,12 +336,13 @@ div.csl-indent {
 <li>Click on the ‘play’ icon to view data attributes or</li>
 <li>Click on the data object or table sign on the far right of your data set name to view the data</li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="working-excel-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">&quot;C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">Esther Makabe</span><span class="sc">\\</span><span class="st">NAP_Progress_Aggregate</span><span class="sc">\\</span><span class="st">Open_NAPs_Database.xlsm&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;GCF&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="working-excel-data.html#cb6-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">&quot;C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">Esther Makabe</span><span class="sc">\\</span><span class="st">NAP_Progress_Aggregate</span><span class="sc">\\</span><span class="st">Open_NAPs_Database.xlsm&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;GCF&quot;</span>)</span></code></pre></div>
 </div>
-<div id="build-tables" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Build Tables</h2>
-<div id="static-table" class="section level3" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Static table</h3>
+</div>
+<div id="build-tables" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Build Tables</h2>
+<div id="static-table" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Static table</h3>
 <ol style="list-style-type: decimal">
 <li>Open a new code chunk</li>
 <li>Install packages DT and magrittr</li>
@@ -344,11 +352,11 @@ div.csl-indent {
 <li>Hover over the function to see parameters required or go to the ‘Help’ tab and search ‘datatable’ to see further details on its application.</li>
 <li>Fill in details as below</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="working-excel-data.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(gcf,<span class="at">caption =</span> <span class="st">&#39;GCF Funding&#39;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="working-excel-data.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&#39;condensed&#39;</span>, <span class="st">&#39;bordered&#39;</span>),<span class="at">fixed_thead =</span> <span class="cn">TRUE</span>, <span class="at">font_size=</span><span class="dv">10</span>, <span class="at">repeat_header_continued =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="working-excel-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(gcf,<span class="at">caption =</span> <span class="st">&#39;GCF Funding&#39;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="working-excel-data.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&#39;condensed&#39;</span>, <span class="st">&#39;bordered&#39;</span>),<span class="at">fixed_thead =</span> <span class="cn">TRUE</span>, <span class="at">font_size=</span><span class="dv">10</span>, <span class="at">repeat_header_continued =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <table class="table table-condensed table-bordered" style="font-size: 10px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-7">Table 5.1: </span>GCF Funding
+<span id="tab:unnamed-chunk-8">Table 5.1: </span>GCF Funding
 </caption>
 <thead>
 <tr>
@@ -420,10 +428,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-32706595
+3.3e+07
 </td>
 <td style="text-align:right;">
-13458035
+1.3e+07
 </td>
 <td style="text-align:left;">
 8/21/2020
@@ -438,7 +446,7 @@ Direct
 Grants
 </td>
 <td style="text-align:right;">
-46164630
+4.6e+07
 </td>
 </tr>
 <tr>
@@ -464,10 +472,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-20000000
+2.0e+07
 </td>
 <td style="text-align:right;">
-2569360
+2.6e+06
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -482,7 +490,7 @@ $3,000,000.00
 GrantsUndefined
 </td>
 <td style="text-align:right;">
-22569360
+2.3e+07
 </td>
 </tr>
 <tr>
@@ -508,10 +516,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-2320388
+2.3e+06
 </td>
 <td style="text-align:right;">
-0
+0.0e+00
 </td>
 <td style="text-align:left;">
 10/20/2018
@@ -526,7 +534,7 @@ $906,500.00
 Grants
 </td>
 <td style="text-align:right;">
-2320388
+2.3e+06
 </td>
 </tr>
 <tr>
@@ -552,10 +560,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-40000000
+4.0e+07
 </td>
 <td style="text-align:right;">
-41001500
+4.1e+07
 </td>
 <td style="text-align:left;">
 11/5/2015
@@ -570,7 +578,7 @@ $150,000.00$2,830,000.00
 Grants
 </td>
 <td style="text-align:right;">
-81001500
+8.1e+07
 </td>
 </tr>
 <tr>
@@ -596,10 +604,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-24980000
+2.5e+07
 </td>
 <td style="text-align:right;">
-8000000
+8.0e+06
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -614,7 +622,7 @@ $4,735,682.00
 Grants
 </td>
 <td style="text-align:right;">
-32980000
+3.3e+07
 </td>
 </tr>
 <tr>
@@ -640,10 +648,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-9681340
+9.7e+06
 </td>
 <td style="text-align:right;">
-3644400
+3.6e+06
 </td>
 <td style="text-align:left;">
 11/14/2019
@@ -658,7 +666,7 @@ $2,161,662.00
 GrantsSubordinated Loansin-kind
 </td>
 <td style="text-align:right;">
-13325740
+1.3e+07
 </td>
 </tr>
 <tr>
@@ -684,10 +692,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-8000000
+8.0e+06
 </td>
 <td style="text-align:right;">
-12002898
+1.2e+07
 </td>
 <td style="text-align:left;">
 2/28/2019
@@ -702,7 +710,7 @@ $1,914,800.00$3,042,600.00
 GrantsSenior LoansEquity
 </td>
 <td style="text-align:right;">
-20002898
+2.0e+07
 </td>
 </tr>
 <tr>
@@ -728,10 +736,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-9000000
+9.0e+06
 </td>
 <td style="text-align:right;">
-1000000
+1.0e+06
 </td>
 <td style="text-align:left;">
 2/28/2019
@@ -746,7 +754,7 @@ $1,065,605.00
 Grants
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -772,10 +780,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-25347194
+2.5e+07
 </td>
 <td style="text-align:right;">
-32668000
+3.3e+07
 </td>
 <td style="text-align:left;">
 7/8/2019
@@ -790,7 +798,7 @@ $3,096,334.00
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-58015194
+5.8e+07
 </td>
 </tr>
 <tr>
@@ -816,10 +824,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-22500000
+2.2e+07
 </td>
 <td style="text-align:right;">
-2500000
+2.5e+06
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -834,7 +842,7 @@ $15,970,000.00
 Grants
 </td>
 <td style="text-align:right;">
-25000000
+2.5e+07
 </td>
 </tr>
 <tr>
@@ -860,10 +868,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-38496000
+3.8e+07
 </td>
 <td style="text-align:right;">
-78717258
+7.9e+07
 </td>
 <td style="text-align:left;">
 10/2/2017
@@ -878,7 +886,7 @@ $7,990,110.25
 Grants
 </td>
 <td style="text-align:right;">
-117213258
+1.2e+08
 </td>
 </tr>
 <tr>
@@ -904,10 +912,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-41919808
+4.2e+07
 </td>
 <td style="text-align:right;">
-18831687
+1.9e+07
 </td>
 <td style="text-align:left;">
 10/20/2018
@@ -922,7 +930,7 @@ $2,950,847.00$8,475,242.00
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-60751495
+6.1e+07
 </td>
 </tr>
 <tr>
@@ -948,10 +956,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-38000000
+3.8e+07
 </td>
 <td style="text-align:right;">
-11200000
+1.1e+07
 </td>
 <td style="text-align:left;">
 8/21/2020
@@ -966,7 +974,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-49200000
+4.9e+07
 </td>
 </tr>
 <tr>
@@ -992,10 +1000,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-31385000
+3.1e+07
 </td>
 <td style="text-align:right;">
-73807000
+7.4e+07
 </td>
 <td style="text-align:left;">
 10/2/2017
@@ -1010,7 +1018,7 @@ $3,068,979.00
 Grants
 </td>
 <td style="text-align:right;">
-105192000
+1.1e+08
 </td>
 </tr>
 <tr>
@@ -1036,10 +1044,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-45002759
+4.5e+07
 </td>
 <td style="text-align:right;">
-4958095
+5.0e+06
 </td>
 <td style="text-align:left;">
 10/2/2017
@@ -1054,7 +1062,7 @@ $3,752,016.00
 Grants
 </td>
 <td style="text-align:right;">
-49960854
+5.0e+07
 </td>
 </tr>
 <tr>
@@ -1080,10 +1088,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-31040000
+3.1e+07
 </td>
 <td style="text-align:right;">
-374100000
+3.7e+08
 </td>
 <td style="text-align:left;">
 11/5/2015
@@ -1098,7 +1106,7 @@ $4,500,000.00$16,640,000.00
 GrantsSenior LoansUndefined
 </td>
 <td style="text-align:right;">
-405140000
+4.1e+08
 </td>
 </tr>
 <tr>
@@ -1124,10 +1132,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-20546756
+2.1e+07
 </td>
 <td style="text-align:right;">
-4974611
+5.0e+06
 </td>
 <td style="text-align:left;">
 6/30/2016
@@ -1142,7 +1150,7 @@ $5,968,542.00$5,295,543.00$4,250,043.00
 Grants
 </td>
 <td style="text-align:right;">
-25521367
+2.6e+07
 </td>
 </tr>
 <tr>
@@ -1168,10 +1176,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-27053598
+2.7e+07
 </td>
 <td style="text-align:right;">
-43241000
+4.3e+07
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -1186,7 +1194,7 @@ $2,285,063.00$8,062,855.00
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-70294598
+7.0e+07
 </td>
 </tr>
 <tr>
@@ -1212,10 +1220,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-41274965
+4.1e+07
 </td>
 <td style="text-align:right;">
-7914558
+7.9e+06
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -1230,7 +1238,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-49189523
+4.9e+07
 </td>
 </tr>
 <tr>
@@ -1256,10 +1264,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-22035512
+2.2e+07
 </td>
 <td style="text-align:right;">
-15619028
+1.6e+07
 </td>
 <td style="text-align:left;">
 10/20/2018
@@ -1274,7 +1282,7 @@ $1,868,090.00
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-37654540
+3.8e+07
 </td>
 </tr>
 <tr>
@@ -1300,10 +1308,10 @@ Private
 Direct
 </td>
 <td style="text-align:right;">
-15500000
+1.6e+07
 </td>
 <td style="text-align:right;">
-12500000
+1.2e+07
 </td>
 <td style="text-align:left;">
 10/20/2018
@@ -1318,7 +1326,7 @@ $376,350.00
 GrantsSenior Loans
 </td>
 <td style="text-align:right;">
-28000000
+2.8e+07
 </td>
 </tr>
 <tr>
@@ -1344,10 +1352,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-34357000
+3.4e+07
 </td>
 <td style="text-align:right;">
-131940000
+1.3e+08
 </td>
 <td style="text-align:left;">
 4/6/2017
@@ -1362,7 +1370,7 @@ Direct
 GrantsSenior Loansin-kind
 </td>
 <td style="text-align:right;">
-166297000
+1.7e+08
 </td>
 </tr>
 <tr>
@@ -1388,10 +1396,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-23152082
+2.3e+07
 </td>
 <td style="text-align:right;">
-11390900
+1.1e+07
 </td>
 <td style="text-align:left;">
 7/8/2019
@@ -1406,7 +1414,7 @@ International
 GrantsSubordinated Loans
 </td>
 <td style="text-align:right;">
-34542982
+3.5e+07
 </td>
 </tr>
 <tr>
@@ -1432,10 +1440,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-8576108
+8.6e+06
 </td>
 <td style="text-align:right;">
-1062117
+1.1e+06
 </td>
 <td style="text-align:left;">
 10/20/2018
@@ -1450,7 +1458,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-9638225
+9.6e+06
 </td>
 </tr>
 <tr>
@@ -1476,10 +1484,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 <td style="text-align:right;">
-1500000
+1.5e+06
 </td>
 <td style="text-align:left;">
 11/14/2019
@@ -1494,7 +1502,7 @@ $2,411,710.00
 GrantsUndefined
 </td>
 <td style="text-align:right;">
-11500000
+1.2e+07
 </td>
 </tr>
 <tr>
@@ -1520,10 +1528,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-12295000
+1.2e+07
 </td>
 <td style="text-align:right;">
-3970000
+4.0e+06
 </td>
 <td style="text-align:left;">
 11/5/2015
@@ -1538,7 +1546,7 @@ $2,377,039.00$3,332,276.00$2,540,848.00$1,379,029.00
 Grants
 </td>
 <td style="text-align:right;">
-16265000
+1.6e+07
 </td>
 </tr>
 <tr>
@@ -1564,10 +1572,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-23640000
+2.4e+07
 </td>
 <td style="text-align:right;">
-4593000
+4.6e+06
 </td>
 <td style="text-align:left;">
 11/5/2015
@@ -1582,7 +1590,7 @@ $3,034,330.00$12,112,446.00$6,038,072.00
 Grants
 </td>
 <td style="text-align:right;">
-28233000
+2.8e+07
 </td>
 </tr>
 <tr>
@@ -1608,10 +1616,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-22750000
+2.3e+07
 </td>
 <td style="text-align:right;">
-8250000
+8.2e+06
 </td>
 <td style="text-align:left;">
 6/30/2016
@@ -1626,7 +1634,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-31000000
+3.1e+07
 </td>
 </tr>
 <tr>
@@ -1652,10 +1660,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-25000000
+2.5e+07
 </td>
 <td style="text-align:right;">
-19131000
+1.9e+07
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -1670,7 +1678,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-44131000
+4.4e+07
 </td>
 </tr>
 <tr>
@@ -1696,10 +1704,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-18631216
+1.9e+07
 </td>
 <td style="text-align:right;">
-6116092
+6.1e+06
 </td>
 <td style="text-align:left;">
 7/8/2019
@@ -1714,7 +1722,7 @@ $2,323,131.00
 Grants
 </td>
 <td style="text-align:right;">
-24747308
+2.5e+07
 </td>
 </tr>
 <tr>
@@ -1740,10 +1748,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-23391813
+2.3e+07
 </td>
 <td style="text-align:right;">
-65497076
+6.5e+07
 </td>
 <td style="text-align:left;">
 4/6/2017
@@ -1758,7 +1766,7 @@ International
 GrantsSenior Loans
 </td>
 <td style="text-align:right;">
-88888889
+8.9e+07
 </td>
 </tr>
 <tr>
@@ -1784,10 +1792,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-37391813
+3.7e+07
 </td>
 <td style="text-align:right;">
-204327485
+2.0e+08
 </td>
 <td style="text-align:left;">
 4/6/2017
@@ -1802,7 +1810,7 @@ International
 GrantsSenior Loans
 </td>
 <td style="text-align:right;">
-241719298
+2.4e+08
 </td>
 </tr>
 <tr>
@@ -1828,10 +1836,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-9250000
+9.2e+06
 </td>
 <td style="text-align:right;">
-750000
+7.5e+05
 </td>
 <td style="text-align:left;">
 11/14/2019
@@ -1846,7 +1854,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -1872,10 +1880,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-9500000
+9.5e+06
 </td>
 <td style="text-align:right;">
-500000
+5.0e+05
 </td>
 <td style="text-align:left;">
 10/14/2016
@@ -1890,7 +1898,7 @@ $3,085,000.00$3,670,000.00
 Grants
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -1916,10 +1924,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 <td style="text-align:right;">
-0
+0.0e+00
 </td>
 <td style="text-align:left;">
 10/14/2016
@@ -1934,7 +1942,7 @@ $427,013.00$7,231,623.00$1,832,021.00
 Grants
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -1960,10 +1968,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-9300000
+9.3e+06
 </td>
 <td style="text-align:right;">
-700000
+7.0e+05
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -1978,7 +1986,7 @@ $3,765,000.00
 Grants
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -2004,10 +2012,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-8904000
+8.9e+06
 </td>
 <td style="text-align:right;">
-160000
+1.6e+05
 </td>
 <td style="text-align:left;">
 2/28/2019
@@ -2022,7 +2030,7 @@ $660,000.00
 Grants
 </td>
 <td style="text-align:right;">
-9064000
+9.1e+06
 </td>
 </tr>
 <tr>
@@ -2048,10 +2056,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-36960000
+3.7e+07
 </td>
 <td style="text-align:right;">
-500000
+5.0e+05
 </td>
 <td style="text-align:left;">
 10/14/2016
@@ -2066,7 +2074,7 @@ $10,504,366.00
 Grants
 </td>
 <td style="text-align:right;">
-37460000
+3.7e+07
 </td>
 </tr>
 <tr>
@@ -2092,10 +2100,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-34990832
+3.5e+07
 </td>
 <td style="text-align:right;">
-12699931
+1.3e+07
 </td>
 <td style="text-align:left;">
 7/8/2019
@@ -2110,7 +2118,7 @@ $6,371,836.00
 Grants
 </td>
 <td style="text-align:right;">
-47690763
+4.8e+07
 </td>
 </tr>
 <tr>
@@ -2136,10 +2144,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-9999042
+1.0e+07
 </td>
 <td style="text-align:right;">
-10192308
+1.0e+07
 </td>
 <td style="text-align:left;">
 11/14/2019
@@ -2154,7 +2162,7 @@ Direct
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-20191350
+2.0e+07
 </td>
 </tr>
 <tr>
@@ -2180,10 +2188,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-57718000
+5.8e+07
 </td>
 <td style="text-align:right;">
-8000000
+8.0e+06
 </td>
 <td style="text-align:left;">
 12/15/2016
@@ -2198,7 +2206,7 @@ $4,766,361.00$7,377,554.00$11,649,728.00
 Grants
 </td>
 <td style="text-align:right;">
-65718000
+6.6e+07
 </td>
 </tr>
 <tr>
@@ -2225,10 +2233,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-7610000
+7.6e+06
 </td>
 <td style="text-align:right;">
-546000
+5.5e+05
 </td>
 <td style="text-align:left;">
 11/5/2015
@@ -2243,7 +2251,7 @@ $1,915,682.00
 Grants
 </td>
 <td style="text-align:right;">
-8156000
+8.2e+06
 </td>
 </tr>
 <tr>
@@ -2269,10 +2277,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-17543860
+1.8e+07
 </td>
 <td style="text-align:right;">
-65497076
+6.5e+07
 </td>
 <td style="text-align:left;">
 10/14/2016
@@ -2287,7 +2295,7 @@ International
 GrantsEquitySenior Loans
 </td>
 <td style="text-align:right;">
-83040936
+8.3e+07
 </td>
 </tr>
 <tr>
@@ -2313,10 +2321,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-9983521
+1.0e+07
 </td>
 <td style="text-align:right;">
-0
+0.0e+00
 </td>
 <td style="text-align:left;">
 10/2/2017
@@ -2331,7 +2339,7 @@ $2,495,900.00
 Grants
 </td>
 <td style="text-align:right;">
-9983521
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -2357,10 +2365,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-38084000
+3.8e+07
 </td>
 <td style="text-align:right;">
-14000000
+1.4e+07
 </td>
 <td style="text-align:left;">
 6/30/2016
@@ -2375,7 +2383,7 @@ $2,867,879.00$8,287,745.00$9,264,383.00
 Grants
 </td>
 <td style="text-align:right;">
-52084000
+5.2e+07
 </td>
 </tr>
 <tr>
@@ -2401,10 +2409,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-39775000
+4.0e+07
 </td>
 <td style="text-align:right;">
-9200000
+9.2e+06
 </td>
 <td style="text-align:left;">
 3/12/2020
@@ -2419,7 +2427,7 @@ International
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-48975000
+4.9e+07
 </td>
 </tr>
 <tr>
@@ -2445,10 +2453,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-25645114
+2.6e+07
 </td>
 <td style="text-align:right;">
-15540000
+1.6e+07
 </td>
 <td style="text-align:left;">
 8/21/2020
@@ -2463,7 +2471,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-41185114
+4.1e+07
 </td>
 </tr>
 <tr>
@@ -2489,10 +2497,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-50000000
+5.0e+07
 </td>
 <td style="text-align:right;">
-78900000
+7.9e+07
 </td>
 <td style="text-align:left;">
 4/6/2017
@@ -2507,7 +2515,7 @@ $2,000,000.00$3,000,000.00$4,000,000.00$4,000,000.00
 GrantsSenior Loans
 </td>
 <td style="text-align:right;">
-128900000
+1.3e+08
 </td>
 </tr>
 <tr>
@@ -2533,10 +2541,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-9273586
+9.3e+06
 </td>
 <td style="text-align:right;">
-699404
+7.0e+05
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -2551,7 +2559,7 @@ $1,782,778.54
 Grants
 </td>
 <td style="text-align:right;">
-9972990
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -2577,10 +2585,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-5000000
+5.0e+06
 </td>
 <td style="text-align:right;">
-5000000
+5.0e+06
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -2595,7 +2603,7 @@ $500,000.00$2,400,000.00
 Grants
 </td>
 <td style="text-align:right;">
-10000000
+1.0e+07
 </td>
 </tr>
 <tr>
@@ -2621,10 +2629,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-120116959
+1.2e+08
 </td>
 <td style="text-align:right;">
-79883041
+8.0e+07
 </td>
 <td style="text-align:left;">
 4/6/2017
@@ -2639,7 +2647,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-200000000
+2.0e+08
 </td>
 </tr>
 <tr>
@@ -2665,10 +2673,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-35087719
+3.5e+07
 </td>
 <td style="text-align:right;">
-29239766
+2.9e+07
 </td>
 <td style="text-align:left;">
 11/14/2019
@@ -2683,7 +2691,7 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-64327485
+6.4e+07
 </td>
 </tr>
 <tr>
@@ -2709,10 +2717,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-22356805
+2.2e+07
 </td>
 <td style="text-align:right;">
-37087062
+3.7e+07
 </td>
 <td style="text-align:left;">
 7/8/2019
@@ -2727,7 +2735,7 @@ $2,349,598.00
 Grants
 </td>
 <td style="text-align:right;">
-59443867
+5.9e+07
 </td>
 </tr>
 <tr>
@@ -2753,10 +2761,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-36010000
+3.6e+07
 </td>
 <td style="text-align:right;">
-2860000
+2.9e+06
 </td>
 <td style="text-align:left;">
 6/30/2016
@@ -2771,7 +2779,7 @@ $2,013,841.00$4,693,133.00
 Grants
 </td>
 <td style="text-align:right;">
-38870000
+3.9e+07
 </td>
 </tr>
 <tr>
@@ -2797,10 +2805,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-24140000
+2.4e+07
 </td>
 <td style="text-align:right;">
-20122000
+2.0e+07
 </td>
 <td style="text-align:left;">
 12/15/2016
@@ -2815,7 +2823,7 @@ $2,617,968.00$1,782,136.00$3,479,526.00
 Grants
 </td>
 <td style="text-align:right;">
-44262000
+4.4e+07
 </td>
 </tr>
 <tr>
@@ -2841,10 +2849,10 @@ Private
 Direct
 </td>
 <td style="text-align:right;">
-26000000
+2.6e+07
 </td>
 <td style="text-align:right;">
-30000000
+3.0e+07
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -2859,7 +2867,7 @@ $286,000.00$331,820.51$187,692.31$2,111,538.46$1,114,423.06$1,250,000.00
 EquityGrants
 </td>
 <td style="text-align:right;">
-56000000
+5.6e+07
 </td>
 </tr>
 <tr>
@@ -2885,10 +2893,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-19000000
+1.9e+07
 </td>
 <td style="text-align:right;">
-49780000
+5.0e+07
 </td>
 <td style="text-align:left;">
 6/30/2016
@@ -2903,7 +2911,7 @@ International
 GrantsSenior Loans
 </td>
 <td style="text-align:right;">
-68780000
+6.9e+07
 </td>
 </tr>
 <tr>
@@ -2929,10 +2937,10 @@ Public
 Direct
 </td>
 <td style="text-align:right;">
-22953000
+2.3e+07
 </td>
 <td style="text-align:right;">
-3682000
+3.7e+06
 </td>
 <td style="text-align:left;">
 12/15/2016
@@ -2947,7 +2955,7 @@ $296,730.00$1,977,696.00
 Grants
 </td>
 <td style="text-align:right;">
-26635000
+2.7e+07
 </td>
 </tr>
 <tr>
@@ -2973,10 +2981,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-30205367
+3.0e+07
 </td>
 <td style="text-align:right;">
-126087475
+1.3e+08
 </td>
 <td style="text-align:left;">
 3/12/2020
@@ -2991,7 +2999,7 @@ International
 GrantsSenior Loansin-kind
 </td>
 <td style="text-align:right;">
-156292842
+1.6e+08
 </td>
 </tr>
 <tr>
@@ -3017,10 +3025,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-32000000
+3.2e+07
 </td>
 <td style="text-align:right;">
-105269000
+1.1e+08
 </td>
 <td style="text-align:left;">
 3/1/2018
@@ -3035,7 +3043,7 @@ $3,077,613.00$6,539,471.00
 Grants
 </td>
 <td style="text-align:right;">
-137269000
+1.4e+08
 </td>
 </tr>
 <tr>
@@ -3061,10 +3069,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-26574567
+2.7e+07
 </td>
 <td style="text-align:right;">
-21243820
+2.1e+07
 </td>
 <td style="text-align:left;">
 3/12/2020
@@ -3079,7 +3087,7 @@ $2,770,634.00
 Grantsin-kind
 </td>
 <td style="text-align:right;">
-47818387
+4.8e+07
 </td>
 </tr>
 <tr>
@@ -3105,10 +3113,10 @@ Public
 International
 </td>
 <td style="text-align:right;">
-8858316
+8.9e+06
 </td>
 <td style="text-align:right;">
-1104447
+1.1e+06
 </td>
 <td style="text-align:left;">
 7/8/2019
@@ -3123,14 +3131,14 @@ International
 Grants
 </td>
 <td style="text-align:right;">
-9962763
+1.0e+07
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="interactive-table" class="section level3" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Interactive table</h3>
+<div id="interactive-table" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Interactive table</h3>
 <ol style="list-style-type: decimal">
 <li>Open a new code chunk</li>
 <li>Install packages DT and magrittr</li>
@@ -3140,17 +3148,17 @@ Grants
 <li>Hover over the function to see parameters required or go to the ‘Help’ tab and search ‘datatable’ to see further details on its application.</li>
 <li>Fill in details as below</li>
 </ol>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="working-excel-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>gcf_columns<span class="ot">&lt;-</span>gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)] <span class="co"># selects only the columns we want to see in our table</span></span>
-<span id="cb7-2"><a href="working-excel-data.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(gcf_columns,<span class="at">filter =</span> <span class="st">&#39;top&#39;</span>,<span class="at">rownames =</span> F, <span class="at">editable =</span> F, <span class="at">style =</span> <span class="st">&#39;jqueryui&#39;</span>, <span class="at">class =</span> <span class="st">&#39;display responsive&#39;</span>, <span class="at">width =</span> <span class="st">&#39;100%&#39;</span>, <span class="at">caption =</span> <span class="st">&quot;GCF Project Funding&quot;</span>, <span class="at">extensions =</span> <span class="st">&#39;Buttons&#39;</span>, <span class="at">options=</span><span class="fu">list</span>(<span class="at">pageLength=</span> <span class="dv">5</span>, <span class="at">dom=</span><span class="st">&#39;lfrtipB&#39;</span>, <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">&#39;copy&#39;</span>, <span class="st">&#39;csv&#39;</span>, <span class="st">&#39;excel&#39;</span>, <span class="st">&#39;pdf&#39;</span>)))<span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="working-excel-data.html#cb7-3" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">formatStyle</span>(<span class="at">columns =</span> <span class="fu">colnames</span>(gcf_columns),<span class="at">fontSize=</span> <span class="st">&#39;10px&#39;</span>)</span></code></pre></div>
-<div id="htmlwidget-8e1270021459a7174ca1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8e1270021459a7174ca1">{"x":{"style":"jqueryui","filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2320388\" data-max=\"120116959.06\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"caption":"<caption>GCF Project Funding<\/caption>","data":[["Antigua and Barbuda","Antigua and BarbudaDominicaGrenada","Bahrain","Bangladesh","Bangladesh","Bangladesh","Belize","Benin","Bhutan","Burkina Faso","Colombia","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Fiji","Gambia","Georgia","Grenada","Guatemala","GuatemalaEl SalvadorHondurasNicaraguaCosta RicaPanamaDominican Republic (the)","India","Kenya","Kyrgyzstan","Lao People's Democratic Republic","Malawi","Maldives","Mali","Marshall Islands","Marshall Islands","Morocco","Morocco","Mozambique","Namibia","Namibia","Namibia","Namibia","Pakistan","Pakistan","Philippines","Samoa","Senegal","Senegal","Senegal","Sri Lanka","Sri Lanka","Sudan","Tajikistan","Tajikistan","Tajikistan","Tanzania United Republic of","TanzaniaMadagascarSouth AfricaMozambique","Timor-Leste","Tuvalu","Uganda","UgandaGhanaNigeriaKenya","UzbekistanTajikistan","Vanuatu","Viet Nam","Zambia","Zimbabwe","Zimbabwe"],["Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Latin America and the Caribbean","Africa","Asia-Pacific","Africa","Latin America and the Caribbean","Africa","Africa","Africa","Africa","Asia-Pacific","Africa","Eastern Europe","Latin America and the Caribbean","Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa"],["Resilience to hurricanes in the building sector in Antigua and Barbuda","Integrated physical adaptation and community resilience through an enhanced direct access pilot in the public, private, and civil society sectors of three Eastern Caribbean small island developing states","Enhancing climate resilience of the water sector in Bahrain","Climate Resilient Infrastructure Mainstreaming (CRIM)","Enhancing adaptive capacities of coastal communities, especially women, to cope with climate change induced salinity","Extended Community Climate Change Project-Flood (ECCCP-Flood)","Resilient Rural Belize (Be-Resilient)","Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes","Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project","Scaling up climate resilient water management practices for vulnerable communities in La Mojana","Ensuring climate resilient water supplies in the Comoros Islands","Ecosystem-based Adaptation in the Indian Ocean – EBA IO","Enhancing climate change adaptation in the North coast and Nile Delta Regions in Egypt","Responding to the increasing risk of drought: building gender-responsive resilience of the most vulnerable communities","Fiji Urban Water Supply and Wastewater Management Project","Large-scale Ecosystem-based Adaptation in The Gambia: developing a climate-resilient, natural resource-based economy","Scaling-up Multi-Hazard Early Warning System and the Use of Climate Information in Georgia","Climate Resilient Water Sector in Grenada (G-CREWS)-","Building livelihood resilience to climate change in the upper basins of Guatemala’s highlands","Productive Investment Initiative for Adaptation to Climate Change (CAMBio II)","Ground Water Recharge and Solar Micro Irrigation to Ensure Food Security and Enhance Resilience in Vulnerable Tribal Areas of Odisha","TWENDE: Towards Ending Drought Emergencies: Ecosystem Based Adaptation in Kenya’s Arid and Semi-Arid Rangelands","Climate services and diversification of climate sensitive livelihoods to empower food insecure and vulnerable communities in the Kyrgyz Republic.","Building resilience of urban populations with ecosystem-based solutions in Lao PDR","Scaling up the use of Modernized Climate information and Early Warning Systems in Malawi","Supporting vulnerable communities in Maldives to manage climate change-induced water shortages","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Mali Country Project","Pacific Resilience Project Phase II for RMI","Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands","Irrigation development and adaptation of irrigated agriculture to climate change in semi-arid Morocco","The Saïss Water Conservation Project","Climate-resilient food security for women and men smallholders in Mozambique through integrated risk management","Climate Resilient Agriculture in three of the Vulnerable Extreme northern crop growing regions (CRAVE)","Enpower to Adapt: Creating Climate-Change Resilient Livelihoods through  Community-Based Natural Resource Management (CBNRM) in Namibia","Improving rangeland and ecosystem management practices of smallholder farmers under conditions of climate change in Sesfontein, Fransfontein, and Warmquelle areas of the Republic of Namibia","Building resilience of communities living in landscapes threatened under climate change through an ecosystems-based adaptation approach","Scaling-up of Glacial Lake Outburst Flood (GLOF) risk reduction in Northern Pakistan","Transforming the Indus Basin with Climate Resilient Agriculture and Water Management","Multi-Hazard Impact-Based Forecasting and Early Warning System  for the Philippines","Integrated Flood Management to Enhance Climate Resilience of the Vaisigano River Catchment in Samoa","Increasing the resilience of ecosystems and communities through\r\n the restoration of the productive bases of salinized lands","Senegal Integrated Urban Flood Management Project","Building the climate resilience of food insecure smallholder farmers through integrated management of climate risk (R4)","Strengthening the resilience of smallholder farmers in the Dry Zone to climate variability and extreme events through an integrated approach to water management","Strengthening Climate Resilience of Subsistence Farmers and Agricultural Plantation Communities residing in the vulnerable river basins, watershed areas and downstream of the Knuckles Mountain Range Catchment of Sri Lanka","Building resilience in the face of climate change within traditional rain fed agricultural and pastoral systems in Sudan","Tajikistan: Scaling Up Hydropower Sector Climate Resilience","Building climate resilience of vulnerable and food insecure communities through capacity strengthening and livelihood diversification in mountainous regions of Tajikistan","Institutional Development of the State Agency for Hydrometeorology of Tajikistan","Simiyu Climate Resilient Project","Blue Action Fund (BAF): GCF Ecosystem Based Adaptation Programme in the Western Indian Ocean","Safeguarding rural communities and their physical and economic assets from climate  induced disasters in Timor-Leste","Tuvalu Coastal Adaptation Project (TCAP)","Building Resilient Communities, Wetland Ecosystems and Associated Catchments in Uganda","Acumen Resilient Agriculture Fund (ARAF)","Climate Adaptation and Mitigation Program For the Aral Sea Basin (CAMP4ASB)","Climate Information Services for Resilient Development Planning in Vanuatu (Van-CIS-RDP)","Strengthening the resilience of smallholder agriculture to climate change-induced water insecurity in the Central Highlands and South-Central Coast regions of Vietnam","Strengthening climate resilience of agricultural livelihoods in Agro-Ecological Regions I and II in Zambia","Building Climate Resilience of Vulnerable Agricultural Livelihoods in Southern Zimbabwe","Integrated Climate Risk Management for Food Security and Livelihoods in Zimbabwe focusing on Masvingo and Rushinga Districts"],[32706595,20000000,2320388,40000000,24980000,9681340,8000000,9000000,25347194,22500000,38496000,41919808,38000000,31385000,45002759,31040000,20546756,27053598,41274964.91,22035512,15500000,34357000,23152082,8576108,10000000,12295000,23640000,22750000,25000000,18631216,23391812.87,37391812.87,9250000,9500000,10000000,9300000,8904000,36960000,34990832,9999042.27,57718000,7610000,17543859.65,9983521,38084000,39775000,25645114,50000000,9273586,5000000,120116959.06,35087719.3,22356805,36010000,24140000,26000000,19000000,22953000,30205367,32000000,26574567,8858316]],"container":"<table class=\"display responsive\">\n  <thead>\n    <tr>\n      <th>countryname<\/th>\n      <th>Region<\/th>\n      <th>Project Name<\/th>\n      <th>Total GCF Funding<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"lfrtipB","buttons":["copy","csv","excel","pdf"],"columnDefs":[{"className":"dt-right","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'10px'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'10px'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'10px'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'10px'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="working-excel-data.html#cb8-1" aria-hidden="true" tabindex="-1"></a>gcf_columns<span class="ot">&lt;-</span>gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)] <span class="co"># selects only the columns we want to see in our table</span></span>
+<span id="cb8-2"><a href="working-excel-data.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(gcf_columns,<span class="at">filter =</span> <span class="st">&#39;top&#39;</span>,<span class="at">rownames =</span> F, <span class="at">editable =</span> F, <span class="at">style =</span> <span class="st">&#39;jqueryui&#39;</span>, <span class="at">class =</span> <span class="st">&#39;display responsive&#39;</span>, <span class="at">width =</span> <span class="st">&#39;100%&#39;</span>, <span class="at">caption =</span> <span class="st">&quot;GCF Project Funding&quot;</span>, <span class="at">extensions =</span> <span class="st">&#39;Buttons&#39;</span>, <span class="at">options=</span><span class="fu">list</span>(<span class="at">pageLength=</span> <span class="dv">5</span>, <span class="at">dom=</span><span class="st">&#39;lfrtipB&#39;</span>, <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">&#39;copy&#39;</span>, <span class="st">&#39;csv&#39;</span>, <span class="st">&#39;excel&#39;</span>, <span class="st">&#39;pdf&#39;</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="working-excel-data.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">formatStyle</span>(<span class="at">columns =</span> <span class="fu">colnames</span>(gcf_columns),<span class="at">fontSize=</span> <span class="st">&#39;10px&#39;</span>)</span></code></pre></div>
+<div id="htmlwidget-93743b63a027d3e2831b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-93743b63a027d3e2831b">{"x":{"style":"jqueryui","filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2320388\" data-max=\"120116959.06\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"caption":"<caption>GCF Project Funding<\/caption>","data":[["Antigua and Barbuda","Antigua and BarbudaDominicaGrenada","Bahrain","Bangladesh","Bangladesh","Bangladesh","Belize","Benin","Bhutan","Burkina Faso","Colombia","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Fiji","Gambia","Georgia","Grenada","Guatemala","GuatemalaEl SalvadorHondurasNicaraguaCosta RicaPanamaDominican Republic (the)","India","Kenya","Kyrgyzstan","Lao People's Democratic Republic","Malawi","Maldives","Mali","Marshall Islands","Marshall Islands","Morocco","Morocco","Mozambique","Namibia","Namibia","Namibia","Namibia","Pakistan","Pakistan","Philippines","Samoa","Senegal","Senegal","Senegal","Sri Lanka","Sri Lanka","Sudan","Tajikistan","Tajikistan","Tajikistan","Tanzania United Republic of","TanzaniaMadagascarSouth AfricaMozambique","Timor-Leste","Tuvalu","Uganda","UgandaGhanaNigeriaKenya","UzbekistanTajikistan","Vanuatu","Viet Nam","Zambia","Zimbabwe","Zimbabwe"],["Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Latin America and the Caribbean","Africa","Asia-Pacific","Africa","Latin America and the Caribbean","Africa","Africa","Africa","Africa","Asia-Pacific","Africa","Eastern Europe","Latin America and the Caribbean","Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa"],["Resilience to hurricanes in the building sector in Antigua and Barbuda","Integrated physical adaptation and community resilience through an enhanced direct access pilot in the public, private, and civil society sectors of three Eastern Caribbean small island developing states","Enhancing climate resilience of the water sector in Bahrain","Climate Resilient Infrastructure Mainstreaming (CRIM)","Enhancing adaptive capacities of coastal communities, especially women, to cope with climate change induced salinity","Extended Community Climate Change Project-Flood (ECCCP-Flood)","Resilient Rural Belize (Be-Resilient)","Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes","Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project","Scaling up climate resilient water management practices for vulnerable communities in La Mojana","Ensuring climate resilient water supplies in the Comoros Islands","Ecosystem-based Adaptation in the Indian Ocean – EBA IO","Enhancing climate change adaptation in the North coast and Nile Delta Regions in Egypt","Responding to the increasing risk of drought: building gender-responsive resilience of the most vulnerable communities","Fiji Urban Water Supply and Wastewater Management Project","Large-scale Ecosystem-based Adaptation in The Gambia: developing a climate-resilient, natural resource-based economy","Scaling-up Multi-Hazard Early Warning System and the Use of Climate Information in Georgia","Climate Resilient Water Sector in Grenada (G-CREWS)-","Building livelihood resilience to climate change in the upper basins of Guatemala’s highlands","Productive Investment Initiative for Adaptation to Climate Change (CAMBio II)","Ground Water Recharge and Solar Micro Irrigation to Ensure Food Security and Enhance Resilience in Vulnerable Tribal Areas of Odisha","TWENDE: Towards Ending Drought Emergencies: Ecosystem Based Adaptation in Kenya’s Arid and Semi-Arid Rangelands","Climate services and diversification of climate sensitive livelihoods to empower food insecure and vulnerable communities in the Kyrgyz Republic.","Building resilience of urban populations with ecosystem-based solutions in Lao PDR","Scaling up the use of Modernized Climate information and Early Warning Systems in Malawi","Supporting vulnerable communities in Maldives to manage climate change-induced water shortages","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Mali Country Project","Pacific Resilience Project Phase II for RMI","Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands","Irrigation development and adaptation of irrigated agriculture to climate change in semi-arid Morocco","The Saïss Water Conservation Project","Climate-resilient food security for women and men smallholders in Mozambique through integrated risk management","Climate Resilient Agriculture in three of the Vulnerable Extreme northern crop growing regions (CRAVE)","Enpower to Adapt: Creating Climate-Change Resilient Livelihoods through  Community-Based Natural Resource Management (CBNRM) in Namibia","Improving rangeland and ecosystem management practices of smallholder farmers under conditions of climate change in Sesfontein, Fransfontein, and Warmquelle areas of the Republic of Namibia","Building resilience of communities living in landscapes threatened under climate change through an ecosystems-based adaptation approach","Scaling-up of Glacial Lake Outburst Flood (GLOF) risk reduction in Northern Pakistan","Transforming the Indus Basin with Climate Resilient Agriculture and Water Management","Multi-Hazard Impact-Based Forecasting and Early Warning System  for the Philippines","Integrated Flood Management to Enhance Climate Resilience of the Vaisigano River Catchment in Samoa","Increasing the resilience of ecosystems and communities through\r\n the restoration of the productive bases of salinized lands","Senegal Integrated Urban Flood Management Project","Building the climate resilience of food insecure smallholder farmers through integrated management of climate risk (R4)","Strengthening the resilience of smallholder farmers in the Dry Zone to climate variability and extreme events through an integrated approach to water management","Strengthening Climate Resilience of Subsistence Farmers and Agricultural Plantation Communities residing in the vulnerable river basins, watershed areas and downstream of the Knuckles Mountain Range Catchment of Sri Lanka","Building resilience in the face of climate change within traditional rain fed agricultural and pastoral systems in Sudan","Tajikistan: Scaling Up Hydropower Sector Climate Resilience","Building climate resilience of vulnerable and food insecure communities through capacity strengthening and livelihood diversification in mountainous regions of Tajikistan","Institutional Development of the State Agency for Hydrometeorology of Tajikistan","Simiyu Climate Resilient Project","Blue Action Fund (BAF): GCF Ecosystem Based Adaptation Programme in the Western Indian Ocean","Safeguarding rural communities and their physical and economic assets from climate  induced disasters in Timor-Leste","Tuvalu Coastal Adaptation Project (TCAP)","Building Resilient Communities, Wetland Ecosystems and Associated Catchments in Uganda","Acumen Resilient Agriculture Fund (ARAF)","Climate Adaptation and Mitigation Program For the Aral Sea Basin (CAMP4ASB)","Climate Information Services for Resilient Development Planning in Vanuatu (Van-CIS-RDP)","Strengthening the resilience of smallholder agriculture to climate change-induced water insecurity in the Central Highlands and South-Central Coast regions of Vietnam","Strengthening climate resilience of agricultural livelihoods in Agro-Ecological Regions I and II in Zambia","Building Climate Resilience of Vulnerable Agricultural Livelihoods in Southern Zimbabwe","Integrated Climate Risk Management for Food Security and Livelihoods in Zimbabwe focusing on Masvingo and Rushinga Districts"],[32706595,20000000,2320388,40000000,24980000,9681340,8000000,9000000,25347194,22500000,38496000,41919808,38000000,31385000,45002759,31040000,20546756,27053598,41274964.91,22035512,15500000,34357000,23152082,8576108,10000000,12295000,23640000,22750000,25000000,18631216,23391812.87,37391812.87,9250000,9500000,10000000,9300000,8904000,36960000,34990832,9999042.27,57718000,7610000,17543859.65,9983521,38084000,39775000,25645114,50000000,9273586,5000000,120116959.06,35087719.3,22356805,36010000,24140000,26000000,19000000,22953000,30205367,32000000,26574567,8858316]],"container":"<table class=\"display responsive\">\n  <thead>\n    <tr>\n      <th>countryname<\/th>\n      <th>Region<\/th>\n      <th>Project Name<\/th>\n      <th>Total GCF Funding<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"lfrtipB","buttons":["copy","csv","excel","pdf"],"columnDefs":[{"className":"dt-right","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'10px'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'10px'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'10px'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'10px'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 </div>
-<div id="generate-other-graphics" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Generate Other Graphics</h2>
-<div id="a-bar-chart" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> A bar chart</h3>
+<div id="generate-other-graphics" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Generate Other Graphics</h2>
+<div id="a-bar-chart" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> A bar chart</h3>
 <ol style="list-style-type: decimal">
 <li>Open a new code chunk</li>
 <li>Install packages plotly &amp; dplyr</li>
@@ -3158,43 +3166,43 @@ Grants
 <li>To plot the no of projects per region, first group your data by region, then count the no of projects (use a unique identifier, in our case the project ID)</li>
 <li>Call the function ‘plot_ly’ and enter parameters as in below</li>
 </ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="working-excel-data.html#cb8-1" aria-hidden="true" tabindex="-1"></a>gcf <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Region)<span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="working-excel-data.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(gcf<span class="sc">$</span><span class="st">`</span><span class="at">Project Name</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="working-excel-data.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">&quot;Projects&quot;</span><span class="ot">=</span><span class="fu">sum</span>(n))<span class="sc">%&gt;%</span></span>
-<span id="cb8-4"><a href="working-excel-data.html#cb8-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">plot_ly</span>(<span class="at">type =</span> <span class="st">&quot;bar&quot;</span>, </span>
-<span id="cb8-5"><a href="working-excel-data.html#cb8-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">y =</span> <span class="sc">~</span>Projects, </span>
-<span id="cb8-6"><a href="working-excel-data.html#cb8-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">x =</span> <span class="sc">~</span>Region</span>
-<span id="cb8-7"><a href="working-excel-data.html#cb8-7" aria-hidden="true" tabindex="-1"></a>          </span>
-<span id="cb8-8"><a href="working-excel-data.html#cb8-8" aria-hidden="true" tabindex="-1"></a>               )</span></code></pre></div>
-<div id="htmlwidget-99a974947fb62c83af12" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-99a974947fb62c83af12">{"x":{"visdat":{"25f022c23562":["function () ","plotlyVisDat"]},"cur_data":"25f022c23562","attrs":{"25f022c23562":{"y":{},"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Region","type":"category","categoryorder":"array","categoryarray":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Projects"},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"y":[28,26,1,7],"x":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"],"type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="working-excel-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>gcf <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Region)<span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="working-excel-data.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(gcf<span class="sc">$</span><span class="st">`</span><span class="at">Project Name</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="working-excel-data.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">&quot;Projects&quot;</span><span class="ot">=</span><span class="fu">sum</span>(n))<span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="working-excel-data.html#cb9-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">plot_ly</span>(<span class="at">type =</span> <span class="st">&quot;bar&quot;</span>, </span>
+<span id="cb9-5"><a href="working-excel-data.html#cb9-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">y =</span> <span class="sc">~</span>Projects, </span>
+<span id="cb9-6"><a href="working-excel-data.html#cb9-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">x =</span> <span class="sc">~</span>Region</span>
+<span id="cb9-7"><a href="working-excel-data.html#cb9-7" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb9-8"><a href="working-excel-data.html#cb9-8" aria-hidden="true" tabindex="-1"></a>               )</span></code></pre></div>
+<div id="htmlwidget-a59e3fba6409188dd930" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a59e3fba6409188dd930">{"x":{"visdat":{"637c66e248a":["function () ","plotlyVisDat"]},"cur_data":"637c66e248a","attrs":{"637c66e248a":{"y":{},"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Region","type":"category","categoryorder":"array","categoryarray":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Projects"},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"y":[28,26,1,7],"x":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"],"type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="a-donut-chart" class="section level3" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> A donut chart</h3>
+<div id="a-donut-chart" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> A donut chart</h3>
 <p>To plot the same data as above but on a pie chart, the process the same, only the type of chart changes</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="working-excel-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="sc">%&gt;%</span><span class="fu">group_by</span>(Region)<span class="sc">%&gt;%</span><span class="fu">summarise</span>(<span class="st">&#39;Total&#39;</span><span class="ot">=</span><span class="fu">sum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>))<span class="sc">%&gt;%</span> <span class="fu">plot_ly</span>(<span class="at">labels=</span><span class="sc">~</span>Region, <span class="at">values=</span><span class="sc">~</span>Total)<span class="sc">%&gt;%</span> <span class="fu">add_pie</span>(<span class="at">hole=</span><span class="fl">0.5</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="working-excel-data.html#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title=</span><span class="st">&quot;GCF Funding by Region&quot;</span>)</span></code></pre></div>
-<div id="htmlwidget-620272a5b360eb4a2997" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-620272a5b360eb4a2997">{"x":{"visdat":{"25f02a8d2561":["function () ","plotlyVisDat"]},"cur_data":"25f02a8d2561","attrs":{"25f02a8d2561":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.5,"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"GCF Funding by Region","hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"],"values":[707849086.75,665898878.27,27053598,178013071.91],"type":"pie","hole":0.5,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="working-excel-data.html#cb10-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="sc">%&gt;%</span><span class="fu">group_by</span>(Region)<span class="sc">%&gt;%</span><span class="fu">summarise</span>(<span class="st">&#39;Total&#39;</span><span class="ot">=</span><span class="fu">sum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>))<span class="sc">%&gt;%</span> <span class="fu">plot_ly</span>(<span class="at">labels=</span><span class="sc">~</span>Region, <span class="at">values=</span><span class="sc">~</span>Total)<span class="sc">%&gt;%</span> <span class="fu">add_pie</span>(<span class="at">hole=</span><span class="fl">0.5</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="working-excel-data.html#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title=</span><span class="st">&quot;GCF Funding by Region&quot;</span>)</span></code></pre></div>
+<div id="htmlwidget-57ebdbe40335d71c0c85" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-57ebdbe40335d71c0c85">{"x":{"visdat":{"637ca10e89":["function () ","plotlyVisDat"]},"cur_data":"637ca10e89","attrs":{"637ca10e89":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.5,"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"GCF Funding by Region","hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"],"values":[707849086.75,665898878.27,27053598,178013071.91],"type":"pie","hole":0.5,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<div id="filter-and-plot-select-data" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Filter and plot select data</h2>
-<div id="pie-chart" class="section level3" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Pie chart</h3>
+<div id="filter-and-plot-select-data" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Filter and plot select data</h2>
+<div id="pie-chart" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Pie chart</h3>
 <p>To plot projects for a select region (s), use the filter function to select only values that match your selection, then group the data by country and create count by unique identifier as above. Repeat the plotting steps as above. you may use any type of charts as may be preferred.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="working-excel-data.html#cb10-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="sc">%&gt;%</span><span class="fu">filter</span>(Region<span class="sc">==</span><span class="st">&quot;Asia-Pacific&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="working-excel-data.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(countryname)<span class="sc">%&gt;%</span><span class="fu">count</span>(<span class="st">`</span><span class="at">Project Name</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb10-3"><a href="working-excel-data.html#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">plot_ly</span>(<span class="at">labels=</span><span class="sc">~</span>countryname, <span class="at">values=</span><span class="sc">~</span>n)<span class="sc">%&gt;%</span></span>
-<span id="cb10-4"><a href="working-excel-data.html#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_pie</span>()<span class="sc">%&gt;%</span></span>
-<span id="cb10-5"><a href="working-excel-data.html#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title=</span><span class="st">&quot; GCF Projects in Asia-Pacific&quot;</span>)</span></code></pre></div>
-<div id="htmlwidget-c4b0ac1b7812636bdea9" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c4b0ac1b7812636bdea9">{"x":{"visdat":{"25f04cee3c53":["function () ","plotlyVisDat"]},"cur_data":"25f04cee3c53","attrs":{"25f04cee3c53":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":" GCF Projects in Asia-Pacific","hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Bahrain","Bangladesh","Bangladesh","Bangladesh","Bhutan","Fiji","India","Kyrgyzstan","Lao People's Democratic Republic","Maldives","Marshall Islands","Marshall Islands","Pakistan","Pakistan","Philippines","Samoa","Sri Lanka","Sri Lanka","Tajikistan","Tajikistan","Tajikistan","Timor-Leste","Tuvalu","UzbekistanTajikistan","Vanuatu","Viet Nam"],"values":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="working-excel-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="sc">%&gt;%</span><span class="fu">filter</span>(Region<span class="sc">==</span><span class="st">&quot;Asia-Pacific&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="working-excel-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(countryname)<span class="sc">%&gt;%</span><span class="fu">count</span>(<span class="st">`</span><span class="at">Project Name</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="working-excel-data.html#cb11-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">plot_ly</span>(<span class="at">labels=</span><span class="sc">~</span>countryname, <span class="at">values=</span><span class="sc">~</span>n)<span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="working-excel-data.html#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_pie</span>()<span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="working-excel-data.html#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title=</span><span class="st">&quot; GCF Projects in Asia-Pacific&quot;</span>)</span></code></pre></div>
+<div id="htmlwidget-3e7e042c5a1eb03266b0" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3e7e042c5a1eb03266b0">{"x":{"visdat":{"637c234154d6":["function () ","plotlyVisDat"]},"cur_data":"637c234154d6","attrs":{"637c234154d6":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":" GCF Projects in Asia-Pacific","hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":["Bahrain","Bangladesh","Bangladesh","Bangladesh","Bhutan","Fiji","India","Kyrgyzstan","Lao People's Democratic Republic","Maldives","Marshall Islands","Marshall Islands","Pakistan","Pakistan","Philippines","Samoa","Sri Lanka","Sri Lanka","Tajikistan","Tajikistan","Tajikistan","Timor-Leste","Tuvalu","UzbekistanTajikistan","Vanuatu","Viet Nam"],"values":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="build-treemap" class="section level3" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Build Treemap</h3>
-<div id="static" class="section level4" number="5.3.2.1">
-<h4><span class="header-section-number">5.3.2.1</span> Static</h4>
+<div id="build-treemap" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Build Treemap</h3>
+<div id="static" class="section level4" number="5.4.2.1">
+<h4><span class="header-section-number">5.4.2.1</span> Static</h4>
 <ol style="list-style-type: decimal">
 <li>Open a new code chunk</li>
 <li>Install packages ggplot2 &amp; treemapify</li>
@@ -3204,30 +3212,30 @@ then summarise the data by country using the functions ‘group-by’ and ‘sum
 <li>Call the function ‘ggplot’ and enter parameters as shown in screenshot above</li>
 <li>Run code</li>
 </ol>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="working-excel-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gcf, <span class="fu">aes</span>(<span class="at">fill=</span>countryname, </span>
-<span id="cb11-2"><a href="working-excel-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">area=</span>gcf<span class="sc">$</span><span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>, </span>
-<span id="cb11-3"><a href="working-excel-data.html#cb11-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">label =</span> <span class="fu">paste</span>(countryname,<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>,<span class="fu">prettyNum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>, <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>))))<span class="sc">+</span></span>
-<span id="cb11-4"><a href="working-excel-data.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap</span>()<span class="sc">+</span></span>
-<span id="cb11-5"><a href="working-excel-data.html#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap_text</span>(<span class="at">colour=</span><span class="st">&#39;black&#39;</span>, <span class="at">place=</span><span class="st">&#39;centre&#39;</span>)<span class="sc">+</span></span>
-<span id="cb11-6"><a href="working-excel-data.html#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">&#39;GCF Funding in Latin America &amp; Caribbean&#39;</span>)<span class="sc">+</span></span>
-<span id="cb11-7"><a href="working-excel-data.html#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;none&#39;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="working-excel-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gcf, <span class="fu">aes</span>(<span class="at">fill=</span>countryname, </span>
+<span id="cb12-2"><a href="working-excel-data.html#cb12-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">area=</span>gcf<span class="sc">$</span><span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>, </span>
+<span id="cb12-3"><a href="working-excel-data.html#cb12-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">label =</span> <span class="fu">paste</span>(countryname,<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>,<span class="fu">prettyNum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>, <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>))))<span class="sc">+</span></span>
+<span id="cb12-4"><a href="working-excel-data.html#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap</span>()<span class="sc">+</span></span>
+<span id="cb12-5"><a href="working-excel-data.html#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap_text</span>(<span class="at">colour=</span><span class="st">&#39;black&#39;</span>, <span class="at">place=</span><span class="st">&#39;centre&#39;</span>)<span class="sc">+</span></span>
+<span id="cb12-6"><a href="working-excel-data.html#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">&#39;GCF Funding in Latin America &amp; Caribbean&#39;</span>)<span class="sc">+</span></span>
+<span id="cb12-7"><a href="working-excel-data.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;none&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
-<div id="interactive" class="section level4" number="5.3.2.2">
-<h4><span class="header-section-number">5.3.2.2</span> Interactive</h4>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="working-excel-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a>gcf_sum<span class="ot">&lt;-</span>gcf<span class="sc">%&gt;%</span><span class="fu">filter</span>(Region<span class="sc">==</span><span class="st">&quot;Africa&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="working-excel-data.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(countryname, Region)<span class="sc">%&gt;%</span><span class="fu">summarise</span>(<span class="st">&quot;Total&quot;</span><span class="ot">=</span><span class="fu">sum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>))</span>
-<span id="cb12-3"><a href="working-excel-data.html#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="working-excel-data.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(</span>
-<span id="cb12-5"><a href="working-excel-data.html#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> gcf_sum,</span>
-<span id="cb12-6"><a href="working-excel-data.html#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">type=</span> <span class="st">&quot;treemap&quot;</span>,</span>
-<span id="cb12-7"><a href="working-excel-data.html#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> <span class="sc">~</span>Total,</span>
-<span id="cb12-8"><a href="working-excel-data.html#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span> <span class="sc">~</span>countryname,</span>
-<span id="cb12-9"><a href="working-excel-data.html#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">parents=</span> <span class="sc">~</span>Region,</span>
-<span id="cb12-10"><a href="working-excel-data.html#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;GCF Funding&quot;</span>,</span>
-<span id="cb12-11"><a href="working-excel-data.html#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">textinfo=</span><span class="st">&quot;label+value+percent parent&quot;</span>)</span></code></pre></div>
-<div id="htmlwidget-a15e054856b5bcc15d2d" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a15e054856b5bcc15d2d">{"x":{"visdat":{"25f029fb607f":["function () ","plotlyVisDat"]},"cur_data":"25f029fb607f","attrs":{"25f029fb607f":{"values":{},"labels":{},"parents":{},"textinfo":"label+value+percent parent","name":"GCF Funding","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"treemap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"values":[9000000,22500000,41919808,38000000,31385000,45002759,20546756,23152082,12295000,22750000,60783625.74,9250000,37704000,35137380.65,25645114,120116959.06,35087719.3,24140000,26000000,32000000,35432883],"labels":["Benin","Burkina Faso","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Gambia","Kenya","Malawi","Mali","Morocco","Mozambique","Namibia","Senegal","Sudan","Tanzania United Republic of","TanzaniaMadagascarSouth AfricaMozambique","Uganda","UgandaGhanaNigeriaKenya","Zambia","Zimbabwe"],"parents":["Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa"],"textinfo":"label+value+percent parent","name":"GCF Funding","type":"treemap","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="interactive" class="section level4" number="5.4.2.2">
+<h4><span class="header-section-number">5.4.2.2</span> Interactive</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="working-excel-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a>gcf_sum<span class="ot">&lt;-</span>gcf<span class="sc">%&gt;%</span><span class="fu">filter</span>(Region<span class="sc">==</span><span class="st">&quot;Africa&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="working-excel-data.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(countryname, Region)<span class="sc">%&gt;%</span><span class="fu">summarise</span>(<span class="st">&quot;Total&quot;</span><span class="ot">=</span><span class="fu">sum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>))</span>
+<span id="cb13-3"><a href="working-excel-data.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="working-excel-data.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(</span>
+<span id="cb13-5"><a href="working-excel-data.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> gcf_sum,</span>
+<span id="cb13-6"><a href="working-excel-data.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">type=</span> <span class="st">&quot;treemap&quot;</span>,</span>
+<span id="cb13-7"><a href="working-excel-data.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> <span class="sc">~</span>Total,</span>
+<span id="cb13-8"><a href="working-excel-data.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span> <span class="sc">~</span>countryname,</span>
+<span id="cb13-9"><a href="working-excel-data.html#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">parents=</span> <span class="sc">~</span>Region,</span>
+<span id="cb13-10"><a href="working-excel-data.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;GCF Funding&quot;</span>,</span>
+<span id="cb13-11"><a href="working-excel-data.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">textinfo=</span><span class="st">&quot;label+value+percent parent&quot;</span>)</span></code></pre></div>
+<div id="htmlwidget-795e00d18eff29aedddf" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-795e00d18eff29aedddf">{"x":{"visdat":{"637c25db1108":["function () ","plotlyVisDat"]},"cur_data":"637c25db1108","attrs":{"637c25db1108":{"values":{},"labels":{},"parents":{},"textinfo":"label+value+percent parent","name":"GCF Funding","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"treemap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"values":[9000000,22500000,41919808,38000000,31385000,45002759,20546756,23152082,12295000,22750000,60783625.74,9250000,37704000,35137380.65,25645114,120116959.06,35087719.3,24140000,26000000,32000000,35432883],"labels":["Benin","Burkina Faso","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Gambia","Kenya","Malawi","Mali","Morocco","Mozambique","Namibia","Senegal","Sudan","Tanzania United Republic of","TanzaniaMadagascarSouth AfricaMozambique","Uganda","UgandaGhanaNigeriaKenya","Zambia","Zimbabwe"],"parents":["Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa"],"textinfo":"label+value+percent parent","name":"GCF Funding","type":"treemap","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 </div>
 </div>

@@ -134,21 +134,25 @@ temp_monthly$Month<-factor(temp_monthly$Month, levels = c('07','08','09','10','1
 # combine the pr and temp data frames 
 pr_tmp<-cbind(pr_monthly,temp_monthly) 
 pr_tmp<-pr_tmp[,-3] # remove duplicate column
+
+pr_tmp$Month<-month.abb
+pr_tmp$Month<-factor(pr_tmp$Month, levels = c("Jul", "Aug", "Sep" ,"Oct" ,"Nov", "Dec", "Jan" ,"Feb", "Mar", "Apr" ,"May" ,"Jun"))
  
 # define properties for secondary axis (only when plotting 2 variables in the same plot area)
 ty<-list(overlaying = "y",
   side = "right",
   title = "Temperature (°C)",
   autotick = FALSE,
-      dtick = 10,
+      dtick = 8,
  range=c(15,30)
   )
 
 # plot 
 plotly::plot_ly(type= 'bar', data= pr_tmp, x= ~Month, y= ~pr, name = 'Precipitation')%>%
-  plotly::add_lines(x= ~Month, y= ~tmean, mode = 'lines+markers',name= 'Temperature', yaxis='y2')%>%
-  #plotly::add_markers(x= ~Month, y= ~tmean, pch=1,color='#D21919', yaxis='y2', name='')%>%
-    plotly::layout(legend=list(orientation='h', y=-0.1,x=0.7), yaxis=list(title='Precipitation (mm)',showticklables=F),width=700, height=450, title='Malawi \n (Mean 1981-2020)', yaxis2=ty)
+  plotly::add_lines(x= ~Month, y= ~tmean,name= 'Temperature', yaxis='y2')%>%
+  plotly::add_markers(x= ~Month, y= ~tmean, pch=1,color='#D21919', yaxis='y2', name='Temperature', showlegend=FALSE)%>%
+    plotly::layout(legend=list(orientation='h', y=-0.13,x=0.65), yaxis=list(title='Precipitation (mm)',showticklables=F),width=700, height=450, title='Malawi \n (Mean 1981-2020)', yaxis2=ty)%>%
+  plotly::subplot(titleX = TRUE, titleY = TRUE)
 ```
 
 ### Plot Annual data
@@ -171,7 +175,7 @@ temp_ann<-tmpdf%>%dplyr::filter(Year>=1981)%>%group_by(Year)%>%summarise('tmean'
 # combine the pr and temp data frames
 pr.tmp<-cbind(pr_ann,temp_ann) 
 pr.tmp<-pr.tmp[,-3] # remove duplicate column
- 
+
 # define properties for secondary axis
 ty<-list(overlaying = "y",
   side = "right",
@@ -185,14 +189,17 @@ ty<-list(overlaying = "y",
 plotly::plot_ly(type= 'bar', data= pr.tmp, x= ~Year, y= ~pr, name = 'Precipitation')%>%
   plotly::add_lines(x= ~Year, y= ~tmean, mode = 'lines+markers',name= 'Temperature', yaxis='y2')%>%
   #plotly::add_markers(x= ~Month, y= ~tmean, pch=1,color='#D21919', yaxis='y2', name='')%>%
-    plotly::layout(legend=list(orientation='h', y=-0.13,x=0.7), yaxis=list(title='Precipitation (mm)',showticklables=F),width=700, height=450, title='Malawi \n (Mean 1981-2020)', yaxis2=ty)
+    plotly::layout(legend=list(orientation='h', y=-0.13,x=0.7), yaxis=list(title='Precipitation (mm)',showticklables=F),width=700, height=450, title='Malawi \n (Mean 1981-2020)', yaxis2=ty, xaxis=list(tickangle=270))
 ```
 The two preceeding plots are twin-plots, meaning two graphics have been combined in a single plot area. To plot just one you may be choose one of the dataframes say temperature and plot it on its own. See below
 
+
 ```{r}
-plotly::plot_ly(temp_ann)%>%
+
+temp_ann%>%filter(Year>2000)%>% plotly::plot_ly()%>%
   plotly::add_lines(x= ~Year, y= ~tmean, color='red', showlegend=FALSE)%>%
-  plotly::add_markers(x= ~Year, y= ~tmean, color='red')%>%
-  plotly::layout(yaxis=list(title='Mean Temerature (°C)'))
+  plotly::add_markers(x= ~Year, y= ~tmean, color='red', showlegend=FALSE, name='Temperature')%>%
+  plotly::layout(yaxis=list(title='Mean Temerature (°C)'),xaxis=list(tickangle=270))
+
 ```
 

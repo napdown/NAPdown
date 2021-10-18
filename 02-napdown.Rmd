@@ -82,6 +82,18 @@ When the process is done, your book should open up in an html window as below;
 __Congratulations!!!__
 
 
+## Integrating code evaluations within your text/ chapters
+
+To integrate a code (+ its evaluation), open a code chunk at your desired section or paragraph and write your code as below. Please refer to the section on [Insert code chunks] if need be.
+
+For instance in the code below we use one of the in-built R datasets named `mtcars` to plot a bar chart of Car 'Model' against 'mpg' (miles per gallon).
+when this code is evaluated, the bar chart will be plotted within your document as specified. You may enter text before or after the plot. 
+
+```{r}
+plotly::plot_ly(mtcars,type = 'bar', y=row.names(mtcars), x=~mpg)
+```
+
+
 ### Some things to note
 1. To create additional chapters, create a new /empty .rmd file and save it under your bookdown directory. Use the same numbering structure as the default chapters (i.e. 01,02,03, etc).    
 We will learn about advanced numbering and re-ordering chapters later.   

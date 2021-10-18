@@ -4,12 +4,12 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>An introduction to markdown</title>
+  <title>Chapter 7 Further Reads | An introduction to markdown</title>
   <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="An introduction to markdown" />
+  <meta property="og:title" content="Chapter 7 Further Reads | An introduction to markdown" />
   <meta property="og:type" content="book" />
   
   
@@ -18,7 +18,7 @@ Additional chapters are provided further reading material and references.</p>" /
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="An introduction to markdown" />
+  <meta name="twitter:title" content="Chapter 7 Further Reads | An introduction to markdown" />
   
   <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
@@ -34,8 +34,8 @@ Additional chapters are provided further reading material and references.</p>" /
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="getting-started.html"/>
+<link rel="prev" href="working-climate-data.html"/>
+<link rel="next" href="references-1.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -300,109 +300,23 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">An introduction to markdown</h1>
-<p class="author"><em>A Team</em></p>
-<p class="date"><em>2021-10-18</em></p>
-</div>
-<div id="prerequisites" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
+<div id="further-reads" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Further Reads</h1>
+<p>Here we include a list of links to articles and other material that might be useful for this exercise.</p>
 <ol style="list-style-type: decimal">
-<li>You have installed R (<a href="https://cran.microsoft.com/" class="uri">https://cran.microsoft.com/</a>)</li>
-<li>You have installed RStudio (<a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a>)</li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/">R mardown basics</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">Bookdown basics</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/github.html">GitHub for bookdown</a></li>
 </ol>
-<p>The installation prompts for installing both r and rstudio are straight-forward.
-However, should you require a step-by-step guide, you may refer to this <a href="https://techvidvan.com/tutorials/install-r/">beginners guide</a></p>
-<div id="opening-a-markdown-file" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Opening a markdown file</h2>
-<ol style="list-style-type: decimal">
-<li>Launch your r/studio app.
-Your rstudio workspace should look more or less similar to this: <img src="tutorial_screenshots/rstudio_panels.png" alt="rstudio_window panels" /></li>
-</ol>
-<p>If your rstudio opens up with 4 windows instead of 3, skip next step.<br />
-2. From the main menu, go to File-&gt;&gt;New File-&gt;&gt;R Markdown.
-You should have a window like this: <img src="tutorial_screenshots/open_rmd_file.png" alt="opening a new .rmd file" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Fill in the details for your document title and author. Leave the rest as default.<br />
-</li>
-<li>Click Ok</li>
-</ol>
-<p>This opens up your 4th rstudio window with an rmarkdown script.<br />
-Now your app area should look more or less like this; <img src="tutorial_screenshots/rstudio_panels_4.png" alt="The four r windows" /><br />
-The arrangement may however be different. If so, do not worry, it’s just semantics.<br />
-<em>As you might have seen, you may open other scripts such as R, python, SQL etc in similar manner.</em></p>
-<div id="rstudio-windows-explained" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Rstudio windows explained:</h3>
-<ul>
-<li><p><strong>The Source</strong><br />
-This is your scripting area.<br />
-You may write, edit and run your code from here.</p></li>
-<li><p><strong>The Console</strong><br />
-All processing in r happens here. You may this is the r kitchen.
-When you run your code, this is where it is evaluated.<br />
-You may also use the console to write and execute your code. However, you can not save your code, nor can you edit it (you will have to rewrite it). Thus, it is always advisable to write your code in the script/source area.<br />
-</p></li>
-<li><p><strong>The Environment</strong><br />
-This panel holds your data objects and their metadata. As you create or add new objects into your project, they will appear in this window. You may view and remove objects.
-It also contains the ‘History’ tab from which you may view all your r processing history.<br />
-</p></li>
-<li><p><strong>The Files/Plots/Packages/Help Panel</strong><br />
-This panel provides a shortcut/alternative to different functions such as to access your project files, to view plots from your code evaluations, install packages and access the Help resource. You may add/remove items here but we will learn that much later. For now we leave it as is.</p></li>
-</ul>
-</div>
-</div>
-<div id="installing-packages" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Installing packages</h2>
-<p>Options:</p>
-<p><strong>1. From the console;</strong><br />
-After the greater than (&gt;) sign, write command <code>install.packages("package name")</code> and hit enter on your keyboard.<br />
-See example;<br />
-<img src="tutorial_screenshots/install_rmkdn_console.png" alt="install packages from console" /><br />
-<strong>2. In script window </strong>
-Inside your script write command <code>install.packages("package name")</code><br />
-Click on ‘Run’ (Run button is on the top right of your source panel).<br />
-Alternatively, if your write your command in a code chunk, you may hit the ‘Play’ button on far right of your code chunk. See example;</p>
-<div class="figure">
-<img src="tutorial_screenshots/install_rmkdn_scrpt.png" alt="" />
-<p class="caption">install packages from script wnindow</p>
-</div>
-<p>We see more about code chunks in the next chapter.</p>
-<p><strong>3. From the menu bar </strong>
-From the menu bar, go the the tab ‘Tools’ and select ‘Install Packages.’</p>
-<p>You should see a window like this one <img src="tutorial_screenshots/install_rmkdn_toolstab.png" alt="install packages from menu bar" /></p>
-<p>In the ‘Install from’ field, select ‘Repository (CRAN),’ then enter the name(s) of packages to be installed.<br />
-Leave everything else as default. Click Install.</p>
-<p><strong>4. From Files/Plots/Packages/Help Panel</strong><br />
-Click on the ‘Packages’ tab. There are 2 tabs under this, Install &amp; Update.<br />
-Click on Install.</p>
-<div class="figure">
-<img src="tutorial_screenshots/install_packages_short.png" alt="" />
-<p class="caption">install packages</p>
-</div>
-<p>If the ‘Install from’ is not set to ‘Repository (CRAN),’ set it so, and enter name(s) of packages to be installed.<br />
-Leave everything else as default. Click Install.</p>
-<p><strong>Note:</strong> <em>Packages can only be installed once. To mean, if you close your r/rstudio app and come back to it the next day/session, you do not need to install the packages you already installed in your previous session. You will only need to load their libraries (see next section)</em></p>
-<div id="removingun-installing-packages" class="section level3" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Removing/un-installing packages</h3>
-<p>To remove a package use command <code>remove.packages("package name")</code></p>
-</div>
-</div>
-<div id="loading-libraries" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Loading Libraries</h2>
-<p>To be able to make use of the packages installed, you need to call their libraries. Most libraries take the name of the package. For instance, for the package <code>rmakdown</code>, the respective library is <code>rmarkdown</code>.To call the rmarkdown library, use command <code>library(rmarkdown)</code>.
-So in general to load/call libraries use command <code>library(name of library)</code>.<br />
-You may load libraries in the console or in your script.</p>
-<p><strong>Note:</strong> <em>Unlike packages,library functions expire when you close a project or end a session. Therefore, each time you open an r session, you have to load/call relevant libraries</em></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="getting-started.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-climate-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -433,7 +347,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/napdown/NAPdown/edit/master/index.Rmd",
+"link": "https://github.com/napdown/NAPdown/edit/master/06-FurtherReads.Rmd",
 "text": "Edit"
 },
 "history": {

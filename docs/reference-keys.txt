@@ -1,5 +1,5 @@
 tab:kable
-tab:unnamed-chunk-7
+tab:unnamed-chunk-8
 prerequisites
 opening-a-markdown-file
 rstudio-windows-explained
@@ -31,6 +31,7 @@ table-figure-references
 pandoc-knitr
 napdown
 setting-up-an-enap
+integrating-code-evaluations-within-your-text-chapters
 some-things-to-note
 some-troubleshooting
 github-github-pages
@@ -40,6 +41,7 @@ via-direct-file-upload
 via-git-bash
 publishing-to-github-pages
 working-excel-data
+prep
 install-packages
 call-libraries-for-the-installed-packages
 import-excel-table-from-local-drive
@@ -63,3 +65,4 @@ loadimport-your-data-into-r
 convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values
 plot-monthly-data
 plot-annual-data
+further-reads

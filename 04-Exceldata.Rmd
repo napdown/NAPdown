@@ -2,8 +2,9 @@
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+options(scipen = 1, digits = 2)
 ```
-
+## Prep
 Steps;  
 
 ### Install packages
