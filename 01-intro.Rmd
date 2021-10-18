@@ -15,7 +15,11 @@ A markdown file has three main sections;
 
    and end with ```
     
+To start using RMarkdown, install the following base packages using any of the methods described in the [Installing packages] section
 
+> ('base64enc', 'digest', 'evaluate', 'glue', 'highr', 'htmltools', 'jquerylib', 'jsonlite', 'knitr', 'magrittr', 'markdown', 'mime',
+> 'rmarkdown', 'stringi', 'stringr', 'tinytex', 'xfun', 'yaml')
+ 
 ## Editing in markdown
 ### Headers 
 To create headers for your reports/document e.g. chapters, sub-chapters and so on; use the hash sign '#' in front of the title. Sequentially increase the number of "#' signs to denote subsequent header levels.  

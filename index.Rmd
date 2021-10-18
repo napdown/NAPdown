@@ -102,9 +102,6 @@ __Note:__ _Unlike packages,library functions expire when you close a project or 
 
 
 
-
-
-
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
