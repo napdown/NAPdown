@@ -1,9 +1,7 @@
+
 # Working Excel data
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
-options(scipen = 1, digits = 2)
-```
+
 ## Prep
 Steps;  
 
@@ -53,15 +51,14 @@ gcf<-read_excel("C:\\Users\\Esther Makabe\\NAP_Progress_Aggregate\\Open_NAPs_Dat
 ### Static table
 
 1.	Open a new code chunk
-2.	Install packages DT and magrittr
-3.	Load their libraries  
-4.	Call 'datatable' function by typing in 'datatable ()' # autofill is your friend
+4.	Call the 'datatable' function by typing in 'datatable ()' # autofill is your friend
+6.  Fill in details as below (*since* we are only plotting the first 10 rows of our table)
 5.	Hover over the function to see parameters required or go to the 'Help' tab and search 'datatable' to see further details on its application.
-6. Fill in details as below
 
-```{r}
 
-kable(gcf,caption = 'GCF Funding')%>%
+```{r, fig.width=0.3, fig.height=0.7}
+
+kable(head(gcf[,c(2,3,5,8)],10),caption = 'GCF Funding')%>%
 kable_styling(bootstrap_options = c('condensed', 'bordered'),fixed_thead = TRUE, font_size=10, repeat_header_continued = TRUE)
 
 ```
@@ -76,7 +73,7 @@ kable_styling(bootstrap_options = c('condensed', 'bordered'),fixed_thead = TRUE,
 5.	Hover over the function to see parameters required or go to the 'Help' tab and search 'datatable' to see further details on its application.
 6. Fill in details as below
 
-```{r, warning=FALSE,message=FALSE}
+```{r, warning=FALSE,message=FALSE, fig.dim=c(1,0.5)}
 
 gcf_columns<-gcf[,c(2,3,5,8)] # selects only the columns we want to see in our table
 datatable(gcf_columns,filter = 'top',rownames = F, editable = F, style = 'jqueryui', class = 'display responsive', width = '100%', caption = "GCF Project Funding", extensions = 'Buttons', options=list(pageLength= 5, dom='lfrtipB', buttons = c('copy', 'csv', 'excel', 'pdf')))%>%
@@ -94,25 +91,24 @@ datatable(gcf_columns,filter = 'top',rownames = F, editable = F, style = 'jquery
 4.	To plot the no of projects per region, first group your data by region, then count the no of projects (use a unique identifier, in our case the project ID)
 5.	Call the function 'plot_ly' and enter parameters as in below
 
-```{r}
+```{r fig.width=15, fig.height=10}
 
-gcf %>% group_by(Region)%>%
-  count(gcf$`Project Name`)%>%
-  summarise("Projects"=sum(n))%>%
-   plot_ly(type = "bar", 
-          y = ~Projects, 
-          x = ~Region
+gcf %>% group_by(Region)%>% count(gcf$`Project Name`)%>%
+  summarise("Projects"=sum(n))%>%   plot_ly(type = "bar", 
+          y = ~Projects,  x = ~Region
           
-               )
+               ) %>%
+plotly::layout(yaxis=list(tickfont=list(size=24)),
+                 xaxis=list(tickfont=list(size=24)))
 
 ```
  
 ### A donut chart 
 To plot the same data as above but on a pie chart, the process the same, only the type of chart changes
 
-```{r}
+```{r, fig.width=15, fig.height=15}
 
-gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>% plot_ly(labels=~Region, values=~Total)%>% add_pie(hole=0.5)%>%
+gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>%plot_ly(labels=~Region, values=~Total)%>% add_pie(hole=0.5)%>%
     layout(title="GCF Funding by Region")
 
 ```
@@ -122,15 +118,18 @@ gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>% plot_ly(
 
 To plot projects for a select region (s), use the filter function to select only values that match your selection, then group the data by country and create count by unique identifier as above. Repeat the plotting steps as above. you may use any type of charts as may be preferred.
 
-```{r}
+```{r,fig.width=15, fig.height=15}
 
 gcf%>%filter(Region=="Asia-Pacific")%>%
   group_by(countryname)%>%count(`Project Name`)%>%
         plot_ly(labels=~countryname, values=~n)%>%
     add_pie()%>%
-    layout(title=" GCF Projects in Asia-Pacific")
+    layout(title=" GCF Projects in Asia-Pacific",
+           legend=list(orientation='h'))
 
 ```
+
+
 ### Build Treemap
 
 #### Static
@@ -147,7 +146,8 @@ then summarise the data by country using the functions 'group-by' and 'sum'
 
 ggplot(gcf, aes(fill=countryname, 
        area=gcf$`Total GCF Funding`, 
-       label = paste(countryname,"\n",prettyNum(`Total GCF Funding`, big.mark = ","))))+
+       label = paste(countryname,"\n",prettyNum(`Total GCF Funding`,
+                                                big.mark = ","))))+
   geom_treemap()+
   geom_treemap_text(colour='black', place='centre')+
   labs(subtitle = 'GCF Funding in Latin America & Caribbean')+
@@ -158,7 +158,7 @@ ggplot(gcf, aes(fill=countryname,
 
 #### Interactive
 
-```{r}
+```{r,fig.dim=c(22,15)}
 
 gcf_sum<-gcf%>%filter(Region=="Africa")%>%
   group_by(countryname, Region)%>%summarise("Total"=sum(`Total GCF Funding`))

@@ -4,30 +4,39 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Getting started | An introduction to markdown</title>
-  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <title>Chapter 2 Getting started | An introduction to NAPdown</title>
+  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Getting started | An introduction to markdown" />
+  <meta property="og:title" content="Chapter 2 Getting started | An introduction to NAPdown" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://napdown.github.io/NAPdown/" />
   
-  
-  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="napdown/NAPdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Getting started | An introduction to markdown" />
+  <meta name="twitter:title" content="Chapter 2 Getting started | An introduction to NAPdown" />
   
-  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   
 
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-18" />
+<meta name="date" content="2021-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,15 +65,15 @@ Additional chapters are provided further reading material and references.</p>" /
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
@@ -292,7 +301,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An introduction to markdown</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An introduction to NAPdown</a>
           </h1>
         </div>
 
@@ -330,24 +339,31 @@ They start with ```{r}</p>
 <h3><span class="header-section-number">2.2.1</span> Headers</h3>
 <p>To create headers for your reports/document e.g. chapters, sub-chapters and so on; use the hash sign ‘#’ in front of the title. Sequentially increase the number of “#’ signs to denote subsequent header levels.<br />
 Insert blank line before each header (except in the beginning of document).</p>
-<p># Header level 1<br />
-## Header level 2<br />
-### Header level 3<br />
-#### Header level 4</p>
+<div class="figure">
+<img src="tutorial_screenshots/headers.png" alt="" />
+<p class="caption">headers</p>
+</div>
 <p><em>Note: For the purpose of this example, I have added a space before each line so that r doesn’t create the headers. Remove the space to create the headers</em></p>
 </div>
 <div id="bold-and-italic-text" class="section level3" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Bold and italic text</h3>
 <p>To create emphasis in your markdown texts, use an asterisk before and after text <em>to italicize</em> or double asterisk <strong>to make your text bold</strong>.<br />
 Alternatively, you may use single underscore <em>for italics</em> or double underscore <strong>for bold</strong>.</p>
+<div class="figure">
+<img src="tutorial_screenshots/italics_bold.png" alt="" />
+<p class="caption">text emphasis</p>
+</div>
 </div>
 <div id="create-lists" class="section level3" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Create Lists</h3>
 <div id="ordered-list" class="section level4" number="2.2.3.1">
 <h4><span class="header-section-number">2.2.3.1</span> Ordered list</h4>
 <p>Use numbers to order your list items.
-and a plus sign ‘+’ to create sub-items on your list.
-<img src="tutorial_screenshots/ordered_list.png" alt="ordered list" /></p>
+and a plus sign ‘+’ to create sub-items on your list.</p>
+<div class="figure">
+<img src="tutorial_screenshots/ordered_list.png" alt="" />
+<p class="caption">ordered list</p>
+</div>
 </div>
 <div id="unordered-list" class="section level4" number="2.2.3.2">
 <h4><span class="header-section-number">2.2.3.2</span> Unordered list</h4>
@@ -368,24 +384,18 @@ to insert a line break</p>
 <div id="insert-links" class="section level3" number="2.2.5">
 <h3><span class="header-section-number">2.2.5</span> Insert links</h3>
 <p>You may insert a link using the plain http address such as <a href="https://rmarkdown.rstudio.com/" class="uri">https://rmarkdown.rstudio.com/</a> or insert it as a linked phrase using square brackets and parenthesis such as in screenshot</p>
-<div class="figure">
-<img src="tutorial_screenshots/link_phrase.png" alt="" />
-<p class="caption">linked phrase</p>
-</div>
-<p>to produce this:</p>
-<p><a href="https://rmarkdown.rstudio.com/">our link phrase goes here</a>.</p>
+<p><img src="tutorial_screenshots/link_phrase.png" alt="linked phrase" /><br />
+to produce this:<br />
+<a href="https://rmarkdown.rstudio.com/">our link phrase goes here</a>.</p>
 </div>
 <div id="insert-figuresimages" class="section level3" number="2.2.6">
 <h3><span class="header-section-number">2.2.6</span> Insert figures/images</h3>
 <p>To insert images to our document, we use the same syntax as links, but start with an exclamation mark’!’ before syntax.
 For an image from a url use; <code>![text to accompany your image e.g a caption](your https link)</code><br />
 or for an image file in your local directory use, <code>![your image text](path to local image file)</code>.<br />
-For instance, I downloaded the UN Climate logo and saved it as a .jpg in my working directory as exact name <code>unfccc_logo.jpg</code>
-The following syntax will insert the logo into my document:</p>
-<div class="figure">
-<img src="tutorial_screenshots/insert_image.png" alt="" />
-<p class="caption">insert image</p>
-</div>
+For instance, I downloaded the UN Climate logo and saved it as a .jpg in my working directory as exact name <code>unfccc_logo.jpg</code><br />
+The following syntax will insert the logo into my document:<br />
+<img src="tutorial_screenshots/insert_image.png" alt="insert image" /></p>
 <div class="figure">
 <img src="unfccc_logo.jpg" alt="" />
 <p class="caption">UN Climate logo</p>
@@ -408,8 +418,11 @@ You will agree with me sooner than later :)</p>
 <div id="insert-code-chunks" class="section level3" number="2.2.8">
 <h3><span class="header-section-number">2.2.8</span> Insert code chunks</h3>
 <p>To write your code use open code chunk with three backticks
-and the curly brackets {insert your code language}, hit enter on your keyboard, insert your code and hit enter, close the code chunk with another three backticks.<br />
-<img src="tutorial_screenshots/code_chunk.png" alt="insert code chunk" /></p>
+and the curly brackets {insert your code language}, hit enter on your keyboard, insert your code and hit enter, close the code chunk with another three backticks.</p>
+<div class="figure">
+<img src="tutorial_screenshots/code_chunk.png" alt="" />
+<p class="caption">insert code chunk</p>
+</div>
 <p>Alternatively, you may do it from top right corner of your script/source window as shown below.
 Click on the green +c icon and select R from the drop down list.</p>
 <p><img src="tutorial_screenshots/code_chunk2.png" alt="code chunk by click" />
@@ -472,41 +485,73 @@ Table: Alternative caption option</caption>
 <p>You may also create simple tables using a <code>knitr</code> function called <code>kable</code>.<br />
 The code below tells r that we want to create a data set with 3 columns, X, Y &amp; Z, assigning them the values enclosed in the letter c. The letter c used together with brackets indicates a list of elements. Thus, in the example below, we tell r that our column X, will contain a list of 4 elements i.e 20, 30, 10 &amp; 50.<br />
 Then we tell r to create the data set by combining all the columns X, Y &amp; Z into a data frame.
-Finally, we call the function <code>kable</code> and enter the data we created. This function converts or data frame into a table format.<br />
+Finally, we call the function <code>kable</code> and enter the data we created. This function converts our data frame into a table format.<br />
 Optionally, you may add a caption to the table and specify cell alignment.</p>
 <div class="figure">
 <img src="tutorial_screenshots/kable_table.png" alt="" />
 <p class="caption">kable table</p>
 </div>
-<table>
-<caption><span id="tab:kable">Table 2.1: </span>My first simple table with kable</caption>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:kable">Table 2.1: </span>My first simple table with kable
+</caption>
 <thead>
-<tr class="header">
-<th align="center">X</th>
-<th align="center">Y</th>
-<th align="center">Z</th>
+<tr>
+<th style="text-align:center;">
+X
+</th>
+<th style="text-align:center;">
+Y
+</th>
+<th style="text-align:center;">
+Z
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="center">20</td>
-<td align="center">1.4</td>
-<td align="center">yes</td>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+1.4
+</td>
+<td style="text-align:center;">
+yes
+</td>
 </tr>
-<tr class="even">
-<td align="center">30</td>
-<td align="center">4.3</td>
-<td align="center">no</td>
+<tr>
+<td style="text-align:center;">
+30
+</td>
+<td style="text-align:center;">
+4.3
+</td>
+<td style="text-align:center;">
+no
+</td>
 </tr>
-<tr class="odd">
-<td align="center">10</td>
-<td align="center">5.9</td>
-<td align="center">true</td>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+5.9
+</td>
+<td style="text-align:center;">
+true
+</td>
 </tr>
-<tr class="even">
-<td align="center">50</td>
-<td align="center">2.7</td>
-<td align="center">false</td>
+<tr>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:center;">
+2.7
+</td>
+<td style="text-align:center;">
+false
+</td>
 </tr>
 </tbody>
 </table>
@@ -551,8 +596,11 @@ The references will appear at the end of the chapter where they are referenced, 
 </div>
 <div id="chapter-references" class="section level4" number="2.2.12.2">
 <h4><span class="header-section-number">2.2.12.2</span> Chapter References</h4>
-<p>To reference chapter, type in the chapter title inside square brackets. For instance, this command references our second chapter named NAPdown.<br />
-<img src="tutorial_screenshots/ref_chapters_sections.png" alt="chapter ref" /></p>
+<p>To reference chapter, type in the chapter title inside square brackets. For instance, this command references our second chapter named NAPdown.</p>
+<div class="figure">
+<img src="tutorial_screenshots/ref_chapters_sections.png" alt="" />
+<p class="caption">chapter ref</p>
+</div>
 <p>The same applies to section headers. Just type [section header name].</p>
 </div>
 <div id="table-figure-references" class="section level4" number="2.2.12.3">

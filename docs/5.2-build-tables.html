@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="5.2 Build Tables | An introduction to NAPdown" />
+<meta property="og:type" content="book" />
+<meta property="og:url" content="https://napdown.github.io/NAPdown/" />
+
+<meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>" />
+<meta name="github-repo" content="napdown/NAPdown" />
+
+<meta name="author" content="A Team" />
+
+<meta name="date" content="2021-10-19" />
+
+
+<meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
+Additional chapters are provided further reading material and references.</p>">
+
+<title>5.2 Build Tables | An introduction to NAPdown</title>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
+<link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-core-jqueryui-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="libs/dt-core-jqueryui-1.10.20/js/dataTables.jqueryui.min.js"></script>
+<script src="libs/jszip-1.10.20/jszip.min.js"></script>
+<script src="libs/pdfmake-1.10.20/pdfmake.js"></script>
+<script src="libs/pdfmake-1.10.20/vfs_fonts.js"></script>
+<link href="libs/dt-ext-buttons-jqueryui-1.10.20/css/buttons.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/dataTables.buttons.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.flash.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.html5.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.colVis.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.print.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.jqueryui.min.js"></script>
+<link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
+<script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="libs/selectize-0.12.0/selectize.min.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+/* show arrow before summary tag as in bootstrap
+TODO: remove if boostrap in updated in html_document (rmarkdown#1485) */
+details > summary {
+  display: list-item;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="index.html#prerequisites"><span class="toc-section-number">1</span> Prerequisites</a>
+<ul>
+<li><a href="1.1-opening-a-markdown-file.html#opening-a-markdown-file"><span class="toc-section-number">1.1</span> Opening a markdown file</a>
+<ul>
+<li><a href="1.1-opening-a-markdown-file.html#rstudio-windows-explained"><span class="toc-section-number">1.1.1</span> Rstudio windows explained:</a></li>
+</ul></li>
+<li><a href="1.2-installing-packages.html#installing-packages"><span class="toc-section-number">1.2</span> Installing packages</a>
+<ul>
+<li><a href="1.2-installing-packages.html#removingun-installing-packages"><span class="toc-section-number">1.2.1</span> Removing/un-installing packages</a></li>
+</ul></li>
+<li><a href="1.3-loading-libraries.html#loading-libraries"><span class="toc-section-number">1.3</span> Loading Libraries</a></li>
+</ul></li>
+<li><a href="2-getting-started.html#getting-started"><span class="toc-section-number">2</span> Getting started</a>
+<ul>
+<li><a href="2.1-about-rmarkdown.html#about-rmarkdown"><span class="toc-section-number">2.1</span> About RMarkdown</a></li>
+<li><a href="2.2-editing-in-markdown.html#editing-in-markdown"><span class="toc-section-number">2.2</span> Editing in markdown</a>
+<ul>
+<li><a href="2.2-editing-in-markdown.html#headers"><span class="toc-section-number">2.2.1</span> Headers</a></li>
+<li><a href="2.2-editing-in-markdown.html#bold-and-italic-text"><span class="toc-section-number">2.2.2</span> Bold and italic text</a></li>
+<li><a href="2.2-editing-in-markdown.html#create-lists"><span class="toc-section-number">2.2.3</span> Create Lists</a></li>
+<li><a href="2.2-editing-in-markdown.html#manual-line-breaks"><span class="toc-section-number">2.2.4</span> Manual line breaks</a></li>
+<li><a href="2.2-editing-in-markdown.html#insert-links"><span class="toc-section-number">2.2.5</span> Insert links</a></li>
+<li><a href="2.2-editing-in-markdown.html#insert-figuresimages"><span class="toc-section-number">2.2.6</span> Insert figures/images</a></li>
+<li><a href="2.2-editing-in-markdown.html#insert-block-quotes"><span class="toc-section-number">2.2.7</span> Insert block quotes</a></li>
+<li><a href="2.2-editing-in-markdown.html#insert-code-chunks"><span class="toc-section-number">2.2.8</span> Insert code chunks</a></li>
+<li><a href="2.2-editing-in-markdown.html#create-tables"><span class="toc-section-number">2.2.9</span> Create tables</a></li>
+<li><a href="2.2-editing-in-markdown.html#page-breaks"><span class="toc-section-number">2.2.10</span> Page breaks</a></li>
+<li><a href="2.2-editing-in-markdown.html#process-a-markdown-document-to-desired-output"><span class="toc-section-number">2.2.11</span> Process a markdown document to desired output</a></li>
+<li><a href="2.2-editing-in-markdown.html#references"><span class="toc-section-number">2.2.12</span> References</a></li>
+<li><a href="2.2-editing-in-markdown.html#pandoc-knitr"><span class="toc-section-number">2.2.13</span> Pandoc &amp; Knitr</a></li>
+</ul></li>
+</ul></li>
+<li><a href="3-napdown.html#napdown"><span class="toc-section-number">3</span> NAPdown</a>
+<ul>
+<li><a href="3.1-setting-up-an-enap.html#setting-up-an-enap"><span class="toc-section-number">3.1</span> Setting up an eNAP</a></li>
+<li><a href="3.2-integrating-code-evaluations-within-your-text-chapters.html#integrating-code-evaluations-within-your-text-chapters"><span class="toc-section-number">3.2</span> Integrating code evaluations within your text/ chapters</a>
+<ul>
+<li><a href="3.2-integrating-code-evaluations-within-your-text-chapters.html#some-things-to-note"><span class="toc-section-number">3.2.1</span> Some things to note</a></li>
+</ul></li>
+<li><a href="3.3-some-troubleshooting.html#some-troubleshooting"><span class="toc-section-number">3.3</span> Some Troubleshooting</a></li>
+</ul></li>
+<li><a href="4-github-github-pages.html#github-github-pages"><span class="toc-section-number">4</span> GitHub &amp; GitHub Pages</a>
+<ul>
+<li><a href="4.1-sharing-repositories-on-github.html#sharing-repositories-on-github"><span class="toc-section-number">4.1</span> Sharing Repositories on GitHub</a>
+<ul>
+<li><a href="4.1-sharing-repositories-on-github.html#via-github-desktop"><span class="toc-section-number">4.1.1</span> Via GitHub Desktop</a></li>
+<li><a href="4.1-sharing-repositories-on-github.html#via-direct-file-upload"><span class="toc-section-number">4.1.2</span> Via direct file upload</a></li>
+<li><a href="4.1-sharing-repositories-on-github.html#via-git-bash"><span class="toc-section-number">4.1.3</span> Via Git Bash</a></li>
+</ul></li>
+<li><a href="4.2-publishing-to-github-pages.html#publishing-to-github-pages"><span class="toc-section-number">4.2</span> Publishing to GitHub pages</a></li>
+</ul></li>
+<li><a href="5-working-excel-data.html#working-excel-data"><span class="toc-section-number">5</span> Working Excel data</a>
+<ul>
+<li><a href="5.1-prep.html#prep"><span class="toc-section-number">5.1</span> Prep</a>
+<ul>
+<li><a href="5.1-prep.html#install-packages"><span class="toc-section-number">5.1.1</span> Install packages</a></li>
+<li><a href="5.1-prep.html#call-libraries-for-the-installed-packages"><span class="toc-section-number">5.1.2</span> Call libraries for the installed packages</a></li>
+<li><a href="5.1-prep.html#import-excel-table-from-local-drive"><span class="toc-section-number">5.1.3</span> Import excel table from local drive</a></li>
+</ul></li>
+<li><a href="5.2-build-tables.html#build-tables"><span class="toc-section-number">5.2</span> Build Tables</a>
+<ul>
+<li><a href="5.2-build-tables.html#static-table"><span class="toc-section-number">5.2.1</span> Static table</a></li>
+<li><a href="5.2-build-tables.html#interactive-table"><span class="toc-section-number">5.2.2</span> Interactive table</a></li>
+</ul></li>
+<li><a href="5.3-generate-other-graphics.html#generate-other-graphics"><span class="toc-section-number">5.3</span> Generate Other Graphics</a>
+<ul>
+<li><a href="5.3-generate-other-graphics.html#a-bar-chart"><span class="toc-section-number">5.3.1</span> A bar chart</a></li>
+<li><a href="5.3-generate-other-graphics.html#a-donut-chart"><span class="toc-section-number">5.3.2</span> A donut chart</a></li>
+</ul></li>
+<li><a href="5.4-filter-and-plot-select-data.html#filter-and-plot-select-data"><span class="toc-section-number">5.4</span> Filter and plot select data</a>
+<ul>
+<li><a href="5.4-filter-and-plot-select-data.html#pie-chart"><span class="toc-section-number">5.4.1</span> Pie chart</a></li>
+<li><a href="5.4-filter-and-plot-select-data.html#build-treemap"><span class="toc-section-number">5.4.2</span> Build Treemap</a></li>
+</ul></li>
+</ul></li>
+<li><a href="6-working-climate-data.html#working-climate-data"><span class="toc-section-number">6</span> Working Climate data</a>
+<ul>
+<li><a href="6.1-historical-climate-data.html#historical-climate-data"><span class="toc-section-number">6.1</span> Historical climate data</a>
+<ul>
+<li><a href="6.1-historical-climate-data.html#install-packages-and-load-libraries"><span class="toc-section-number">6.1.1</span> Install Packages and load libraries</a></li>
+<li><a href="6.1-historical-climate-data.html#load-data-from-cru-website"><span class="toc-section-number">6.1.2</span> Load data from cru website</a></li>
+<li><a href="6.1-historical-climate-data.html#loaddefine-geometry"><span class="toc-section-number">6.1.3</span> Load/define geometry</a></li>
+<li><a href="6.1-historical-climate-data.html#loadimport-your-data-into-r"><span class="toc-section-number">6.1.4</span> Load/Import your data into r</a></li>
+<li><a href="6.1-historical-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><span class="toc-section-number">6.1.5</span> Convert the raster stack created above into a dataframe and format date values</a></li>
+<li><a href="6.1-historical-climate-data.html#plot-monthly-data"><span class="toc-section-number">6.1.6</span> Plot Monthly data</a></li>
+<li><a href="6.1-historical-climate-data.html#plot-annual-data"><span class="toc-section-number">6.1.7</span> Plot Annual data</a></li>
+</ul></li>
+</ul></li>
+<li><a href="7-further-reads.html#further-reads"><span class="toc-section-number">7</span> Further Reads</a></li>
+<li><a href="references-1.html#references-1">References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="build-tables" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Build Tables</h2>
+<div id="static-table" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Static table</h3>
+<ol style="list-style-type: decimal">
+<li>Open a new code chunk</li>
+<li>Install packages DT and magrittr</li>
+<li>Load their libraries<br />
+</li>
+<li>Call ‘datatable’ function by typing in ‘datatable ()’ # autofill is your friend</li>
+<li>Hover over the function to see parameters required or go to the ‘Help’ tab and search ‘datatable’ to see further details on its application.</li>
+<li>Fill in details as below</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="5.2-build-tables.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(gcf,<span class="at">caption =</span> <span class="st">&#39;GCF Funding&#39;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="5.2-build-tables.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&#39;condensed&#39;</span>, <span class="st">&#39;bordered&#39;</span>),<span class="at">fixed_thead =</span> <span class="cn">TRUE</span>, <span class="at">font_size=</span><span class="dv">10</span>, <span class="at">repeat_header_continued =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<table class="table table-condensed table-bordered" style="font-size: 10px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-8">Table 5.1: </span>GCF Funding
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Approved Ref
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+countryname
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Region
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Theme
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Project Name
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Sector
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Assess modality
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Total GCF Funding
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Total Co-Financing
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Approval Date
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Disbursements
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Duration (Months)
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Funding Type
+</th>
+<th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;">
+Total Value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+FP133
+</td>
+<td style="text-align:left;">
+Antigua and Barbuda
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Resilience to hurricanes in the building sector in Antigua and Barbuda
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+3.3e+07
+</td>
+<td style="text-align:right;">
+1.3e+07
+</td>
+<td style="text-align:left;">
+8/21/2020
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.6e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP061
+</td>
+<td style="text-align:left;">
+Antigua and BarbudaDominicaGrenada
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Integrated physical adaptation and community resilience through an enhanced direct access pilot in the public, private, and civil society sectors of three Eastern Caribbean small island developing states
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+2.0e+07
+</td>
+<td style="text-align:right;">
+2.6e+06
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$3,000,000.00
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+GrantsUndefined
+</td>
+<td style="text-align:right;">
+2.3e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP003
+</td>
+<td style="text-align:left;">
+Bahrain
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Enhancing climate resilience of the water sector in Bahrain
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.3e+06
+</td>
+<td style="text-align:right;">
+0.0e+00
+</td>
+<td style="text-align:left;">
+10/20/2018
+</td>
+<td style="text-align:left;">
+$906,500.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.3e+06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP004
+</td>
+<td style="text-align:left;">
+Bangladesh
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate Resilient Infrastructure Mainstreaming (CRIM)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+4.0e+07
+</td>
+<td style="text-align:right;">
+4.1e+07
+</td>
+<td style="text-align:left;">
+11/5/2015
+</td>
+<td style="text-align:left;">
+$150,000.00$2,830,000.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+8.1e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP069
+</td>
+<td style="text-align:left;">
+Bangladesh
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Enhancing adaptive capacities of coastal communities, especially women, to cope with climate change induced salinity
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.5e+07
+</td>
+<td style="text-align:right;">
+8.0e+06
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$4,735,682.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+3.3e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP008
+</td>
+<td style="text-align:left;">
+Bangladesh
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Extended Community Climate Change Project-Flood (ECCCP-Flood)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+9.7e+06
+</td>
+<td style="text-align:right;">
+3.6e+06
+</td>
+<td style="text-align:left;">
+11/14/2019
+</td>
+<td style="text-align:left;">
+$2,161,662.00
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+GrantsSubordinated Loansin-kind
+</td>
+<td style="text-align:right;">
+1.3e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP101
+</td>
+<td style="text-align:left;">
+Belize
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Resilient Rural Belize (Be-Resilient)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+8.0e+06
+</td>
+<td style="text-align:right;">
+1.2e+07
+</td>
+<td style="text-align:left;">
+2/28/2019
+</td>
+<td style="text-align:left;">
+$1,914,800.00$3,042,600.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+GrantsSenior LoansEquity
+</td>
+<td style="text-align:right;">
+2.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP005
+</td>
+<td style="text-align:left;">
+Benin
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+9.0e+06
+</td>
+<td style="text-align:right;">
+1.0e+06
+</td>
+<td style="text-align:left;">
+2/28/2019
+</td>
+<td style="text-align:left;">
+$1,065,605.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP107
+</td>
+<td style="text-align:left;">
+Bhutan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.5e+07
+</td>
+<td style="text-align:right;">
+3.3e+07
+</td>
+<td style="text-align:left;">
+7/8/2019
+</td>
+<td style="text-align:left;">
+$3,096,334.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+5.8e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP074
+</td>
+<td style="text-align:left;">
+Burkina Faso
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.2e+07
+</td>
+<td style="text-align:right;">
+2.5e+06
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$15,970,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.5e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP056
+</td>
+<td style="text-align:left;">
+Colombia
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Scaling up climate resilient water management practices for vulnerable communities in La Mojana
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.8e+07
+</td>
+<td style="text-align:right;">
+7.9e+07
+</td>
+<td style="text-align:left;">
+10/2/2017
+</td>
+<td style="text-align:left;">
+$7,990,110.25
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.2e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP094
+</td>
+<td style="text-align:left;">
+Comoros
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Ensuring climate resilient water supplies in the Comoros Islands
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+4.2e+07
+</td>
+<td style="text-align:right;">
+1.9e+07
+</td>
+<td style="text-align:left;">
+10/20/2018
+</td>
+<td style="text-align:left;">
+$2,950,847.00$8,475,242.00
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+6.1e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP135
+</td>
+<td style="text-align:left;">
+Comoros (the)MadagascarMauritiusSeychelles
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Ecosystem-based Adaptation in the Indian Ocean – EBA IO
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.8e+07
+</td>
+<td style="text-align:right;">
+1.1e+07
+</td>
+<td style="text-align:left;">
+8/21/2020
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+120
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP053
+</td>
+<td style="text-align:left;">
+Egypt
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Enhancing climate change adaptation in the North coast and Nile Delta Regions in Egypt
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.1e+07
+</td>
+<td style="text-align:right;">
+7.4e+07
+</td>
+<td style="text-align:left;">
+10/2/2017
+</td>
+<td style="text-align:left;">
+$3,068,979.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.1e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP058
+</td>
+<td style="text-align:left;">
+Ethiopia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Responding to the increasing risk of drought: building gender-responsive resilience of the most vulnerable communities
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+4.5e+07
+</td>
+<td style="text-align:right;">
+5.0e+06
+</td>
+<td style="text-align:left;">
+10/2/2017
+</td>
+<td style="text-align:left;">
+$3,752,016.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+5.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP008
+</td>
+<td style="text-align:left;">
+Fiji
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Fiji Urban Water Supply and Wastewater Management Project
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.1e+07
+</td>
+<td style="text-align:right;">
+3.7e+08
+</td>
+<td style="text-align:left;">
+11/5/2015
+</td>
+<td style="text-align:left;">
+$4,500,000.00$16,640,000.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+GrantsSenior LoansUndefined
+</td>
+<td style="text-align:right;">
+4.1e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP011
+</td>
+<td style="text-align:left;">
+Gambia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Large-scale Ecosystem-based Adaptation in The Gambia: developing a climate-resilient, natural resource-based economy
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.1e+07
+</td>
+<td style="text-align:right;">
+5.0e+06
+</td>
+<td style="text-align:left;">
+6/30/2016
+</td>
+<td style="text-align:left;">
+$5,968,542.00$5,295,543.00$4,250,043.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.6e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP068
+</td>
+<td style="text-align:left;">
+Georgia
+</td>
+<td style="text-align:left;">
+Eastern Europe
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Scaling-up Multi-Hazard Early Warning System and the Use of Climate Information in Georgia
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.7e+07
+</td>
+<td style="text-align:right;">
+4.3e+07
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$2,285,063.00$8,062,855.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+7.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP059
+</td>
+<td style="text-align:left;">
+Grenada
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate Resilient Water Sector in Grenada (G-CREWS)-
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+4.1e+07
+</td>
+<td style="text-align:right;">
+7.9e+06
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+€4,000,000.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP087
+</td>
+<td style="text-align:left;">
+Guatemala
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building livelihood resilience to climate change in the upper basins of Guatemala’s highlands
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.2e+07
+</td>
+<td style="text-align:right;">
+1.6e+07
+</td>
+<td style="text-align:left;">
+10/20/2018
+</td>
+<td style="text-align:left;">
+$1,868,090.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+3.8e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP097
+</td>
+<td style="text-align:left;">
+GuatemalaEl SalvadorHondurasNicaraguaCosta RicaPanamaDominican Republic (the)
+</td>
+<td style="text-align:left;">
+Latin America and the Caribbean
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Productive Investment Initiative for Adaptation to Climate Change (CAMBio II)
+</td>
+<td style="text-align:left;">
+Private
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+1.6e+07
+</td>
+<td style="text-align:right;">
+1.2e+07
+</td>
+<td style="text-align:left;">
+10/20/2018
+</td>
+<td style="text-align:left;">
+$376,350.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsSenior Loans
+</td>
+<td style="text-align:right;">
+2.8e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP045
+</td>
+<td style="text-align:left;">
+India
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Ground Water Recharge and Solar Micro Irrigation to Ensure Food Security and Enhance Resilience in Vulnerable Tribal Areas of Odisha
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+3.4e+07
+</td>
+<td style="text-align:right;">
+1.3e+08
+</td>
+<td style="text-align:left;">
+4/6/2017
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsSenior Loansin-kind
+</td>
+<td style="text-align:right;">
+1.7e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP113
+</td>
+<td style="text-align:left;">
+Kenya
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+TWENDE: Towards Ending Drought Emergencies: Ecosystem Based Adaptation in Kenya’s Arid and Semi-Arid Rangelands
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.3e+07
+</td>
+<td style="text-align:right;">
+1.1e+07
+</td>
+<td style="text-align:left;">
+7/8/2019
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsSubordinated Loans
+</td>
+<td style="text-align:right;">
+3.5e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP002
+</td>
+<td style="text-align:left;">
+Kyrgyzstan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate services and diversification of climate sensitive livelihoods to empower food insecure and vulnerable communities in the Kyrgyz Republic.
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+8.6e+06
+</td>
+<td style="text-align:right;">
+1.1e+06
+</td>
+<td style="text-align:left;">
+10/20/2018
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+9.6e+06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP009
+</td>
+<td style="text-align:left;">
+Lao People’s Democratic Republic
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building resilience of urban populations with ecosystem-based solutions in Lao PDR
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+<td style="text-align:right;">
+1.5e+06
+</td>
+<td style="text-align:left;">
+11/14/2019
+</td>
+<td style="text-align:left;">
+$2,411,710.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsUndefined
+</td>
+<td style="text-align:right;">
+1.2e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP002
+</td>
+<td style="text-align:left;">
+Malawi
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Scaling up the use of Modernized Climate information and Early Warning Systems in Malawi
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.2e+07
+</td>
+<td style="text-align:right;">
+4.0e+06
+</td>
+<td style="text-align:left;">
+11/5/2015
+</td>
+<td style="text-align:left;">
+$2,377,039.00$3,332,276.00$2,540,848.00$1,379,029.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.6e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP007
+</td>
+<td style="text-align:left;">
+Maldives
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Supporting vulnerable communities in Maldives to manage climate change-induced water shortages
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.4e+07
+</td>
+<td style="text-align:right;">
+4.6e+06
+</td>
+<td style="text-align:left;">
+11/5/2015
+</td>
+<td style="text-align:left;">
+$3,034,330.00$12,112,446.00$6,038,072.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.8e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP012
+</td>
+<td style="text-align:left;">
+Mali
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Mali Country Project
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.3e+07
+</td>
+<td style="text-align:right;">
+8.2e+06
+</td>
+<td style="text-align:left;">
+6/30/2016
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+3.1e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP066
+</td>
+<td style="text-align:left;">
+Marshall Islands
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Pacific Resilience Project Phase II for RMI
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.5e+07
+</td>
+<td style="text-align:right;">
+1.9e+07
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.4e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP112
+</td>
+<td style="text-align:left;">
+Marshall Islands
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.9e+07
+</td>
+<td style="text-align:right;">
+6.1e+06
+</td>
+<td style="text-align:left;">
+7/8/2019
+</td>
+<td style="text-align:left;">
+$2,323,131.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.5e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP042
+</td>
+<td style="text-align:left;">
+Morocco
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Irrigation development and adaptation of irrigated agriculture to climate change in semi-arid Morocco
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.3e+07
+</td>
+<td style="text-align:right;">
+6.5e+07
+</td>
+<td style="text-align:left;">
+4/6/2017
+</td>
+<td style="text-align:left;">
+€2,000,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsSenior Loans
+</td>
+<td style="text-align:right;">
+8.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP043
+</td>
+<td style="text-align:left;">
+Morocco
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+The Saïss Water Conservation Project
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.7e+07
+</td>
+<td style="text-align:right;">
+2.0e+08
+</td>
+<td style="text-align:left;">
+4/6/2017
+</td>
+<td style="text-align:left;">
+€1,970,000.00€15,000,000.00€15,000,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsSenior Loans
+</td>
+<td style="text-align:right;">
+2.4e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP011
+</td>
+<td style="text-align:left;">
+Mozambique
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate-resilient food security for women and men smallholders in Mozambique through integrated risk management
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+9.2e+06
+</td>
+<td style="text-align:right;">
+7.5e+05
+</td>
+<td style="text-align:left;">
+11/14/2019
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP023
+</td>
+<td style="text-align:left;">
+Namibia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate Resilient Agriculture in three of the Vulnerable Extreme northern crop growing regions (CRAVE)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+9.5e+06
+</td>
+<td style="text-align:right;">
+5.0e+05
+</td>
+<td style="text-align:left;">
+10/14/2016
+</td>
+<td style="text-align:left;">
+$3,085,000.00$3,670,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP024
+</td>
+<td style="text-align:left;">
+Namibia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Enpower to Adapt: Creating Climate-Change Resilient Livelihoods through Community-Based Natural Resource Management (CBNRM) in Namibia
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+<td style="text-align:right;">
+0.0e+00
+</td>
+<td style="text-align:left;">
+10/14/2016
+</td>
+<td style="text-align:left;">
+$427,013.00$7,231,623.00$1,832,021.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP001
+</td>
+<td style="text-align:left;">
+Namibia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Improving rangeland and ecosystem management practices of smallholder farmers under conditions of climate change in Sesfontein, Fransfontein, and Warmquelle areas of the Republic of Namibia
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+9.3e+06
+</td>
+<td style="text-align:right;">
+7.0e+05
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$3,765,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP006
+</td>
+<td style="text-align:left;">
+Namibia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building resilience of communities living in landscapes threatened under climate change through an ecosystems-based adaptation approach
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+8.9e+06
+</td>
+<td style="text-align:right;">
+1.6e+05
+</td>
+<td style="text-align:left;">
+2/28/2019
+</td>
+<td style="text-align:left;">
+$660,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+9.1e+06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP018
+</td>
+<td style="text-align:left;">
+Pakistan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Scaling-up of Glacial Lake Outburst Flood (GLOF) risk reduction in Northern Pakistan
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.7e+07
+</td>
+<td style="text-align:right;">
+5.0e+05
+</td>
+<td style="text-align:left;">
+10/14/2016
+</td>
+<td style="text-align:left;">
+$10,504,366.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+3.7e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP108
+</td>
+<td style="text-align:left;">
+Pakistan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Transforming the Indus Basin with Climate Resilient Agriculture and Water Management
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.5e+07
+</td>
+<td style="text-align:right;">
+1.3e+07
+</td>
+<td style="text-align:left;">
+7/8/2019
+</td>
+<td style="text-align:left;">
+$6,371,836.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.8e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP010
+</td>
+<td style="text-align:left;">
+Philippines
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Multi-Hazard Impact-Based Forecasting and Early Warning System for the Philippines
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+<td style="text-align:left;">
+11/14/2019
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+2.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP037
+</td>
+<td style="text-align:left;">
+Samoa
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Integrated Flood Management to Enhance Climate Resilience of the Vaisigano River Catchment in Samoa
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+5.8e+07
+</td>
+<td style="text-align:right;">
+8.0e+06
+</td>
+<td style="text-align:left;">
+12/15/2016
+</td>
+<td style="text-align:left;">
+$4,766,361.00$7,377,554.00$11,649,728.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+6.6e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP003
+</td>
+<td style="text-align:left;">
+Senegal
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Increasing the resilience of ecosystems and communities through
+the restoration of the productive bases of salinized lands
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+7.6e+06
+</td>
+<td style="text-align:right;">
+5.5e+05
+</td>
+<td style="text-align:left;">
+11/5/2015
+</td>
+<td style="text-align:left;">
+$1,915,682.00
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+8.2e+06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP021
+</td>
+<td style="text-align:left;">
+Senegal
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Senegal Integrated Urban Flood Management Project
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.8e+07
+</td>
+<td style="text-align:right;">
+6.5e+07
+</td>
+<td style="text-align:left;">
+10/14/2016
+</td>
+<td style="text-align:left;">
+€2,000,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsEquitySenior Loans
+</td>
+<td style="text-align:right;">
+8.3e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP049
+</td>
+<td style="text-align:left;">
+Senegal
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building the climate resilience of food insecure smallholder farmers through integrated management of climate risk (R4)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+<td style="text-align:right;">
+0.0e+00
+</td>
+<td style="text-align:left;">
+10/2/2017
+</td>
+<td style="text-align:left;">
+$2,495,900.00
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP016
+</td>
+<td style="text-align:left;">
+Sri Lanka
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Strengthening the resilience of smallholder farmers in the Dry Zone to climate variability and extreme events through an integrated approach to water management
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.8e+07
+</td>
+<td style="text-align:right;">
+1.4e+07
+</td>
+<td style="text-align:left;">
+6/30/2016
+</td>
+<td style="text-align:left;">
+$2,867,879.00$8,287,745.00$9,264,383.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+5.2e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP124
+</td>
+<td style="text-align:left;">
+Sri Lanka
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Strengthening Climate Resilience of Subsistence Farmers and Agricultural Plantation Communities residing in the vulnerable river basins, watershed areas and downstream of the Knuckles Mountain Range Catchment of Sri Lanka
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+4.0e+07
+</td>
+<td style="text-align:right;">
+9.2e+06
+</td>
+<td style="text-align:left;">
+3/12/2020
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+4.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP139
+</td>
+<td style="text-align:left;">
+Sudan
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building resilience in the face of climate change within traditional rain fed agricultural and pastoral systems in Sudan
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.6e+07
+</td>
+<td style="text-align:right;">
+1.6e+07
+</td>
+<td style="text-align:left;">
+8/21/2020
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.1e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP040
+</td>
+<td style="text-align:left;">
+Tajikistan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Tajikistan: Scaling Up Hydropower Sector Climate Resilience
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+5.0e+07
+</td>
+<td style="text-align:right;">
+7.9e+07
+</td>
+<td style="text-align:left;">
+4/6/2017
+</td>
+<td style="text-align:left;">
+$2,000,000.00$3,000,000.00$4,000,000.00$4,000,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+GrantsSenior Loans
+</td>
+<td style="text-align:right;">
+1.3e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP067
+</td>
+<td style="text-align:left;">
+Tajikistan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building climate resilience of vulnerable and food insecure communities through capacity strengthening and livelihood diversification in mountainous regions of Tajikistan
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+9.3e+06
+</td>
+<td style="text-align:right;">
+7.0e+05
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$1,782,778.54
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP075
+</td>
+<td style="text-align:left;">
+Tajikistan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Institutional Development of the State Agency for Hydrometeorology of Tajikistan
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+5.0e+06
+</td>
+<td style="text-align:right;">
+5.0e+06
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$500,000.00$2,400,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP041
+</td>
+<td style="text-align:left;">
+Tanzania United Republic of
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Simiyu Climate Resilient Project
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.2e+08
+</td>
+<td style="text-align:right;">
+8.0e+07
+</td>
+<td style="text-align:left;">
+4/6/2017
+</td>
+<td style="text-align:left;">
+€4,000,000.00
+</td>
+<td style="text-align:right;">
+60
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.0e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP122
+</td>
+<td style="text-align:left;">
+TanzaniaMadagascarSouth AfricaMozambique
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Blue Action Fund (BAF): GCF Ecosystem Based Adaptation Programme in the Western Indian Ocean
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.5e+07
+</td>
+<td style="text-align:right;">
+2.9e+07
+</td>
+<td style="text-align:left;">
+11/14/2019
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+6.4e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP109
+</td>
+<td style="text-align:left;">
+Timor-Leste
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Safeguarding rural communities and their physical and economic assets from climate induced disasters in Timor-Leste
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.2e+07
+</td>
+<td style="text-align:right;">
+3.7e+07
+</td>
+<td style="text-align:left;">
+7/8/2019
+</td>
+<td style="text-align:left;">
+$2,349,598.00
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+5.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP015
+</td>
+<td style="text-align:left;">
+Tuvalu
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Tuvalu Coastal Adaptation Project (TCAP)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.6e+07
+</td>
+<td style="text-align:right;">
+2.9e+06
+</td>
+<td style="text-align:left;">
+6/30/2016
+</td>
+<td style="text-align:left;">
+$2,013,841.00$4,693,133.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+3.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP034
+</td>
+<td style="text-align:left;">
+Uganda
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building Resilient Communities, Wetland Ecosystems and Associated Catchments in Uganda
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.4e+07
+</td>
+<td style="text-align:right;">
+2.0e+07
+</td>
+<td style="text-align:left;">
+12/15/2016
+</td>
+<td style="text-align:left;">
+$2,617,968.00$1,782,136.00$3,479,526.00
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+4.4e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP078
+</td>
+<td style="text-align:left;">
+UgandaGhanaNigeriaKenya
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Acumen Resilient Agriculture Fund (ARAF)
+</td>
+<td style="text-align:left;">
+Private
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+2.6e+07
+</td>
+<td style="text-align:right;">
+3.0e+07
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$286,000.00$331,820.51$187,692.31$2,111,538.46$1,114,423.06$1,250,000.00
+</td>
+<td style="text-align:right;">
+144
+</td>
+<td style="text-align:left;">
+EquityGrants
+</td>
+<td style="text-align:right;">
+5.6e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP014
+</td>
+<td style="text-align:left;">
+UzbekistanTajikistan
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate Adaptation and Mitigation Program For the Aral Sea Basin (CAMP4ASB)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+1.9e+07
+</td>
+<td style="text-align:right;">
+5.0e+07
+</td>
+<td style="text-align:left;">
+6/30/2016
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+GrantsSenior Loans
+</td>
+<td style="text-align:right;">
+6.9e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP035
+</td>
+<td style="text-align:left;">
+Vanuatu
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Climate Information Services for Resilient Development Planning in Vanuatu (Van-CIS-RDP)
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+Direct
+</td>
+<td style="text-align:right;">
+2.3e+07
+</td>
+<td style="text-align:right;">
+3.7e+06
+</td>
+<td style="text-align:left;">
+12/15/2016
+</td>
+<td style="text-align:left;">
+$296,730.00$1,977,696.00
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+2.7e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP125
+</td>
+<td style="text-align:left;">
+Viet Nam
+</td>
+<td style="text-align:left;">
+Asia-Pacific
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Strengthening the resilience of smallholder agriculture to climate change-induced water insecurity in the Central Highlands and South-Central Coast regions of Vietnam
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.0e+07
+</td>
+<td style="text-align:right;">
+1.3e+08
+</td>
+<td style="text-align:left;">
+3/12/2020
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+72
+</td>
+<td style="text-align:left;">
+GrantsSenior Loansin-kind
+</td>
+<td style="text-align:right;">
+1.6e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP072
+</td>
+<td style="text-align:left;">
+Zambia
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Strengthening climate resilience of agricultural livelihoods in Agro-Ecological Regions I and II in Zambia
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+3.2e+07
+</td>
+<td style="text-align:right;">
+1.1e+08
+</td>
+<td style="text-align:left;">
+3/1/2018
+</td>
+<td style="text-align:left;">
+$3,077,613.00$6,539,471.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.4e+08
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FP127
+</td>
+<td style="text-align:left;">
+Zimbabwe
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Building Climate Resilience of Vulnerable Agricultural Livelihoods in Southern Zimbabwe
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+2.7e+07
+</td>
+<td style="text-align:right;">
+2.1e+07
+</td>
+<td style="text-align:left;">
+3/12/2020
+</td>
+<td style="text-align:left;">
+$2,770,634.00
+</td>
+<td style="text-align:right;">
+84
+</td>
+<td style="text-align:left;">
+Grantsin-kind
+</td>
+<td style="text-align:right;">
+4.8e+07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SAP007
+</td>
+<td style="text-align:left;">
+Zimbabwe
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:left;">
+Adaptation
+</td>
+<td style="text-align:left;">
+Integrated Climate Risk Management for Food Security and Livelihoods in Zimbabwe focusing on Masvingo and Rushinga Districts
+</td>
+<td style="text-align:left;">
+Public
+</td>
+<td style="text-align:left;">
+International
+</td>
+<td style="text-align:right;">
+8.9e+06
+</td>
+<td style="text-align:right;">
+1.1e+06
+</td>
+<td style="text-align:left;">
+7/8/2019
+</td>
+<td style="text-align:left;">
+&amp;ndash;
+</td>
+<td style="text-align:right;">
+48
+</td>
+<td style="text-align:left;">
+Grants
+</td>
+<td style="text-align:right;">
+1.0e+07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="interactive-table" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Interactive table</h3>
+<ol style="list-style-type: decimal">
+<li>Open a new code chunk</li>
+<li>Install packages DT and magrittr</li>
+<li>Load their libraries<br />
+</li>
+<li>Call ‘datatable’ function by typing in ‘datatable ()’ # autofill is your friend</li>
+<li>Hover over the function to see parameters required or go to the ‘Help’ tab and search ‘datatable’ to see further details on its application.</li>
+<li>Fill in details as below</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="5.2-build-tables.html#cb8-1" aria-hidden="true" tabindex="-1"></a>gcf_columns<span class="ot">&lt;-</span>gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)] <span class="co"># selects only the columns we want to see in our table</span></span>
+<span id="cb8-2"><a href="5.2-build-tables.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(gcf_columns,<span class="at">filter =</span> <span class="st">&#39;top&#39;</span>,<span class="at">rownames =</span> F, <span class="at">editable =</span> F, <span class="at">style =</span> <span class="st">&#39;jqueryui&#39;</span>, <span class="at">class =</span> <span class="st">&#39;display responsive&#39;</span>, <span class="at">width =</span> <span class="st">&#39;100%&#39;</span>, <span class="at">caption =</span> <span class="st">&quot;GCF Project Funding&quot;</span>, <span class="at">extensions =</span> <span class="st">&#39;Buttons&#39;</span>, <span class="at">options=</span><span class="fu">list</span>(<span class="at">pageLength=</span> <span class="dv">5</span>, <span class="at">dom=</span><span class="st">&#39;lfrtipB&#39;</span>, <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">&#39;copy&#39;</span>, <span class="st">&#39;csv&#39;</span>, <span class="st">&#39;excel&#39;</span>, <span class="st">&#39;pdf&#39;</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="5.2-build-tables.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">formatStyle</span>(<span class="at">columns =</span> <span class="fu">colnames</span>(gcf_columns),<span class="at">fontSize=</span> <span class="st">&#39;10px&#39;</span>)</span></code></pre></div>
+<div id="htmlwidget-c7e6b0e151afa7d43adb" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c7e6b0e151afa7d43adb">{"x":{"style":"jqueryui","filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2320388\" data-max=\"120116959.06\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"caption":"<caption>GCF Project Funding<\/caption>","data":[["Antigua and Barbuda","Antigua and BarbudaDominicaGrenada","Bahrain","Bangladesh","Bangladesh","Bangladesh","Belize","Benin","Bhutan","Burkina Faso","Colombia","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Fiji","Gambia","Georgia","Grenada","Guatemala","GuatemalaEl SalvadorHondurasNicaraguaCosta RicaPanamaDominican Republic (the)","India","Kenya","Kyrgyzstan","Lao People's Democratic Republic","Malawi","Maldives","Mali","Marshall Islands","Marshall Islands","Morocco","Morocco","Mozambique","Namibia","Namibia","Namibia","Namibia","Pakistan","Pakistan","Philippines","Samoa","Senegal","Senegal","Senegal","Sri Lanka","Sri Lanka","Sudan","Tajikistan","Tajikistan","Tajikistan","Tanzania United Republic of","TanzaniaMadagascarSouth AfricaMozambique","Timor-Leste","Tuvalu","Uganda","UgandaGhanaNigeriaKenya","UzbekistanTajikistan","Vanuatu","Viet Nam","Zambia","Zimbabwe","Zimbabwe"],["Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Latin America and the Caribbean","Africa","Asia-Pacific","Africa","Latin America and the Caribbean","Africa","Africa","Africa","Africa","Asia-Pacific","Africa","Eastern Europe","Latin America and the Caribbean","Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa"],["Resilience to hurricanes in the building sector in Antigua and Barbuda","Integrated physical adaptation and community resilience through an enhanced direct access pilot in the public, private, and civil society sectors of three Eastern Caribbean small island developing states","Enhancing climate resilience of the water sector in Bahrain","Climate Resilient Infrastructure Mainstreaming (CRIM)","Enhancing adaptive capacities of coastal communities, especially women, to cope with climate change induced salinity","Extended Community Climate Change Project-Flood (ECCCP-Flood)","Resilient Rural Belize (Be-Resilient)","Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes","Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project","Scaling up climate resilient water management practices for vulnerable communities in La Mojana","Ensuring climate resilient water supplies in the Comoros Islands","Ecosystem-based Adaptation in the Indian Ocean – EBA IO","Enhancing climate change adaptation in the North coast and Nile Delta Regions in Egypt","Responding to the increasing risk of drought: building gender-responsive resilience of the most vulnerable communities","Fiji Urban Water Supply and Wastewater Management Project","Large-scale Ecosystem-based Adaptation in The Gambia: developing a climate-resilient, natural resource-based economy","Scaling-up Multi-Hazard Early Warning System and the Use of Climate Information in Georgia","Climate Resilient Water Sector in Grenada (G-CREWS)-","Building livelihood resilience to climate change in the upper basins of Guatemala’s highlands","Productive Investment Initiative for Adaptation to Climate Change (CAMBio II)","Ground Water Recharge and Solar Micro Irrigation to Ensure Food Security and Enhance Resilience in Vulnerable Tribal Areas of Odisha","TWENDE: Towards Ending Drought Emergencies: Ecosystem Based Adaptation in Kenya’s Arid and Semi-Arid Rangelands","Climate services and diversification of climate sensitive livelihoods to empower food insecure and vulnerable communities in the Kyrgyz Republic.","Building resilience of urban populations with ecosystem-based solutions in Lao PDR","Scaling up the use of Modernized Climate information and Early Warning Systems in Malawi","Supporting vulnerable communities in Maldives to manage climate change-induced water shortages","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Mali Country Project","Pacific Resilience Project Phase II for RMI","Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands","Irrigation development and adaptation of irrigated agriculture to climate change in semi-arid Morocco","The Saïss Water Conservation Project","Climate-resilient food security for women and men smallholders in Mozambique through integrated risk management","Climate Resilient Agriculture in three of the Vulnerable Extreme northern crop growing regions (CRAVE)","Enpower to Adapt: Creating Climate-Change Resilient Livelihoods through  Community-Based Natural Resource Management (CBNRM) in Namibia","Improving rangeland and ecosystem management practices of smallholder farmers under conditions of climate change in Sesfontein, Fransfontein, and Warmquelle areas of the Republic of Namibia","Building resilience of communities living in landscapes threatened under climate change through an ecosystems-based adaptation approach","Scaling-up of Glacial Lake Outburst Flood (GLOF) risk reduction in Northern Pakistan","Transforming the Indus Basin with Climate Resilient Agriculture and Water Management","Multi-Hazard Impact-Based Forecasting and Early Warning System  for the Philippines","Integrated Flood Management to Enhance Climate Resilience of the Vaisigano River Catchment in Samoa","Increasing the resilience of ecosystems and communities through\r\n the restoration of the productive bases of salinized lands","Senegal Integrated Urban Flood Management Project","Building the climate resilience of food insecure smallholder farmers through integrated management of climate risk (R4)","Strengthening the resilience of smallholder farmers in the Dry Zone to climate variability and extreme events through an integrated approach to water management","Strengthening Climate Resilience of Subsistence Farmers and Agricultural Plantation Communities residing in the vulnerable river basins, watershed areas and downstream of the Knuckles Mountain Range Catchment of Sri Lanka","Building resilience in the face of climate change within traditional rain fed agricultural and pastoral systems in Sudan","Tajikistan: Scaling Up Hydropower Sector Climate Resilience","Building climate resilience of vulnerable and food insecure communities through capacity strengthening and livelihood diversification in mountainous regions of Tajikistan","Institutional Development of the State Agency for Hydrometeorology of Tajikistan","Simiyu Climate Resilient Project","Blue Action Fund (BAF): GCF Ecosystem Based Adaptation Programme in the Western Indian Ocean","Safeguarding rural communities and their physical and economic assets from climate  induced disasters in Timor-Leste","Tuvalu Coastal Adaptation Project (TCAP)","Building Resilient Communities, Wetland Ecosystems and Associated Catchments in Uganda","Acumen Resilient Agriculture Fund (ARAF)","Climate Adaptation and Mitigation Program For the Aral Sea Basin (CAMP4ASB)","Climate Information Services for Resilient Development Planning in Vanuatu (Van-CIS-RDP)","Strengthening the resilience of smallholder agriculture to climate change-induced water insecurity in the Central Highlands and South-Central Coast regions of Vietnam","Strengthening climate resilience of agricultural livelihoods in Agro-Ecological Regions I and II in Zambia","Building Climate Resilience of Vulnerable Agricultural Livelihoods in Southern Zimbabwe","Integrated Climate Risk Management for Food Security and Livelihoods in Zimbabwe focusing on Masvingo and Rushinga Districts"],[32706595,20000000,2320388,40000000,24980000,9681340,8000000,9000000,25347194,22500000,38496000,41919808,38000000,31385000,45002759,31040000,20546756,27053598,41274964.91,22035512,15500000,34357000,23152082,8576108,10000000,12295000,23640000,22750000,25000000,18631216,23391812.87,37391812.87,9250000,9500000,10000000,9300000,8904000,36960000,34990832,9999042.27,57718000,7610000,17543859.65,9983521,38084000,39775000,25645114,50000000,9273586,5000000,120116959.06,35087719.3,22356805,36010000,24140000,26000000,19000000,22953000,30205367,32000000,26574567,8858316]],"container":"<table class=\"display responsive\">\n  <thead>\n    <tr>\n      <th>countryname<\/th>\n      <th>Region<\/th>\n      <th>Project Name<\/th>\n      <th>Total GCF Funding<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"lfrtipB","buttons":["copy","csv","excel","pdf"],"columnDefs":[{"className":"dt-right","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'10px'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'10px'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'10px'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'10px'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="5.1-prep.html"><button class="btn btn-default">Previous</button></a>
+<a href="5.3-generate-other-graphics.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

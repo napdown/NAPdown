@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Further Reads
 
 Here we include a list of links to articles and other material that might be useful for this exercise. 

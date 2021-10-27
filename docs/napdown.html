@@ -4,30 +4,39 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 NAPdown | An introduction to markdown</title>
-  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <title>Chapter 3 NAPdown | An introduction to NAPdown</title>
+  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 NAPdown | An introduction to markdown" />
+  <meta property="og:title" content="Chapter 3 NAPdown | An introduction to NAPdown" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://napdown.github.io/NAPdown/" />
   
-  
-  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="napdown/NAPdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 NAPdown | An introduction to markdown" />
+  <meta name="twitter:title" content="Chapter 3 NAPdown | An introduction to NAPdown" />
   
-  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   
 
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-18" />
+<meta name="date" content="2021-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,15 +65,15 @@ Additional chapters are provided further reading material and references.</p>" /
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
@@ -292,7 +301,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An introduction to markdown</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An introduction to NAPdown</a>
           </h1>
         </div>
 
@@ -305,39 +314,41 @@ div.csl-indent {
 <div id="setting-up-an-enap" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Setting up an eNAP</h2>
 <p>We will use the package <code>bookdown</code> to generate NAP document in a book format. Journal articles or reports can be produced in the same way.
-We will also use the package <code>tinytex</code> to build pdf format of the book document.</p>
-<ol style="list-style-type: decimal">
-<li><p>First, launch the rstudio app in your pc.</p></li>
-<li><p>Install the bookdown and tinytex packages. Use any of the methods shown in the <a href="index.html#installing-packages">Installing packages</a> section.<br />
-</p></li>
-<li><p>Then from the menu bar go to <code>File-&gt;&gt;New Project-&gt;&gt;New Directory-&gt;&gt;Book Project using bookdown</code>.<br />
-A new window appears<br />
-<img src="tutorial_screenshots/open_bkdown_proj.png" style="width:4in" alt="Create Bookdown project…" /></p></li>
-<li><p>Give your bookdown directory a name ‘NAPBook_tutorial.’ This is the name of a new folder that will be created to store your bookdwon project files.<br />
-</p></li>
-<li><p>In the ‘Create project as subdirectory of’ field, use the browse button to navigate to where you want to save your bookdown project folder.<br />
-</p></li>
-<li><p>After you select the directory location, you are returned to the ‘Create Book project…’ window. Click ‘create project.’<br />
-A new project session opens up, with skeleton chapters and other sections and metadata files. <img src="tutorial_screenshots/bkdn_proj_window_label.png" alt="The window looks like this" /><br />
-Your project window might appear with panel arrangements different from mine/in screenshot.
-Your project files can be accessed from the Files tab in bottom right of the project window.
+We will also use the package <code>tinytex</code> to build pdf format of the book document.<br />
+1. First, launch the rstudio app in your pc.
+2. Install the bookdown and tinytex packages in case you have not installed them. Use any of the methods shown in the <a href="index.html#installing-packages">Installing packages</a> section.<br />
+3. Then from the menu bar go to <code>File-&gt;&gt;New Project-&gt;&gt;New Directory-&gt;&gt;Book Project using bookdown</code>.<br />
+A new window appears</p>
+<div class="figure">
+<img src="tutorial_screenshots/open_bkdown_proj.png" style="width:4in" alt="" />
+<p class="caption">Create Bookdown project…</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Give your bookdown directory a name ‘NAPBook_tutorial.’ This is the name of a new folder that will be created to store your bookdwon project files.<br />
+</li>
+<li>In the ‘Create project as subdirectory of’ field, use the browse button to navigate to where you want to save your bookdown project folder.<br />
+</li>
+<li>After you select the directory location, you are returned to the ‘Create Book project…’ window. Click ‘create project.’<br />
+A new project session opens up, with skeleton chapters and other sections and metadata files.<br />
+<img src="tutorial_screenshots/bkdn_proj_window_label.png" alt="The window looks like this" /><br />
+Your project window might appear with panel arrangements different from mine/in screenshot. Your project files can be accessed from the Files tab in bottom right of the project window.<br />
 Each chapter is compiled from a single .rmd file, and always starts with a first level header sign ‘#.’<br />
 From the files pane, you can open any chapter, and edit it to your liking.<br />
 Lets take a look at the ’_bookdown.yml’ file.<br />
-</p></li>
-<li><p>From the ‘Files’ tab, click on the _bookdown.yml’ file.<br />
+</li>
+<li>From the ‘Files’ tab, click on the _bookdown.yml’ file.<br />
 The file open up in your script/source pane. Notice, the book_filename takes the name of the folder we created when opening the project.<br />
-</p></li>
-<li><p>Let’s add the line <code>output_dir: "docs"</code> to this file.
-See screenshot below;<br />
-<img src="tutorial_screenshots/add_docs_to_bkdnyaml.png" alt="Creating a docs folder" /></p></li>
+</li>
+<li>Let’s add the line <code>output_dir: "docs"</code> to this file.
+See screenshot below;</li>
 </ol>
-<p>This command creates an additional folder called ‘docs’ and specifies that we want to store our outputs here. This folder is necessary for creating webpages from our book project.<br />
+<p><img src="tutorial_screenshots/add_docs_to_bkdnyaml.png" alt="Creating a docs folder" /><br />
+This command creates an additional folder called ‘docs’ and specifies that we want to store our outputs here. This folder is necessary for creating webpages from our book project.<br />
 9. Save changes. Use the ‘Save’ icon on the script window or Ctrl + S on your keyboard.<br />
 10. Next, click to open the ’_output.yml’ file.<br />
 11. Let’s edit the line that contains the title to our book. Change the text ‘A Minimal Book …’ to ‘NAP Book Tutorial.’<br />
-Should look like this;
-<img src="tutorial_screenshots/edit_title_output_yaml.png" alt="Change book title" /><br />
+Should look like this;</p>
+<p><img src="tutorial_screenshots/edit_title_output_yaml.png" alt="Change book title" /><br />
 Ignore everything else for now :)<br />
 12. Save.<br />
 13. Scroll down your files to find the ‘index.rmd’ file. Click to open.<br />
@@ -346,8 +357,11 @@ Ignore everything else for now :)<br />
 16. Add a chapter named ‘Preliminaries’ before the code chunk.<br />
 Chapters are created using the first level header #.<br />
 17. Add sections to your chapter using second level header ##.<br />
-Your script should look more or less similar to this;
-<img src="tutorial_screenshots/edit_index.png" alt="edit book title and author" /></p>
+Your script should look more or less similar to this;</p>
+<div class="figure">
+<img src="tutorial_screenshots/edit_index.png" alt="" />
+<p class="caption">edit book title and author</p>
+</div>
 <ol start="18" style="list-style-type: decimal">
 <li>Next, open the ‘README.md’ file and edit the text to this ‘This is an example NAP designed to help you get started with creating your NAPs with bookdown.’ Or add a description of your choice.</li>
 <li>Save your work.<br />
@@ -357,51 +371,33 @@ Your script should look more or less similar to this;
 <li>Type in the chapter title ‘Introduction’<br />
 </li>
 <li>Type in sub-chapters with the names ‘Overview of the NAP Process, NAP Vision, NAP Mandate, NAP Process in Sierra Leone, Functions, Guiding Principles, Goals, Overview of the NAP’<br />
-Your script should resemble this;
-<img src="tutorial_screenshots/intro_chapter.png" alt="introduction chapter" />
+Your script should resemble this;</li>
+</ol>
+<p><img src="tutorial_screenshots/intro_chapter.png" alt="introduction chapter" /><br />
 This text has been borrowed from the Sierra Leone NAP. Use the text from the screenshot below to edit the next two chapters (.rmd files). i.e ‘02-literature.rmd &amp; 03-methods.rmd.’<br />
-<img src="tutorial_screenshots/SLeone_NAP_chapters.png" alt="Sierra Leone NAP chapters" /></li>
-</ol>
-<p>For the interest of time, let’s delete chapters 4 and 5 from our project files.<br />
+<img src="tutorial_screenshots/SLeone_NAP_chapters.png" alt="Sierra Leone NAP chapters" /><br />
+For the interest of time, let’s delete chapters 4 and 5 from our project files.<br />
 23. From the files tab (bottom right), click on the check-boxes to the left of the application and summary .rmd files to select them.
-24. Click delete<br />
-<img src="tutorial_screenshots/delete_4_5.png" alt="delete chapters" /></p>
-<ol start="25" style="list-style-type: decimal">
-<li>Save project.<br />
-</li>
-<li>From the ‘Environment’ window, click on the tab ‘Build.’<br />
-</li>
-<li>On the new window that opens, click the hammer/Build Book button to start rendering the book. <img src="tutorial_screenshots/build_book.png" alt="Build book" /><br />
-This process may take a few minutes. You can monitor the progress in the Environment window.<br />
-When the process is done, your book should open up in an html window as below;</li>
-</ol>
+24. Click delete</p>
+<p><img src="tutorial_screenshots/delete_4_5.png" alt="delete chapters" />
+25. Save project.<br />
+26. From the ‘Environment’ window, click on the tab ‘Build.’<br />
+27. On the new window that opens, click the hammer/Build Book button to start rendering the book.</p>
 <div class="figure">
-<img src="tutorial_screenshots/built_book.png" alt="" />
-<p class="caption">Your book</p>
+<img src="tutorial_screenshots/build_book.png" alt="" />
+<p class="caption">Build book</p>
 </div>
-<ol start="28" style="list-style-type: decimal">
-<li>Scroll down your chapters to find the ‘References’ chapter. Oops! No reference! Don’t sweat.<br />
-</li>
-<li>Back to our project, from the Files tab in bottom right window, open the file named ‘book.bib.’ This is the text file holding our citations.Currently, only one. You will notice that the document type is a book, and the the book name is ‘xie2015.’</li>
-</ol>
-<div class="figure">
-<img src="tutorial_screenshots/add_citation.png" alt="" />
-<p class="caption">Adding bibliography</p>
-</div>
-<ol start="30" style="list-style-type: decimal">
-<li>To cite this book in our NAP book, open square brackets and type the ‘@’ sign followed by the book name. i.e <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.<br />
-</li>
-<li>Let’s use this citation say in the Introduction chapter. Open the chapter, and insert the text ‘Our only citation at the moment is <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.’ See example:</li>
-</ol>
-<div class="figure">
-<img src="tutorial_screenshots/cite_book.png" alt="" />
-<p class="caption">cite book</p>
-</div>
-<ol start="32" style="list-style-type: decimal">
-<li>Run the ‘Build Book’ command again.<br />
-</li>
-<li>Now you should see that your book has been added to the ‘References’ section, both in the chapter in which you cited it as well as in the overall References Chapter.</li>
-</ol>
+<p>This process may take a few minutes. You can monitor the progress in the Environment window.<br />
+When the process is done, your book should open up in an html window as below;<br />
+<img src="tutorial_screenshots/built_book.png" alt="Your book" /><br />
+28. Scroll down your chapters to find the ‘References’ chapter. Oops! No reference! Don’t sweat.<br />
+29. Back to our project, from the Files tab in bottom right window, open the file named ‘book.bib.’ This is the text file holding our citations.Currently, only one. You will notice that the document type is a book, and the the book name is ‘xie2015.’</p>
+<p><img src="tutorial_screenshots/add_citation.png" alt="Adding bibliography" />
+30. To cite this book in our NAP book, open square brackets and type the ‘@’ sign followed by the book name. i.e <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.<br />
+31. Let’s use this citation say in the Introduction chapter. Open the chapter, and insert the text ‘Our only citation at the moment is <span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.’ See example:<br />
+<img src="tutorial_screenshots/cite_book.png" alt="cite book" />
+32. Run the ‘Build Book’ command again.<br />
+33. Now you should see that your book has been added to the ‘References’ section, both in the chapter in which you cited it as well as in the overall References Chapter.</p>
 <div class="figure">
 <img src="tutorial_screenshots/reference_incl.png" alt="" />
 <p class="caption">citation added to ref</p>
@@ -412,10 +408,13 @@ When the process is done, your book should open up in an html window as below;</
 <h2><span class="header-section-number">3.2</span> Integrating code evaluations within your text/ chapters</h2>
 <p>To integrate a code (+ its evaluation), open a code chunk at your desired section or paragraph and write your code as below. Please refer to the section on <a href="getting-started.html#insert-code-chunks">Insert code chunks</a> if need be.</p>
 <p>For instance in the code below we use one of the in-built R datasets named <code>mtcars</code> to plot a bar chart of Car ‘Model’ against ‘mpg’ (miles per gallon).
-when this code is evaluated, the bar chart will be plotted within your document as specified. You may enter text before or after the plot.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="napdown.html#cb1-1" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">plot_ly</span>(mtcars,<span class="at">type =</span> <span class="st">&#39;bar&#39;</span>, <span class="at">y=</span><span class="fu">row.names</span>(mtcars), <span class="at">x=</span><span class="sc">~</span>mpg)</span></code></pre></div>
-<div id="htmlwidget-728fbb22c7441b25b5cc" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-728fbb22c7441b25b5cc">{"x":{"visdat":{"637c4c1f6d79":["function () ","plotlyVisDat"]},"cur_data":"637c4c1f6d79","attrs":{"637c4c1f6d79":{"y":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"mpg"},"yaxis":{"domain":[0,1],"automargin":true,"title":[],"type":"category","categoryorder":"array","categoryarray":["AMC Javelin","Cadillac Fleetwood","Camaro Z28","Chrysler Imperial","Datsun 710","Dodge Challenger","Duster 360","Ferrari Dino","Fiat 128","Fiat X1-9","Ford Pantera L","Honda Civic","Hornet 4 Drive","Hornet Sportabout","Lincoln Continental","Lotus Europa","Maserati Bora","Mazda RX4","Mazda RX4 Wag","Merc 230","Merc 240D","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Pontiac Firebird","Porsche 914-2","Toyota Corolla","Toyota Corona","Valiant","Volvo 142E"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"y":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"type":"bar","orientation":"h","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+When this code is evaluated, the bar chart will be plotted within your document as specified. You may enter text before or after the plot.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="napdown.html#cb1-1" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">plot_ly</span>(mtcars,<span class="at">type =</span> <span class="st">&#39;bar&#39;</span>, </span>
+<span id="cb1-2"><a href="napdown.html#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">y=</span><span class="fu">row.names</span>(mtcars), <span class="at">x=</span><span class="sc">~</span>mpg)<span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="napdown.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  plotly<span class="sc">::</span><span class="fu">layout</span>(<span class="at">yaxis=</span><span class="fu">list</span>(<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">26</span>)),</span>
+<span id="cb1-4"><a href="napdown.html#cb1-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">xaxis=</span><span class="fu">list</span>(<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">26</span>)))</span></code></pre></div>
+<div id="htmlwidget-3b9704318ee34a88faf8" style="width:2880px;height:1920px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3b9704318ee34a88faf8">{"x":{"visdat":{"3c0293d70d":["function () ","plotlyVisDat"]},"cur_data":"3c0293d70d","attrs":{"3c0293d70d":{"y":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"tickfont":{"size":26},"title":[],"type":"category","categoryorder":"array","categoryarray":["AMC Javelin","Cadillac Fleetwood","Camaro Z28","Chrysler Imperial","Datsun 710","Dodge Challenger","Duster 360","Ferrari Dino","Fiat 128","Fiat X1-9","Ford Pantera L","Honda Civic","Hornet 4 Drive","Hornet Sportabout","Lincoln Continental","Lotus Europa","Maserati Bora","Mazda RX4","Mazda RX4 Wag","Merc 230","Merc 240D","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Pontiac Firebird","Porsche 914-2","Toyota Corolla","Toyota Corona","Valiant","Volvo 142E"]},"xaxis":{"domain":[0,1],"automargin":true,"tickfont":{"size":26},"title":"mpg"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"y":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"type":"bar","orientation":"h","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <div id="some-things-to-note" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Some things to note</h3>
 <ol style="list-style-type: decimal">
@@ -426,11 +425,8 @@ We will learn about advanced numbering and re-ordering chapters later.<br />
 </li>
 <li>From our output.yml file, you will notice that we have 3 output options for our file; gitbook, pdf and epub. This is the default. You may select the most preferred output type by deleting the other/unwanted formats or leave this as default and choose a single output format when building the book. Since we left the default 3 options, when we rendered the book, it was compiled in .tex/gitbook, pdf and epub. This can be accessed from the ‘docs’ folder.</li>
 </ol>
-<div class="figure">
-<img src="tutorial_screenshots/docs_folder_contents.png" alt="" />
-<p class="caption">Outputs</p>
-</div>
-<p>4 When building the book. Here you may choose to build one or all formats. From the Build Book button, click on the drop-down arrow and select your preferred format.</p>
+<p><img src="tutorial_screenshots/docs_folder_contents.png" alt="Outputs" /><br />
+4. When building the book. Here you may choose to build one or all formats. From the Build Book button, click on the drop-down arrow and select your preferred format.</p>
 <div class="figure">
 <img src="tutorial_screenshots/build_book_drop_down.png" alt="" />
 <p class="caption">Build book format options</p>
@@ -442,9 +438,9 @@ We will learn about advanced numbering and re-ordering chapters later.<br />
 <p>Creating pdf documents using LaTeX engines and distributions such as TinyTeX is not a straightforward task and may produce errors as the process involves multiple processing activities. However, most errors can be solved using suggestions contained in the error messages produced in the Environment or Console windows.<br />
 If, in any case, the LaTeX error generated is not clear, you may use any the commands options below to solve the problem.</p>
 <p><em>Remove the # sign to run code</em></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="napdown.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ## 1 install the development version of tinytex</span></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="napdown.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ##install the development version of tinytex</span></span>
 <span id="cb2-2"><a href="napdown.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="napdown.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) #3 2 update your r and</span></span>
+<span id="cb2-3"><a href="napdown.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) ## update your r and</span></span>
 <span id="cb2-4"><a href="napdown.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
 <span id="cb2-5"><a href="napdown.html#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="napdown.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
@@ -453,7 +449,7 @@ If, in any case, the LaTeX error generated is not clear, you may use any the com
 <p>See more on <a href="https://yihui.org/tinytex/r/">TinyTex Debugging</a>.</p>
 <p>Additionally, quite often, LaTeX formatting is not very compatible with other output formats such as html. But with the use of <code>html widgets</code> and other advanced formatting options, this problem can be overcome.
 To produce a pdf document from a document with both LaTeX and html formats, it may be useful to install the package <code>webshot</code> from CRAN.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="napdown.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;webshot&quot;)  </span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="napdown.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;webshot&quot;)  </span></span>
 <span id="cb3-2"><a href="napdown.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
 <p>Further reading on <a href="https://bookdown.org/yihui/bookdown/html-widgets.html">html widgets here</a></p>
 

@@ -1,3 +1,4 @@
+
 # Getting started 
 ## About RMarkdown
 RMarkdown is a file document that allows you to write, save and execute code, as well as text and figures to help generate reproducible reports that can be shared in several formats. 
@@ -25,11 +26,9 @@ To start using RMarkdown, install the following base packages using any of the m
 To create headers for your reports/document e.g. chapters, sub-chapters and so on; use the hash sign '#' in front of the title. Sequentially increase the number of "#' signs to denote subsequent header levels.  
 Insert blank line before each header (except in the beginning of document).
 
- # Header level 1   
- ## Header level 2  
- ### Header level 3  
- #### Header level 4  
+![headers](tutorial_screenshots/headers.png)
 
+ 
 _Note: For the purpose of this example, I have added a space before each line so that r doesn't create the headers. Remove the space to create the headers_
 
 
@@ -37,10 +36,13 @@ _Note: For the purpose of this example, I have added a space before each line so
 To create emphasis in your markdown texts, use an asterisk before and after text *to italicize* or double asterisk **to make your text bold**.  
 Alternatively, you may use single underscore _for italics_ or double underscore __for bold__.
 
+![text emphasis](tutorial_screenshots/italics_bold.png)
+
 ### Create Lists
 #### Ordered list
 Use numbers to order your list items.
-and a plus sign '+' to create sub-items on your list. 
+and a plus sign '+' to create sub-items on your list.   
+
 ![ordered list](tutorial_screenshots/ordered_list.png)
 
 #### Unordered list
@@ -59,26 +61,24 @@ to insert a line break
 You may insert a link using the plain http address such as https://rmarkdown.rstudio.com/ or insert it as a linked phrase using square brackets and parenthesis such as in screenshot
 
 ![linked phrase](tutorial_screenshots/link_phrase.png)   
+to produce this:  
+[our link phrase goes here](https://rmarkdown.rstudio.com/).   
 
-to produce this:
+### Insert figures/images    
 
-[our link phrase goes here](https://rmarkdown.rstudio.com/).
-
-### Insert figures/images
 To insert images to our document, we use the same syntax as links, but start with an exclamation mark'!' before syntax.
 For an image from a url use; `![text to accompany your image e.g a caption](your https link)`  
 or for an image file in your local directory use, `![your image text](path to local image file)`.  
-For instance, I downloaded the UN Climate logo and saved it as a .jpg in my working directory as exact name `unfccc_logo.jpg` 
-The following syntax will insert the logo into my document:   
-
+For instance, I downloaded the UN Climate logo and saved it as a .jpg in my working directory as exact name `unfccc_logo.jpg`  
+The following syntax will insert the logo into my document:      
 ![insert image](tutorial_screenshots/insert_image.png)
 
-
-![UN Climate logo](unfccc_logo.jpg)   
+![UN Climate logo](unfccc_logo.jpg)  
+ 
 
 __When inserting images from local file, it is strongly recommended to have the image in your working directory.__
 
-### Insert block quotes
+### Insert block quotes  
 To insert a block quote within your text, use the greater than sign '>' in the beginning of quote. The quote must begin on a new line, and remember to insert blank line before and after. For instance the screenshot below;  
 
 ![block quote](tutorial_screenshots/block_quote.png)
@@ -90,7 +90,8 @@ produces this:
 
 ### Insert code chunks
 To write your code use  open code chunk with three backticks 
-and the curly brackets {insert your code language}, hit enter on your keyboard, insert your code and hit enter, close the code chunk with another three backticks.   
+and the curly brackets {insert your code language}, hit enter on your keyboard, insert your code and hit enter, close the code chunk with another three backticks.  
+
 ![insert code chunk](tutorial_screenshots/code_chunk.png)
 
 Alternatively, you may do it from top right corner of your script/source window as shown below. 
@@ -107,7 +108,7 @@ Type in row values below the dashed lines. The row value length may exceed the d
 To insert a caption or alt text to your table use, full colon ':' followed by your caption text at the end of the table.  
 Alternatively, use 'Table: your caption or text'. The following syntax (screenshot) produces the ensuing table.
 
-![manual table](tutorial_screenshots/typed_table.png)
+  ![manual table](tutorial_screenshots/typed_table.png)
 
 
   Header 1    Header 2    Header 3       Header 4
@@ -124,27 +125,31 @@ Table: Alternative caption option
 You may also create simple tables using a `knitr` function called `kable`.  
 The code below tells r that we want to create a data set with 3 columns, X, Y & Z, assigning them the values enclosed in the letter c. The letter c used together with brackets indicates a list of elements. Thus, in the example below, we tell r that our column X, will contain a list of 4 elements i.e 20, 30, 10 & 50.  
 Then we tell r to create the data set by combining all the columns X, Y & Z into a data frame.
-Finally, we call the function `kable` and enter the data we created. This function converts or data frame into a table format.  
+Finally, we call the function `kable` and enter the data we created. This function converts our data frame into a table format.  
 Optionally, you may add a caption to the table and specify cell alignment. 
 
-![kable table](tutorial_screenshots/kable_table.png)
+![kable table](tutorial_screenshots/kable_table.png)  
 
-```{r kable,echo=FALSE, fig.cap= "My first simple table with kable"}
+
+```{r kable,echo=FALSE, fig.cap= "My first simple table with kable", fig.width=10}
+library(magrittr)
 X<-c(20,30,10, 50)    # create variable X
 Y<-c(1.4, 4.3,5.9,2.7)    # create variable Y
 Z<-c("yes","no","true","false")   # create variable Z
 mydata<-data.frame(X,Y,Z) # combine variables into table format
-knitr::kable(mydata, caption = "My first simple table with kable", align = 'c') # plot table with kable
+knitr::kable(mydata, caption = "My first simple table with kable", align = 'c')%>%
+  kableExtra::kable_styling(latex_options = 'hold_position')
 ```
+
 
 __Note that our code chunk is labelled 'kable'. You can label code chunks as below__
 
-![labled chunk](tutorial_screenshots/chunk_name.png)
+ ![labled chunk](tutorial_screenshots/chunk_name.png)
 
 
 This will be useful for cross-referencing as we'll see in the [Chapter References] section.
 
-### Page breaks  
+### Page breaks   
 Use three or more asterisks or dashes to insert a page break.   
 
 ![page break](tutorial_screenshots/page_break.png)
@@ -175,6 +180,7 @@ The references will appear at the end of the chapter where they are referenced, 
 
 #### Chapter References
 To reference chapter, type in the chapter title inside square brackets. For instance, this command references our second chapter named NAPdown.  
+
 ![chapter ref](tutorial_screenshots/ref_chapters_sections.png)
 
 The same applies to section headers. Just type [section header name].

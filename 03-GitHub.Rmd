@@ -5,32 +5,34 @@ To use github as your repository manager, Create an account at (https://github.c
 ## Sharing Repositories on GitHub
 ### Via GitHub Desktop
 1. Open GitHub desktop on your pc/laptop  
-2. On the main menu, click on `File` and select `Add local repository` from the dropdown list
-![add repository](tutorial_screenshots/gh_desktop_add_repo.png)  
+2. On the main menu, click on `File` and select `Add local repository` from the dropdown list  
+![add repository](tutorial_screenshots/gh_desktop_add_repo.png)    
 3. Browse to your your repository is sitting in your pc, select it and click `Add Repository'
 4. A list of all your files and sub-directories appears from which you may select and deselect what you want to publish to GitHub.
-5. Enter a commit message on the 'Summary' text-box right below your listed files and optionally a brief description.
-![commit](tutorial_screenshots/gh_desktop_commit.png)
-
+5. Enter a commit message on the 'Summary' text-box right below your listed files and optionally a brief description.  
+![commit](tutorial_screenshots/gh_desktop_commit.png)    
 6. Hit 'Commit to master'
-7. To the right of the GitHub desktop window, the app will notify you that this repository is only available on your local machine and if you would like to share/publish it to GitHub. Click on publish repository 
-![Publish new repo](tutorial_screenshots/gh_desktop_publish_repo.png)
-8. Uncheck the box for ‘keep the code private’ and Click `Publish repository`
-![uncheck private](tutorial_screenshots/gh_desktop_uncheck_private.png)
-9. From the menu bar on GitHub desktop, click on `Repository` and select `Push` from the dropdown list.
+7. To the right of the GitHub desktop window, the app will notify you that this repository is only available on your local machine and if you would like to share/publish it to GitHub. Click on publish repository   
+![Publish new repo](tutorial_screenshots/gh_desktop_publish_repo.png)    
+8. Uncheck the box for ‘keep the code private’ and Click `Publish repository`  
+![uncheck private](tutorial_screenshots/gh_desktop_uncheck_private.png)   
+
+9. From the menu bar on GitHub desktop, click on `Repository` and select `Push` from the drop-down list.
 10. Congratulations, you just published your repository to GitHub  
 
 ### Via direct file upload
 
 1. Log in to your GitHub.com account 
 2. Click on the plus sign + located at the top right corner of your github account page. 
-![open github repo](tutorial_screenshots/gh_create_repo.png)
+
+![open github repo](tutorial_screenshots/gh_create_repo.png)  
 3. Click on 'New Repository' from the drop-down menu.  
 4. On the new window that appears, give the repository a name: NAPBook_Tutorial  
 5. Leave the repository as 'Public' 
 6. Leave everything else as is   
 7. Scroll down and click on 'Create Repository'  
-8. On the resulting window, click on 'upload an existing file'   
+8. On the resulting window, click on 'upload an existing file' 
+
 ![import repo to github](tutorial_screenshots/gh_uploadfiles.png)
 
 This will take you to a new window, from which you can drag-&-drop or browse to your files.   
@@ -50,8 +52,10 @@ When making changes to your files, you may use this field to briefly describe wh
 
 1. Download and install Git Bash from this link (https://git-scm.com/downloads).  
 2. Repeat steps 1 - 7 in the preceding section.  
-3. On the new window, click on the 'https' tab to reveal the url for your repository. 
+3. On the new window, click on the 'https' tab to reveal the url for your repository.   
+
 ![Repository url](tutorial_screenshots/gh_repolink.png)
+
 4. Luanch Git Bash on your pc. This opens up a window with your pc name in the text. This is the command window.  
 5. Set the working repository to where your project files are located. To do this, type in commamd `cd "path to your project files directory`. Click Enter on your keyboard.  
 6. Type in `git init` to initialize this directory as your file origin.  
@@ -62,8 +66,7 @@ When making changes to your files, you may use this field to briefly describe wh
 10. Type in `git push origin master` and click Enter. This pushes/uploads your files plus the commit message to your github repo.   
 Below is a list of the above commands  
 
-
-![Upload files via git bash](tutorial_screenshots/gh_bash_upload.png)  
+![Upload files via git bash](tutorial_screenshots/gh_bash_upload.png)    
 
 
 
@@ -77,22 +80,22 @@ To share your repository with colleagues and friends, just copy the link on your
 Github pages helps you to create/publish websites in very simple steps.
 We will publish the NAP book we just created with bookdown into a git-based website.
 To do this,  
-
 1.In your github repository, click on the `Settings` tab (right side of your screen)  
 2. Scroll down the listed menu items on the left side of the screen until you find menu item `Pages`. Click on it.  
-![gh_pages](tutorial_screenshots/gh_pages_setup.png)
+
+![gh_pages](tutorial_screenshots/gh_pages_setup.png)  
 3. Scroll down to the 'Source' field. Click on the drop-down arrow and select the __main/master__ branch and __docs__ folder as your source files for your website. Click Save.   
-A message with a link to your website will appear, right above the `Source` field. 
+A message with a link to your website will appear, right above the `Source` field.
 
 > Your site is ready to be published at https://yourusername.github.io/repositoryname/
 
-or as seen here ![gh pages link](tutorial_screenshots/gh_pageslink.png) 
+or as seen here: 
+![gh pages link](tutorial_screenshots/gh_pageslink.png)  
 
-Use this link to view your newly created website. 
-
+Use this link to view your newly created website.   
 4. Alternatively, navigate back to your main repository area, scroll down to your right to find your active `github-pages`. Click to view your website deployments.  
 
-![gh pages deployment](tutorial_screenshots/gh_pages_deploy.png)  
+![gh pages deployment](tutorial_screenshots/gh_pages_deploy.png)   
 
 
 

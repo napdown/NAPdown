@@ -4,30 +4,39 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>An introduction to markdown</title>
-  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <title>An introduction to NAPdown</title>
+  <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="An introduction to markdown" />
+  <meta property="og:title" content="An introduction to NAPdown" />
   <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://napdown.github.io/NAPdown/" />
   
-  
-  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <meta property="og:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta name="github-repo" content="napdown/NAPdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="An introduction to markdown" />
+  <meta name="twitter:title" content="An introduction to NAPdown" />
   
-  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics of R and RStudio, chapter 2 introduces napdown, a bookdown concept and chapter three on sharing and collaboration with GitHub. The subsequent chapters go into detail about working with different types of data and data sources.
+  <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
+of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
+on sharing and collaboration with GitHub. The subsequent chapters go into detail
+about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   
 
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-18" />
+<meta name="date" content="2021-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,15 +65,15 @@ Additional chapters are provided further reading material and references.</p>" /
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
 <script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
@@ -292,7 +301,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An introduction to markdown</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An introduction to NAPdown</a>
           </h1>
         </div>
 
@@ -301,9 +310,9 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">An introduction to markdown</h1>
+<h1 class="title">An introduction to NAPdown</h1>
 <p class="author"><em>A Team</em></p>
-<p class="date"><em>2021-10-18</em></p>
+<p class="date"><em>2021-10-21</em></p>
 </div>
 <div id="prerequisites" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
@@ -317,20 +326,20 @@ However, should you require a step-by-step guide, you may refer to this <a href=
 <h2><span class="header-section-number">1.1</span> Opening a markdown file</h2>
 <ol style="list-style-type: decimal">
 <li>Launch your r/studio app.
-Your rstudio workspace should look more or less similar to this: <img src="tutorial_screenshots/rstudio_panels.png" alt="rstudio_window panels" /></li>
+Your rstudio workspace should look more or less similar to this:</li>
 </ol>
-<p>If your rstudio opens up with 4 windows instead of 3, skip next step.<br />
-2. From the main menu, go to File-&gt;&gt;New File-&gt;&gt;R Markdown.
-You should have a window like this: <img src="tutorial_screenshots/open_rmd_file.png" alt="opening a new .rmd file" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Fill in the details for your document title and author. Leave the rest as default.<br />
-</li>
-<li>Click Ok</li>
-</ol>
-<p>This opens up your 4th rstudio window with an rmarkdown script.<br />
-Now your app area should look more or less like this; <img src="tutorial_screenshots/rstudio_panels_4.png" alt="The four r windows" /><br />
-The arrangement may however be different. If so, do not worry, it’s just semantics.<br />
-<em>As you might have seen, you may open other scripts such as R, python, SQL etc in similar manner.</em></p>
+<p><img src="tutorial_screenshots/rstudio_panels.png" alt="rstudio_window panels" /><br />
+If your rstudio opens up with 4 windows instead of 3, skip next step.<br />
+2. From the main menu, go to File-&gt;&gt;New File-&gt;&gt;R Markdown.<br />
+You should have a window like this:<br />
+<img src="tutorial_screenshots/open_rmd_file.png" alt="opening a new .rmd file" /><br />
+3. Fill in the details for your document title and author. Leave the rest as default.<br />
+4. Click Ok.<br />
+This opens up your 4th rstudio window with an rmarkdown script.<br />
+Now your app area should look more or less like this;<br />
+<img src="tutorial_screenshots/rstudio_panels_4.png" alt="The four r windows" /></p>
+<p>The arrangement may however be different. If so, do not worry, it’s just semantics.</p>
+<p><em>As you might have seen, you may open other scripts such as R, python, SQL etc in similar manner.</em></p>
 <div id="rstudio-windows-explained" class="section level3" number="1.1.1">
 <h3><span class="header-section-number">1.1.1</span> Rstudio windows explained:</h3>
 <ul>
@@ -356,9 +365,12 @@ This panel provides a shortcut/alternative to different functions such as to acc
 <p>Options:</p>
 <p><strong>1. From the console;</strong><br />
 After the greater than (&gt;) sign, write command <code>install.packages("package name")</code> and hit enter on your keyboard.<br />
-See example;<br />
-<img src="tutorial_screenshots/install_rmkdn_console.png" alt="install packages from console" /><br />
-<strong>2. In script window </strong>
+See example;</p>
+<div class="figure">
+<img src="tutorial_screenshots/install_rmkdn_console.png" alt="" />
+<p class="caption">install packages from console</p>
+</div>
+<p><strong>2. In script window </strong>
 Inside your script write command <code>install.packages("package name")</code><br />
 Click on ‘Run’ (Run button is on the top right of your source panel).<br />
 Alternatively, if your write your command in a code chunk, you may hit the ‘Play’ button on far right of your code chunk. See example;</p>
@@ -366,10 +378,14 @@ Alternatively, if your write your command in a code chunk, you may hit the ‘Pl
 <img src="tutorial_screenshots/install_rmkdn_scrpt.png" alt="" />
 <p class="caption">install packages from script wnindow</p>
 </div>
-<p>We see more about code chunks in the next chapter.</p>
+<p>*We see more about code chunks in the next chapter.</p>
 <p><strong>3. From the menu bar </strong>
-From the menu bar, go the the tab ‘Tools’ and select ‘Install Packages.’</p>
-<p>You should see a window like this one <img src="tutorial_screenshots/install_rmkdn_toolstab.png" alt="install packages from menu bar" /></p>
+From the menu bar, go the the tab ‘Tools’ and select ‘Install Packages.’<br />
+You should see a window like this one:</p>
+<div class="figure">
+<img src="tutorial_screenshots/install_rmkdn_toolstab.png" alt="" />
+<p class="caption">install packages from menu bar</p>
+</div>
 <p>In the ‘Install from’ field, select ‘Repository (CRAN),’ then enter the name(s) of packages to be installed.<br />
 Leave everything else as default. Click Install.</p>
 <p><strong>4. From Files/Plots/Packages/Help Panel</strong><br />
