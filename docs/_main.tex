@@ -6,7 +6,7 @@
 ]{book}
 \title{An introduction to NAPdown}
 \author{A Team}
-\date{2021-10-21}
+\date{2021-10-28}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -334,8 +334,8 @@ Insert blank line before each header (except in the beginning of document).
 \hypertarget{bold-and-italic-text}{%
 \subsection{Bold and italic text}\label{bold-and-italic-text}}
 
-To create emphasis in your markdown texts, use an asterisk before and after text \emph{to italicize} or double asterisk \textbf{to make your text bold}.\\
-Alternatively, you may use single underscore \emph{for italics} or double underscore \textbf{for bold}.
+To create emphasis in your markdown texts, use an asterisk \texttt{*} before and after text \emph{to italicize} or double asterisk \texttt{**} \textbf{to make your text bold}.\\
+Alternatively, you may use single underscore\texttt{\_} \emph{for italics} or double underscore\texttt{\_\_} \textbf{for bold}.
 
 \begin{figure}
 \centering
@@ -1015,33 +1015,61 @@ Steps;
 \hypertarget{import-excel-table-from-local-drive}{%
 \subsection{Import excel table from local drive}\label{import-excel-table-from-local-drive}}
 
+To load and use excel data from local storage such as your pc, follow the following steps
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
 \tightlist
 \item
-  From the Environment window, click `Import Dataset'
+  Create an object by typing in a name for the data you want to upload followed by the greater than sign and a hyphen/dash (\textless-).My object below is called `gcf'
 \item
-  From the drop down menu, select `From Excel'
+  Call the library function \texttt{read\_excel} or \texttt{read\_csv} in case your data is stored in csv format\\
 \item
-  A new window opens; use this to browse to your target excel file and select it
+  Inside the parenthesis, open single or double quotation marks \texttt{"\ "} or \texttt{\textquotesingle{}\textquotesingle{}} , enter the path to your excel file (you may copy and paste this form your file explorer address bar). Be sure to include the full name of your file including the format extension (.xls, .xlsx, .csv, etc)\\
 \item
-  In case of multiple worksheets in your excel file, you may specify
+  The backslash in markdown is a special character, therefore to avoid associated errors, add another backslash to each existing backslash in your path.\\
 \item
-  the name or number of worksheet you are interested in. Otherwise, the first sheet is imported by default
-\item
-  Click `Import' on the bottom right of the window
-\item
-  Your file should appear in the global environment
-\item
-  Copy the code from your console into your code environment (you may change the name of your data object to make it shorter or more descriptive)
-\item
-  Run code
-\item
-  Click on the `play' icon to view data attributes or
-\item
-  Click on the data object or table sign on the far right of your data set name to view the data
+  Specify the sheet name or number in case your excel data has multiple sheets, otherwise skip this step\\
+  see screenshot below for all the steps above.
 \end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{tutorial_screenshots/load_excel.png}
+\caption{exceldata}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Run code\\
+\item
+  Your data object appears in the environment window\\
+\item
+  To view your data attributes and structure, click on the `play' icon
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{tutorial_screenshots/view_exel_attr.png}
+\caption{view attr}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  To view your data, click on the data object or table sign on the far right of your data set/object name
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{tutorial_screenshots/view_exel.png}
+\caption{view excel data}
+\end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1061,17 +1089,25 @@ Steps;
 \item
   Open a new code chunk
 \item
-  Call the `datatable' function by typing in `datatable ()' \# autofill is your friend
+  Call the \texttt{kable} function by typing in `kable()' \# auto fill is your friend
 \item
-  Fill in details as below (\emph{since} we are only plotting the first 10 rows of our table)
-\item
-  Hover over the function to see parameters required or go to the `Help' tab and search `datatable' to see further details on its application.
+  Fill in details as below ( since we are only plotting the first 10 rows of our table, we will add another argument called `head' and specify we want to only plot columns 2,3,5,and 8 and only the first 10 rows)
 \end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{tutorial_screenshots/kable_table1.png}
+\caption{kable table}
+\end{figure}
+
+Hover over the function to see parameters required or go to the `Help' tab and search `datatable' to see further details on its application.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(gcf[,}\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{8}\NormalTok{)],}\DecValTok{10}\NormalTok{),}\AttributeTok{caption =} \StringTok{\textquotesingle{}GCF Funding\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
-\FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}condensed\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bordered\textquotesingle{}}\NormalTok{),}\AttributeTok{fixed\_thead =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{font\_size=}\DecValTok{10}\NormalTok{, }\AttributeTok{repeat\_header\_continued =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{kable\_styling}\NormalTok{(}\AttributeTok{bootstrap\_options =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}condensed\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}bordered\textquotesingle{}}\NormalTok{),}
+              \AttributeTok{fixed\_thead =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{font\_size=}\DecValTok{10}\NormalTok{, }\AttributeTok{repeat\_header\_continued =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{full\_width =}\NormalTok{ F)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{column\_spec}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{, }\AttributeTok{width =} \StringTok{"10em"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1080,7 +1116,7 @@ Steps;
 \caption{\label{tab:unnamed-chunk-8}GCF Funding}
 \centering
 \fontsize{10}{12}\selectfont
-\begin{tabular}[t]{l|l|l|r}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{10em}|>{\raggedright\arraybackslash}p{10em}|>{\raggedright\arraybackslash}p{10em}|>{\raggedleft\arraybackslash}p{10em}}
 \hline
 countryname & Region & Project Name & Total GCF Funding\\
 \hline
@@ -1120,7 +1156,7 @@ Burkina Faso & Africa & Africa Hydromet Program – Strengthening Climate Resili
 \item
   Load their libraries\\
 \item
-  Call `datatable' function by typing in `datatable ()' \# autofill is your friend
+  Call \texttt{datatable} function by typing in `datatable()' \# auto fill is your friend
 \item
   Hover over the function to see parameters required or go to the `Help' tab and search `datatable' to see further details on its application.
 \item
@@ -1138,7 +1174,7 @@ Burkina Faso & Africa & Africa Hydromet Program – Strengthening Climate Resili
 \includegraphics{_main_files/figure-latex/unnamed-chunk-9-1.pdf}
 
 \hypertarget{generate-other-graphics}{%
-\section{Generate Other Graphics}\label{generate-other-graphics}}
+\chapter{Generate Other Graphics}\label{generate-other-graphics}}
 
 \hypertarget{a-bar-chart}{%
 \subsection{A bar chart}\label{a-bar-chart}}
@@ -1165,8 +1201,8 @@ Burkina Faso & Africa & Africa Hydromet Program – Strengthening Climate Resili
           \AttributeTok{y =} \SpecialCharTok{\textasciitilde{}}\NormalTok{Projects,  }\AttributeTok{x =} \SpecialCharTok{\textasciitilde{}}\NormalTok{Region}
           
 \NormalTok{               ) }\SpecialCharTok{\%\textgreater{}\%}
-\NormalTok{plotly}\SpecialCharTok{::}\FunctionTok{layout}\NormalTok{(}\AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{24}\NormalTok{)),}
-                 \AttributeTok{xaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{24}\NormalTok{)))}
+\NormalTok{plotly}\SpecialCharTok{::}\FunctionTok{layout}\NormalTok{(}\AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}No. of Projects\textquotesingle{}}\NormalTok{,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{20}\NormalTok{)),}
+                 \AttributeTok{xaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Region\textquotesingle{}}\NormalTok{, }\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{20}\NormalTok{)))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1179,7 +1215,7 @@ To plot the same data as above but on a pie chart, the process the same, only th
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{gcf}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{group\_by}\NormalTok{(Region)}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{summarise}\NormalTok{(}\StringTok{\textquotesingle{}Total\textquotesingle{}}\OtherTok{=}\FunctionTok{sum}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{Total GCF Funding}\StringTok{\textasciigrave{}}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{plot\_ly}\NormalTok{(}\AttributeTok{labels=}\SpecialCharTok{\textasciitilde{}}\NormalTok{Region, }\AttributeTok{values=}\SpecialCharTok{\textasciitilde{}}\NormalTok{Total)}\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{add\_pie}\NormalTok{(}\AttributeTok{hole=}\FloatTok{0.5}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{gcf}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{group\_by}\NormalTok{(Region)}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{summarise}\NormalTok{(}\StringTok{\textquotesingle{}Total\textquotesingle{}}\OtherTok{=}\FunctionTok{sum}\NormalTok{(}\StringTok{\textasciigrave{}}\AttributeTok{Total GCF Funding}\StringTok{\textasciigrave{}}\NormalTok{))}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{plot\_ly}\NormalTok{(}\AttributeTok{labels=}\SpecialCharTok{\textasciitilde{}}\NormalTok{Region, }\AttributeTok{values=}\SpecialCharTok{\textasciitilde{}}\NormalTok{Total,}\AttributeTok{sep =} \StringTok{\textquotesingle{}}\SpecialCharTok{\textbackslash{}n}\StringTok{\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{add\_pie}\NormalTok{(}\AttributeTok{hole=}\FloatTok{0.5}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
     \FunctionTok{layout}\NormalTok{(}\AttributeTok{title=}\StringTok{"GCF Funding by Region"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -1280,7 +1316,8 @@ The first step is to set your working directory, where your files are stored. Yo
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\#install.packages("R.utils","rnaturalearth","reshape","raster","magrittr","dplyr","lubridate")}
+\CommentTok{\#install.packages("R.utils","rnaturalearth","reshape","raster",}
+\CommentTok{\#"magrittr","dplyr","lubridate")}
 \FunctionTok{library}\NormalTok{(R.utils)}
 \FunctionTok{library}\NormalTok{(rnaturalearth)}
 \FunctionTok{library}\NormalTok{(reshape)}
@@ -1302,7 +1339,8 @@ The first step is to set your working directory, where your files are stored. Yo
 \item
   Select the variable of your choice. In the example below, we will use precipitation and mean temperature data, variable names `pre' \& `tmp' respectively.
 \item
-  On the data folder, find data for the years 1901-2020(cru\_ts4.05.1901.2020.pre.dat.nc.gz/ru\_ts4.05.1901.2020.tmp.dat.nc.gz).
+  On the data folder, find data for the years 1901-2020
+  (cru\_ts4.05.1901.2020.pre.dat.nc.gz/ru\_ts4.05.1901.2020.tmp.dat.nc.gz).
 \item
   Right click on it and copy link address. Open a code chunk and paste your link in an object( as in `myurl' in below code).
 \item
@@ -1316,12 +1354,14 @@ The first step is to set your working directory, where your files are stored. Yo
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# pre}
-\CommentTok{\#preurl\textless{}{-} "https://crudata.uea.ac.uk/cru/data/hrg/cru\_ts\_4.05/cruts.2103051243.v4.05/pre/cru\_ts4.05.1901.2020.pre.dat.nc.gz"}
+\CommentTok{\#preurl\textless{}{-} "https://crudata.uea.ac.uk/cru/data/hrg/cru\_ts\_4.05/}
+\CommentTok{\#cruts.2103051243.v4.05/pre/cru\_ts4.05.1901.2020.pre.dat.nc.gz"}
 \CommentTok{\#download.file(preurl, destfile="cru\_ts4.05.1901.2020.pre.dat.nc.gz")}
 \CommentTok{\#gunzip("cru\_ts4.05.1901.2020.pre.dat.nc.gz")}
 
 \CommentTok{\# tmp}
-\CommentTok{\#tmpurl\textless{}{-} "https://crudata.uea.ac.uk/cru/data/hrg/cru\_ts\_4.05/cruts.2103051243.v4.05/tmp/cru\_ts4.05.1901.2020.tmp.dat.nc.gz"}
+\CommentTok{\#tmpurl\textless{}{-} "https://crudata.uea.ac.uk/cru/data/hrg/cru\_ts\_4.05/}
+\CommentTok{\#cruts.2103051243.v4.05/tmp/cru\_ts4.05.1901.2020.tmp.dat.nc.gz"}
 \CommentTok{\#download.file(tmpurl, destfile="cru\_ts4.05.1901.2020.tmp.dat.nc.gz")}
 \CommentTok{\#gunzip("cru\_ts4.05.1901.2020.tmp.dat.nc.gz")}
 \end{Highlighting}
@@ -1419,13 +1459,15 @@ we may plot monthly data as below;
 
 \CommentTok{\# rearrange drawing order to plot from July to June}
 \NormalTok{pr\_monthly}\SpecialCharTok{$}\NormalTok{Month}\OtherTok{\textless{}{-}}\FunctionTok{factor}\NormalTok{(pr\_monthly}\SpecialCharTok{$}\NormalTok{Month,}
-                         \AttributeTok{levels =}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}07\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}08\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}09\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}10\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}11\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}12\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}01\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}02\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}03\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}04\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}05\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}06\textquotesingle{}}\NormalTok{))}
+                         \AttributeTok{levels =}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}07\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}08\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}09\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}10\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}11\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}12\textquotesingle{}}\NormalTok{,}
+                                   \StringTok{\textquotesingle{}01\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}02\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}03\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}04\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}05\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}06\textquotesingle{}}\NormalTok{))}
 
 
 \NormalTok{temp\_monthly}\OtherTok{\textless{}{-}}\NormalTok{tmpdf}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{dplyr}\SpecialCharTok{::}\FunctionTok{filter}\NormalTok{(Year}\SpecialCharTok{\textgreater{}=}\DecValTok{1981}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{group\_by}\NormalTok{(Month)}\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarise}\NormalTok{(}\StringTok{\textquotesingle{}tmean\textquotesingle{}}\OtherTok{=}\FunctionTok{mean}\NormalTok{(tmean))}
 \NormalTok{temp\_monthly}\SpecialCharTok{$}\NormalTok{Month}\OtherTok{\textless{}{-}}\FunctionTok{factor}\NormalTok{(temp\_monthly}\SpecialCharTok{$}\NormalTok{Month, }
-                           \AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}07\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}08\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}09\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}10\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}11\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}12\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}01\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}02\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}03\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}04\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}05\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}06\textquotesingle{}}\NormalTok{))}
+                           \AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}07\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}08\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}09\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}10\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}11\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}12\textquotesingle{}}\NormalTok{,}
+                                      \StringTok{\textquotesingle{}01\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}02\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}03\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}04\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}05\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}06\textquotesingle{}}\NormalTok{))}
 
 \CommentTok{\# combine the pr and temp data frames }
 \NormalTok{pr\_tmp}\OtherTok{\textless{}{-}}\FunctionTok{cbind}\NormalTok{(pr\_monthly,temp\_monthly) }
@@ -1433,10 +1475,11 @@ we may plot monthly data as below;
 
 \NormalTok{pr\_tmp}\SpecialCharTok{$}\NormalTok{Month}\OtherTok{\textless{}{-}}\NormalTok{month.abb}
 \NormalTok{pr\_tmp}\SpecialCharTok{$}\NormalTok{Month}\OtherTok{\textless{}{-}}\FunctionTok{factor}\NormalTok{(pr\_tmp}\SpecialCharTok{$}\NormalTok{Month, }
-                     \AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"Jul"}\NormalTok{, }\StringTok{"Aug"}\NormalTok{, }\StringTok{"Sep"}\NormalTok{ ,}\StringTok{"Oct"}\NormalTok{ ,}\StringTok{"Nov"}\NormalTok{, }
-                                \StringTok{"Dec"}\NormalTok{, }\StringTok{"Jan"}\NormalTok{ ,}\StringTok{"Feb"}\NormalTok{, }\StringTok{"Mar"}\NormalTok{, }\StringTok{"Apr"}\NormalTok{ ,}\StringTok{"May"}\NormalTok{ ,}\StringTok{"Jun"}\NormalTok{))}
+                     \AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"Jul"}\NormalTok{,}\StringTok{"Aug"}\NormalTok{,}\StringTok{"Sep"}\NormalTok{,}\StringTok{"Oct"}\NormalTok{,}\StringTok{"Nov"}\NormalTok{, }
+                                \StringTok{"Dec"}\NormalTok{,}\StringTok{"Jan"}\NormalTok{,}\StringTok{"Feb"}\NormalTok{,}\StringTok{"Mar"}\NormalTok{,}\StringTok{"Apr"}\NormalTok{,}\StringTok{"May"}\NormalTok{ ,}\StringTok{"Jun"}\NormalTok{))}
  
-\CommentTok{\# define properties for secondary axis (only when plotting 2 variables in the same plot area)}
+\CommentTok{\# define properties for secondary axis (only when plotting 2 variables }
+\CommentTok{\#in the same plot area)}
 \NormalTok{ty}\OtherTok{\textless{}{-}}\FunctionTok{list}\NormalTok{(}\AttributeTok{overlaying =} \StringTok{"y"}\NormalTok{,}
   \AttributeTok{side =} \StringTok{"right"}\NormalTok{,}
   \AttributeTok{title =} \StringTok{"Temperature (°C)"}\NormalTok{,}
@@ -1448,8 +1491,12 @@ we may plot monthly data as below;
 \CommentTok{\# plot }
 \FunctionTok{plot\_ly}\NormalTok{(}\AttributeTok{type=} \StringTok{\textquotesingle{}bar\textquotesingle{}}\NormalTok{, }\AttributeTok{data=}\NormalTok{ pr\_tmp, }\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Month, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{pr, }\AttributeTok{name =} \StringTok{\textquotesingle{}Precipitation\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
  \FunctionTok{add\_lines}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Month, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean,}\AttributeTok{name=} \StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{, }\AttributeTok{yaxis=}\StringTok{\textquotesingle{}y2\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{add\_markers}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Month, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean,}\AttributeTok{color=}\StringTok{\textquotesingle{}\#D21919\textquotesingle{}}\NormalTok{, }\AttributeTok{yaxis=}\StringTok{\textquotesingle{}y2\textquotesingle{}}\NormalTok{, }\AttributeTok{name=}\StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{, }\AttributeTok{showlegend=}\ConstantTok{FALSE}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
-    \FunctionTok{layout}\NormalTok{(}\AttributeTok{legend=}\FunctionTok{list}\NormalTok{(}\AttributeTok{orientation=}\StringTok{\textquotesingle{}h\textquotesingle{}}\NormalTok{, }\AttributeTok{y=}\SpecialCharTok{{-}}\FloatTok{0.13}\NormalTok{,}\AttributeTok{x=}\FloatTok{0.65}\NormalTok{), }\AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Precipitation (mm)\textquotesingle{}}\NormalTok{,}\AttributeTok{showticklables=}\NormalTok{F,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{16}\NormalTok{)),}\AttributeTok{width=}\DecValTok{700}\NormalTok{, }\AttributeTok{height=}\DecValTok{450}\NormalTok{, }\AttributeTok{title=}\StringTok{\textquotesingle{}Malawi }\SpecialCharTok{\textbackslash{}n}\StringTok{ (Mean 1981{-}2020)\textquotesingle{}}\NormalTok{, }\AttributeTok{yaxis2=}\NormalTok{ty)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_markers}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Month,}\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean,}\AttributeTok{color=}\StringTok{\textquotesingle{}\#D21919\textquotesingle{}}\NormalTok{,}\AttributeTok{yaxis=}\StringTok{\textquotesingle{}y2\textquotesingle{}}\NormalTok{, }\AttributeTok{name=}\StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{, }
+              \AttributeTok{showlegend=}\ConstantTok{FALSE}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{layout}\NormalTok{(}\AttributeTok{legend=}\FunctionTok{list}\NormalTok{(}\AttributeTok{orientation=}\StringTok{\textquotesingle{}h\textquotesingle{}}\NormalTok{, }\AttributeTok{y=}\SpecialCharTok{{-}}\FloatTok{0.13}\NormalTok{,}\AttributeTok{x=}\FloatTok{0.65}\NormalTok{), }
+           \AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Precipitation (mm)\textquotesingle{}}\NormalTok{,}\AttributeTok{showticklables=}\NormalTok{F,}
+                      \AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{16}\NormalTok{)),}\AttributeTok{width=}\DecValTok{700}\NormalTok{, }\AttributeTok{height=}\DecValTok{450}\NormalTok{, }
+           \AttributeTok{title=}\StringTok{\textquotesingle{}Malawi }\SpecialCharTok{\textbackslash{}n}\StringTok{ (Mean 1981{-}2020)\textquotesingle{}}\NormalTok{, }\AttributeTok{yaxis2=}\NormalTok{ty)}\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{subplot}\NormalTok{(}\AttributeTok{titleX =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{titleY =} \ConstantTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -1481,7 +1528,8 @@ or the annual means as below;
   \FunctionTok{summarise}\NormalTok{(}\FunctionTok{across}\NormalTok{(}\FunctionTok{contains}\NormalTok{(}\StringTok{"pr"}\NormalTok{), }\SpecialCharTok{\textasciitilde{}}\FunctionTok{mean}\NormalTok{(pr))) }
 
 
-\NormalTok{temp\_ann}\OtherTok{\textless{}{-}}\NormalTok{tmpdf}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{dplyr}\SpecialCharTok{::}\FunctionTok{filter}\NormalTok{(Year}\SpecialCharTok{\textgreater{}=}\DecValTok{1981}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{group\_by}\NormalTok{(Year)}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{summarise}\NormalTok{(}\StringTok{\textquotesingle{}tmean\textquotesingle{}}\OtherTok{=}\FunctionTok{mean}\NormalTok{(tmean))}
+\NormalTok{temp\_ann}\OtherTok{\textless{}{-}}\NormalTok{tmpdf}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{dplyr}\SpecialCharTok{::}\FunctionTok{filter}\NormalTok{(Year}\SpecialCharTok{\textgreater{}=}\DecValTok{1981}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{group\_by}\NormalTok{(Year)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\StringTok{\textquotesingle{}tmean\textquotesingle{}}\OtherTok{=}\FunctionTok{mean}\NormalTok{(tmean))}
 
 \CommentTok{\# combine the pr and temp data frames}
 \NormalTok{pr.tmp}\OtherTok{\textless{}{-}}\FunctionTok{cbind}\NormalTok{(pr\_ann,temp\_ann) }
@@ -1498,9 +1546,12 @@ or the annual means as below;
 
 \CommentTok{\# plot }
 \FunctionTok{plot\_ly}\NormalTok{(}\AttributeTok{type=} \StringTok{\textquotesingle{}bar\textquotesingle{}}\NormalTok{, }\AttributeTok{data=}\NormalTok{ pr.tmp, }\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Year, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{pr, }\AttributeTok{name =} \StringTok{\textquotesingle{}Precipitation\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
- \FunctionTok{add\_lines}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Year, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean, }\AttributeTok{mode =} \StringTok{\textquotesingle{}lines+markers\textquotesingle{}}\NormalTok{,}\AttributeTok{name=} \StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{, }\AttributeTok{yaxis=}\StringTok{\textquotesingle{}y2\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
+ \FunctionTok{add\_lines}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Year, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean, }\AttributeTok{mode =} \StringTok{\textquotesingle{}lines+markers\textquotesingle{}}\NormalTok{,}\AttributeTok{name=} \StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{,}
+           \AttributeTok{yaxis=}\StringTok{\textquotesingle{}y2\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
     \FunctionTok{layout}\NormalTok{(}\AttributeTok{legend=}\FunctionTok{list}\NormalTok{(}\AttributeTok{orientation=}\StringTok{\textquotesingle{}h\textquotesingle{}}\NormalTok{, }\AttributeTok{y=}\SpecialCharTok{{-}}\FloatTok{0.13}\NormalTok{,}\AttributeTok{x=}\FloatTok{0.7}\NormalTok{), }
-                   \AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Precipitation (mm)\textquotesingle{}}\NormalTok{,}\AttributeTok{showticklables=}\NormalTok{F, }\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{16}\NormalTok{)),}\AttributeTok{width=}\DecValTok{700}\NormalTok{, }\AttributeTok{height=}\DecValTok{450}\NormalTok{, }\AttributeTok{title=}\StringTok{\textquotesingle{}Malawi }\SpecialCharTok{\textbackslash{}n}\StringTok{ (Mean 1981{-}2020)\textquotesingle{}}\NormalTok{, }
+                   \AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Precipitation (mm)\textquotesingle{}}\NormalTok{,}
+                              \AttributeTok{showticklables=}\NormalTok{F, }\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{16}\NormalTok{)),}\AttributeTok{width=}\DecValTok{700}\NormalTok{, }
+           \AttributeTok{height=}\DecValTok{450}\NormalTok{, }\AttributeTok{title=}\StringTok{\textquotesingle{}Malawi }\SpecialCharTok{\textbackslash{}n}\StringTok{ (Mean 1981{-}2020)\textquotesingle{}}\NormalTok{, }
                    \AttributeTok{yaxis2=}\NormalTok{ty, }\AttributeTok{xaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{tickangle=}\DecValTok{270}\NormalTok{,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{16}\NormalTok{)))}
 \end{Highlighting}
 \end{Shaded}
@@ -1514,8 +1565,10 @@ To plot just one you may be choose one of the dataframes say temperature and plo
 \begin{Highlighting}[]
 \NormalTok{temp\_ann}\SpecialCharTok{\%\textgreater{}\%}\FunctionTok{filter}\NormalTok{(Year}\SpecialCharTok{\textgreater{}}\DecValTok{2000}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}\NormalTok{ plotly}\SpecialCharTok{::}\FunctionTok{plot\_ly}\NormalTok{()}\SpecialCharTok{\%\textgreater{}\%}
  \FunctionTok{add\_lines}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Year, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean, }\AttributeTok{color=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{, }\AttributeTok{showlegend=}\ConstantTok{FALSE}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{add\_markers}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Year, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean, }\AttributeTok{color=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{, }\AttributeTok{showlegend=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{name=}\StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{layout}\NormalTok{(}\AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Mean Temerature (°C)\textquotesingle{}}\NormalTok{,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{22}\NormalTok{)),}\AttributeTok{xaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{tickangle=}\DecValTok{270}\NormalTok{,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{22}\NormalTok{)))}
+  \FunctionTok{add\_markers}\NormalTok{(}\AttributeTok{x=} \SpecialCharTok{\textasciitilde{}}\NormalTok{Year, }\AttributeTok{y=} \SpecialCharTok{\textasciitilde{}}\NormalTok{tmean, }\AttributeTok{color=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{, }\AttributeTok{showlegend=}\ConstantTok{FALSE}\NormalTok{, }
+              \AttributeTok{name=}\StringTok{\textquotesingle{}Temperature\textquotesingle{}}\NormalTok{)}\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{layout}\NormalTok{(}\AttributeTok{yaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{title=}\StringTok{\textquotesingle{}Mean Temerature (°C)\textquotesingle{}}\NormalTok{,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{22}\NormalTok{)),}
+         \AttributeTok{xaxis=}\FunctionTok{list}\NormalTok{(}\AttributeTok{tickangle=}\DecValTok{270}\NormalTok{,}\AttributeTok{tickfont=}\FunctionTok{list}\NormalTok{(}\AttributeTok{size=}\DecValTok{22}\NormalTok{)))}
 \end{Highlighting}
 \end{Shaded}
 

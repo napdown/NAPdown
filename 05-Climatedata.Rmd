@@ -8,7 +8,8 @@ The first step is to set your working directory, where your files are stored. Yo
 
 
 ```{r}
-#install.packages("R.utils","rnaturalearth","reshape","raster","magrittr","dplyr","lubridate")
+#install.packages("R.utils","rnaturalearth","reshape","raster",
+#"magrittr","dplyr","lubridate")
 library(R.utils)
 library(rnaturalearth)
 library(reshape)
@@ -22,7 +23,8 @@ library(lubridate)
 
 1. On your browser, navigate to (https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.05/cruts.2103051243.v4.05/). This is where all data variables are stored. 
 2. Select the variable of your choice. In the example below, we will use precipitation and mean temperature data, variable names 'pre' & 'tmp' respectively. 
-3. On the data folder, find data for the years 1901-2020(cru_ts4.05.1901.2020.pre.dat.nc.gz/ru_ts4.05.1901.2020.tmp.dat.nc.gz). 
+3. On the data folder, find data for the years 1901-2020 
+(cru_ts4.05.1901.2020.pre.dat.nc.gz/ru_ts4.05.1901.2020.tmp.dat.nc.gz). 
 4. Right click on it and copy link address. Open a code chunk and paste your link in an object( as in 'myurl' in below code).
 5. Call the function `download.file` and enter details as below.
 6. The files are stored as a compressed .gz file; to extract the files, call the function `gunzip` and enter file name with the .gz extension
@@ -32,12 +34,14 @@ library(lubridate)
 ```{r, cache=TRUE, warning=FALSE, message=FALSE}
 
 # pre
-#preurl<- "https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.05/cruts.2103051243.v4.05/pre/cru_ts4.05.1901.2020.pre.dat.nc.gz"
+#preurl<- "https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.05/
+#cruts.2103051243.v4.05/pre/cru_ts4.05.1901.2020.pre.dat.nc.gz"
 #download.file(preurl, destfile="cru_ts4.05.1901.2020.pre.dat.nc.gz")
 #gunzip("cru_ts4.05.1901.2020.pre.dat.nc.gz")
 
 # tmp
-#tmpurl<- "https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.05/cruts.2103051243.v4.05/tmp/cru_ts4.05.1901.2020.tmp.dat.nc.gz"
+#tmpurl<- "https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.05/
+#cruts.2103051243.v4.05/tmp/cru_ts4.05.1901.2020.tmp.dat.nc.gz"
 #download.file(tmpurl, destfile="cru_ts4.05.1901.2020.tmp.dat.nc.gz")
 #gunzip("cru_ts4.05.1901.2020.tmp.dat.nc.gz")
 ```
@@ -120,13 +124,15 @@ pr_monthly<-prdf%>%dplyr::filter(Year>=1981)%>% group_by(Month)%>%
 
 # rearrange drawing order to plot from July to June
 pr_monthly$Month<-factor(pr_monthly$Month,
-                         levels =c('07','08','09','10','11','12','01','02','03','04','05','06'))
+                         levels =c('07','08','09','10','11','12',
+                                   '01','02','03','04','05','06'))
 
 
 temp_monthly<-tmpdf%>%dplyr::filter(Year>=1981)%>%group_by(Month)%>%
   summarise('tmean'=mean(tmean))
 temp_monthly$Month<-factor(temp_monthly$Month, 
-                           levels = c('07','08','09','10','11','12','01','02','03','04','05','06'))
+                           levels = c('07','08','09','10','11','12',
+                                      '01','02','03','04','05','06'))
 
 # combine the pr and temp data frames 
 pr_tmp<-cbind(pr_monthly,temp_monthly) 
@@ -134,10 +140,11 @@ pr_tmp<-pr_tmp[,-3] # remove duplicate column
 
 pr_tmp$Month<-month.abb
 pr_tmp$Month<-factor(pr_tmp$Month, 
-                     levels = c("Jul", "Aug", "Sep" ,"Oct" ,"Nov", 
-                                "Dec", "Jan" ,"Feb", "Mar", "Apr" ,"May" ,"Jun"))
+                     levels = c("Jul","Aug","Sep","Oct","Nov", 
+                                "Dec","Jan","Feb","Mar","Apr","May" ,"Jun"))
  
-# define properties for secondary axis (only when plotting 2 variables in the same plot area)
+# define properties for secondary axis (only when plotting 2 variables 
+#in the same plot area)
 ty<-list(overlaying = "y",
   side = "right",
   title = "Temperature (°C)",
@@ -149,8 +156,12 @@ ty<-list(overlaying = "y",
 # plot 
 plot_ly(type= 'bar', data= pr_tmp, x= ~Month, y= ~pr, name = 'Precipitation')%>%
  add_lines(x= ~Month, y= ~tmean,name= 'Temperature', yaxis='y2')%>%
-  add_markers(x= ~Month, y= ~tmean,color='#D21919', yaxis='y2', name='Temperature', showlegend=FALSE)%>%
-    layout(legend=list(orientation='h', y=-0.13,x=0.65), yaxis=list(title='Precipitation (mm)',showticklables=F,tickfont=list(size=16)),width=700, height=450, title='Malawi \n (Mean 1981-2020)', yaxis2=ty)%>%
+  add_markers(x= ~Month,y= ~tmean,color='#D21919',yaxis='y2', name='Temperature', 
+              showlegend=FALSE)%>%
+    layout(legend=list(orientation='h', y=-0.13,x=0.65), 
+           yaxis=list(title='Precipitation (mm)',showticklables=F,
+                      tickfont=list(size=16)),width=700, height=450, 
+           title='Malawi \n (Mean 1981-2020)', yaxis2=ty)%>%
   subplot(titleX = TRUE, titleY = TRUE)
 ```
 
@@ -164,13 +175,14 @@ or the annual means as below;
 + Plot time series object
 
 
-```{r, fig.dim=c(2,1), warning=FALSE, message=FALSE}
+```{r, fig.dim=c(4,1), warning=FALSE, message=FALSE}
 
 pr_ann<-prdf%>%dplyr::filter(Year>=1981)%>% group_by(Year)%>%
   summarise(across(contains("pr"), ~mean(pr))) 
 
 
-temp_ann<-tmpdf%>%dplyr::filter(Year>=1981)%>%group_by(Year)%>%summarise('tmean'=mean(tmean))
+temp_ann<-tmpdf%>%dplyr::filter(Year>=1981)%>%group_by(Year)%>%
+  summarise('tmean'=mean(tmean))
 
 # combine the pr and temp data frames
 pr.tmp<-cbind(pr_ann,temp_ann) 
@@ -187,9 +199,12 @@ ty<-list(overlaying = "y",
 
 # plot 
 plot_ly(type= 'bar', data= pr.tmp, x= ~Year, y= ~pr, name = 'Precipitation')%>%
- add_lines(x= ~Year, y= ~tmean, mode = 'lines+markers',name= 'Temperature', yaxis='y2')%>%
+ add_lines(x= ~Year, y= ~tmean, mode = 'lines+markers',name= 'Temperature',
+           yaxis='y2')%>%
     layout(legend=list(orientation='h', y=-0.13,x=0.7), 
-                   yaxis=list(title='Precipitation (mm)',showticklables=F, tickfont=list(size=16)),width=700, height=450, title='Malawi \n (Mean 1981-2020)', 
+                   yaxis=list(title='Precipitation (mm)',
+                              showticklables=F, tickfont=list(size=16)),width=700, 
+           height=450, title='Malawi \n (Mean 1981-2020)', 
                    yaxis2=ty, xaxis=list(tickangle=270,tickfont=list(size=16)))
 
 
@@ -206,8 +221,10 @@ To plot just one you may be choose one of the dataframes say temperature and plo
 
 temp_ann%>%filter(Year>2000)%>% plotly::plot_ly()%>%
  add_lines(x= ~Year, y= ~tmean, color='red', showlegend=FALSE)%>%
-  add_markers(x= ~Year, y= ~tmean, color='red', showlegend=FALSE, name='Temperature')%>%
-  layout(yaxis=list(title='Mean Temerature (°C)',tickfont=list(size=22)),xaxis=list(tickangle=270,tickfont=list(size=22)))
+  add_markers(x= ~Year, y= ~tmean, color='red', showlegend=FALSE, 
+              name='Temperature')%>%
+  layout(yaxis=list(title='Mean Temerature (°C)',tickfont=list(size=22)),
+         xaxis=list(tickangle=270,tickfont=list(size=22)))
 
 ```
 

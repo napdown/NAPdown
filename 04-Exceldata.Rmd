@@ -24,56 +24,61 @@ library(dplyr)
 library(ggplot2)
 library(treemapify)
 ```
+### Import excel table from local drive       
+To load and use excel data from local storage such as your pc, follow the following steps    
 
+1.	Create an object by typing in a name for the data you want to upload followed by the greater than sign and a hyphen/dash (<-).My object below is called 'gcf'
+2.  Call the library function `read_excel` or `read_csv` in case your data is stored in csv format   
+2.	Inside the parenthesis, open single or double quotation marks `" "` or `''` , enter the path to your excel file (you may copy and paste this form your file explorer address bar). Be sure to include the full name of your file including the format extension (.xls, .xlsx, .csv, etc)    
+4. The backslash in markdown is a special character, therefore to avoid associated errors, add another backslash to each existing backslash in your path.   
+5.	Specify the sheet name or number in case your excel data has multiple sheets, otherwise skip this step  
+see screenshot below for all the steps above.  
 
-### Import excel table from local drive
+![exceldata](tutorial_screenshots/load_excel.png)
 
-3.	From the Environment window, click 'Import Dataset'
-4.	From the drop down menu, select 'From Excel' 
-5.	A new window opens; use this to browse to your target excel file and select it
-6.	In case of multiple worksheets in your excel file, you may specify 
-7.	the name or number of worksheet you are interested in. Otherwise, the first sheet is imported by default
-8.	Click 'Import' on the bottom right of the window
-9.	Your file should appear in the global environment
-10.	Copy the code from your console into your code environment (you may change the name of your data object to make it shorter or more descriptive)
-11.	Run code
-12.	Click on the 'play' icon to view data attributes or
-13.	Click on the data object or table sign on the far right of your data set name to view the data
+6.	Run code  
+7. Your data object appears in the environment window  
+8.	To view your data attributes and structure, click on the 'play' icon  
+
+![view attr](tutorial_screenshots/view_exel_attr.png)
+
+9.	To view your data, click on the data object or table sign on the far right of your data set/object name
+
+![view excel data](tutorial_screenshots/view_exel.png)
 
 ```{r}
 
 gcf<-read_excel("C:\\Users\\Esther Makabe\\NAP_Progress_Aggregate\\Open_NAPs_Database.xlsm", sheet = "GCF")
 
 ```
-
-
 ## Build Tables
-### Static table
-
+### Static table  
 1.	Open a new code chunk
-4.	Call the 'datatable' function by typing in 'datatable ()' # autofill is your friend
-6.  Fill in details as below (*since* we are only plotting the first 10 rows of our table)
-5.	Hover over the function to see parameters required or go to the 'Help' tab and search 'datatable' to see further details on its application.
+4.	Call the `kable` function by typing in 'kable()' # auto fill is your friend
+6.  Fill in details as below ( since we are only plotting the first 10 rows of our table, we will add another argument called `head' and specify we want to only plot columns 2,3,5,and 8 and only the first 10 rows)  
 
+![kable table](tutorial_screenshots/kable_table1.png)
 
-```{r, fig.width=0.3, fig.height=0.7}
+Hover over the function to see parameters required or go to the 'Help' tab and search 'datatable' to see further details on its application.
+
+```{r, fig.width=0.1, fig.height=0.7}
 
 kable(head(gcf[,c(2,3,5,8)],10),caption = 'GCF Funding')%>%
-kable_styling(bootstrap_options = c('condensed', 'bordered'),fixed_thead = TRUE, font_size=10, repeat_header_continued = TRUE)
+kable_styling(bootstrap_options = c('condensed', 'bordered'),
+              fixed_thead = TRUE, font_size=10, repeat_header_continued = TRUE, full_width = F)%>%
+  column_spec(1:4, width = "10em")
 
 ```
+### Interactive table 
 
-
-### Interactive table
-
-1.	Open a new code chunk
+1.	Open a new code chunk 
 2.	Install packages DT and magrittr
 3.	Load their libraries  
-4.	Call 'datatable' function by typing in 'datatable ()' # autofill is your friend
+4.	Call `datatable` function by typing in 'datatable()' # auto fill is your friend
 5.	Hover over the function to see parameters required or go to the 'Help' tab and search 'datatable' to see further details on its application.
-6. Fill in details as below
-
+6.  Fill in details as below  
 ```{r, warning=FALSE,message=FALSE, fig.dim=c(1,0.5)}
+
 
 gcf_columns<-gcf[,c(2,3,5,8)] # selects only the columns we want to see in our table
 datatable(gcf_columns,filter = 'top',rownames = F, editable = F, style = 'jqueryui', class = 'display responsive', width = '100%', caption = "GCF Project Funding", extensions = 'Buttons', options=list(pageLength= 5, dom='lfrtipB', buttons = c('copy', 'csv', 'excel', 'pdf')))%>%
@@ -81,44 +86,40 @@ datatable(gcf_columns,filter = 'top',rownames = F, editable = F, style = 'jquery
 
 ```
 
-## Generate Other Graphics
-
-### A bar chart
-
+# Generate Other Graphics   
+### A bar chart       
 1.	Open a new code chunk
 2.	Install packages plotly & dplyr
 3.	Call their respective libraries
 4.	To plot the no of projects per region, first group your data by region, then count the no of projects (use a unique identifier, in our case the project ID)
 5.	Call the function 'plot_ly' and enter parameters as in below
 
-```{r fig.width=15, fig.height=10}
+```{r fig.width=10, fig.height=10}
 
 gcf %>% group_by(Region)%>% count(gcf$`Project Name`)%>%
   summarise("Projects"=sum(n))%>%   plot_ly(type = "bar", 
           y = ~Projects,  x = ~Region
           
                ) %>%
-plotly::layout(yaxis=list(tickfont=list(size=24)),
-                 xaxis=list(tickfont=list(size=24)))
+plotly::layout(yaxis=list(title='No. of Projects',tickfont=list(size=20)),
+                 xaxis=list(title='Region', tickfont=list(size=20)))
 
 ```
  
 ### A donut chart 
 To plot the same data as above but on a pie chart, the process the same, only the type of chart changes
+```{r, fig.width=10, fig.height=10}
 
-```{r, fig.width=15, fig.height=15}
-
-gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>%plot_ly(labels=~Region, values=~Total)%>% add_pie(hole=0.5)%>%
+gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>%plot_ly(labels=~Region, values=~Total,sep = '\n')%>% add_pie(hole=0.5)%>%
     layout(title="GCF Funding by Region")
 
 ```
 
-## Filter and plot select data
-### Pie chart 
-
+## Filter and plot select data        
+### Pie chart         
 To plot projects for a select region (s), use the filter function to select only values that match your selection, then group the data by country and create count by unique identifier as above. Repeat the plotting steps as above. you may use any type of charts as may be preferred.
 
-```{r,fig.width=15, fig.height=15}
+```{r,fig.width=10, fig.height=10}
 
 gcf%>%filter(Region=="Asia-Pacific")%>%
   group_by(countryname)%>%count(`Project Name`)%>%
@@ -129,11 +130,8 @@ gcf%>%filter(Region=="Asia-Pacific")%>%
 
 ```
 
-
-### Build Treemap
-
-#### Static
-
+### Build Treemap       
+#### Static       
 1.	Open a new code chunk
 2.	Install packages ggplot2 & treemapify
 3.	Call the respective libraries
@@ -155,9 +153,7 @@ ggplot(gcf, aes(fill=countryname,
 
 ```
 
-
-#### Interactive
-
+#### Interactive            
 ```{r,fig.dim=c(22,15)}
 
 gcf_sum<-gcf%>%filter(Region=="Africa")%>%
