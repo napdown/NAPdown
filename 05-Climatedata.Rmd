@@ -80,10 +80,12 @@ tmask<-raster::mask(tcrop, malawi)
 
 At this point you can already plot individual precipitation and temperature layers using the basic plot function. Below we plot precipitation and temperature  for October 2011
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 par(mfrow=c(1,2))
-print(plot(prstack$X2011.10.16, main='Precipitation'))
-print(plot(temp$X2011.10.16, main='Temperature'))
+pr<-plot(prstack$X2011.10.16, main='Precipitation')
+t<-plot(temp$X2011.10.16, main='Temperature')
+show(pr)
+show(t)
 ```
 
 

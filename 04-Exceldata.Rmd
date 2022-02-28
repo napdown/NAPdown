@@ -144,14 +144,15 @@ then summarise the data by country using the functions 'group-by' and 'sum'
 
 ```{r}
 
-print(ggplot(gcf, aes(fill=countryname, 
+tm<-ggplot(gcf, aes(fill=countryname, 
        area=gcf$`Total GCF Funding`, 
        label = paste(countryname,"\n",prettyNum(`Total GCF Funding`,
                                                 big.mark = ","))))+
   geom_treemap()+
   geom_treemap_text(colour='black', place='centre')+
   labs(subtitle = 'GCF Funding in Latin America & Caribbean')+
-  theme(legend.position = 'none'))
+  theme(legend.position = 'none')
+show(tm)
 
 ```
 
