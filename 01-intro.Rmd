@@ -1,5 +1,5 @@
 
-# Getting started 
+#  RMarkdown
 ## About RMarkdown
 RMarkdown is a file document that allows you to write, save and execute code, as well as text and figures to help generate reproducible reports that can be shared in several formats. 
 The file extension is .rmd.  
@@ -7,7 +7,7 @@ A markdown file has three main sections;
 
 1. __YAML header__  
   This is where your document metadata go to e.g your document title, author, date, output file type etc.
-  This parameters are set when opening a new .rmd file. And more can be set after.
+  Theses parameters are set when opening a new .rmd or project file. And more can be set after.
   This section MUST always be at the beginning of your document and between a set of three dashes i.e three dashes before section and three dashes after section.
 2. __Text__  
   Your narration/prose in markdown format. More details about formatting in subsequent sections.
@@ -15,6 +15,9 @@ A markdown file has three main sections;
   They start with ```{r} 
 
    and end with ```
+as in below screenshot
+
+![code chunk](tutorial_screenshots/codechunk_blank.png)
     
 To start using RMarkdown, install the following base packages using any of the methods described in the [Installing packages] section
 
@@ -29,9 +32,6 @@ Insert blank line before each header (except in the beginning of document).
 ![headers](tutorial_screenshots/headers.png)
 
  
-_Note: For the purpose of this example, I have added a space before each line so that r doesn't create the headers. Remove the space to create the headers_
-
-
 ### Bold and italic text
 To create emphasis in your markdown texts, use an asterisk `*` before and after text *to italicize* or double asterisk `**` **to make your text bold**.  
 Alternatively, you may use single underscore`_` _for italics_ or double underscore`__` __for bold__.
@@ -52,16 +52,27 @@ Use tab command or two spaces on your keyboard to indent the list items
 
 ![unodered list](tutorial_screenshots/unordered_list.png)
 
+__Note: Always leave anmempty line before starting a new list or use double space or tab on your key board at the end of the text line preceding the list__
+
+As shown in the 2 examples below
+
+![list1](tutorial_screenshots/listing_empty_space.png)
+ or  
+ 
+ ![list2](tutorial_screenshots/listing_space2.png)
 
 ### Manual line breaks
 Use two or more spaces at the end of a line    
 to insert a line break
 
+![line break](tutorial_screenshots/line_break.png)
+
 ### Insert links
 You may insert a link using the plain http address such as https://rmarkdown.rstudio.com/ or insert it as a linked phrase using square brackets and parenthesis such as in screenshot
 
 ![linked phrase](tutorial_screenshots/link_phrase.png)   
-to produce this:  
+to produce this:   
+
 [our link phrase goes here](https://rmarkdown.rstudio.com/).   
 
 ### Insert figures/images    
@@ -149,6 +160,10 @@ __Note that our code chunk is labelled 'kable'. You can label code chunks as bel
 
 This will be useful for cross-referencing as we'll see in the [Chapter References] section.
 
+#### Option 3
+You may also generate tables using Microsoft excel data, using the `kable`package or a lot more other packages not covered in this release.   
+Please refer to chapter 5 [Working Excel data] for details. 
+
 ### Page breaks   
 Use three or more asterisks or dashes to insert a page break.   
 
@@ -162,6 +177,8 @@ _Remember to add a blank line before the asterisks or dashes_
 To create the desired output file document from the markdown format, use the function `render ("your .rmd file name)`.  
 Alternatively,and most commonly used, is the `Knit` button from the markdown script environment. The button is a blue ball of yarn around a crotchet, and is labeled 'Knit'
 When a document is rendered, rmarkdown saves the results/output file into your working directory, giving it the same name as your .rmd file, but with relevant extension (e.g. as html if output type was set to html) 
+
+![knit](tutorial_screenshots/knit_button.png)
 
 
 ### References

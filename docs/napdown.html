@@ -36,14 +36,14 @@ Additional chapters are provided further reading material and references.</p>" /
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-28" />
+<meta name="date" content="2022-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="getting-started.html"/>
+<link rel="prev" href="rmarkdown.html"/>
 <link rel="next" href="github-github-pages.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -70,25 +70,24 @@ Additional chapters are provided further reading material and references.</p>" /
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.19/datatables.js"></script>
-<link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
-<script src="libs/dt-core-jqueryui-1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="libs/dt-core-jqueryui-1.10.20/js/dataTables.jqueryui.min.js"></script>
-<script src="libs/jszip-1.10.20/jszip.min.js"></script>
-<script src="libs/pdfmake-1.10.20/pdfmake.js"></script>
-<script src="libs/pdfmake-1.10.20/vfs_fonts.js"></script>
-<link href="libs/dt-ext-buttons-jqueryui-1.10.20/css/buttons.jqueryui.min.css" rel="stylesheet" />
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/dataTables.buttons.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.flash.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.html5.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.colVis.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.print.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.jqueryui.min.js"></script>
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-jqueryui-1.11.3/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-core-jqueryui-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/dt-core-jqueryui-1.11.3/js/dataTables.jqueryui.min.js"></script>
+<script src="libs/jszip-1.11.3/jszip.min.js"></script>
+<script src="libs/pdfmake-1.11.3/pdfmake.js"></script>
+<script src="libs/pdfmake-1.11.3/vfs_fonts.js"></script>
+<link href="libs/dt-ext-buttons-jqueryui-1.11.3/css/buttons.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/dataTables.buttons.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.html5.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.colVis.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.print.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.jqueryui.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
@@ -199,36 +198,42 @@ div.csl-indent {
 <li><a href="./">An Introduction to NAPdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#opening-a-markdown-file"><i class="fa fa-check"></i><b>1.1</b> Opening a markdown file</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.1</b> Prerequisites</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#rstudio-windows-explained"><i class="fa fa-check"></i><b>1.1.1</b> Rstudio windows explained:</a></li>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#installing-r"><i class="fa fa-check"></i><b>1.1.1</b> Installing R</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#install-rstudio"><i class="fa fa-check"></i><b>1.1.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#signing-up-on-github"><i class="fa fa-check"></i><b>1.1.3</b> Signing up on GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.2</b> Installing packages</a>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#opening-a-markdown-file"><i class="fa fa-check"></i><b>1.2</b> Opening a markdown file</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#removingun-installing-packages"><i class="fa fa-check"></i><b>1.2.1</b> Removing/un-installing packages</a></li>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#rstudio-windows-explained"><i class="fa fa-check"></i><b>1.2.1</b> Rstudio windows explained:</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#loading-libraries"><i class="fa fa-check"></i><b>1.3</b> Loading Libraries</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.3</b> Installing packages</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#removingun-installing-packages"><i class="fa fa-check"></i><b>1.3.1</b> Removing/un-installing packages</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#loading-libraries"><i class="fa fa-check"></i><b>1.4</b> Loading Libraries</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>2</b> RMarkdown</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
-<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
+<li class="chapter" data-level="2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
+<li class="chapter" data-level="2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
-<li class="chapter" data-level="2.2.2" data-path="getting-started.html"><a href="getting-started.html#bold-and-italic-text"><i class="fa fa-check"></i><b>2.2.2</b> Bold and italic text</a></li>
-<li class="chapter" data-level="2.2.3" data-path="getting-started.html"><a href="getting-started.html#create-lists"><i class="fa fa-check"></i><b>2.2.3</b> Create Lists</a></li>
-<li class="chapter" data-level="2.2.4" data-path="getting-started.html"><a href="getting-started.html#manual-line-breaks"><i class="fa fa-check"></i><b>2.2.4</b> Manual line breaks</a></li>
-<li class="chapter" data-level="2.2.5" data-path="getting-started.html"><a href="getting-started.html#insert-links"><i class="fa fa-check"></i><b>2.2.5</b> Insert links</a></li>
-<li class="chapter" data-level="2.2.6" data-path="getting-started.html"><a href="getting-started.html#insert-figuresimages"><i class="fa fa-check"></i><b>2.2.6</b> Insert figures/images</a></li>
-<li class="chapter" data-level="2.2.7" data-path="getting-started.html"><a href="getting-started.html#insert-block-quotes"><i class="fa fa-check"></i><b>2.2.7</b> Insert block quotes</a></li>
-<li class="chapter" data-level="2.2.8" data-path="getting-started.html"><a href="getting-started.html#insert-code-chunks"><i class="fa fa-check"></i><b>2.2.8</b> Insert code chunks</a></li>
-<li class="chapter" data-level="2.2.9" data-path="getting-started.html"><a href="getting-started.html#create-tables"><i class="fa fa-check"></i><b>2.2.9</b> Create tables</a></li>
-<li class="chapter" data-level="2.2.10" data-path="getting-started.html"><a href="getting-started.html#page-breaks"><i class="fa fa-check"></i><b>2.2.10</b> Page breaks</a></li>
-<li class="chapter" data-level="2.2.11" data-path="getting-started.html"><a href="getting-started.html#process-a-markdown-document-to-desired-output"><i class="fa fa-check"></i><b>2.2.11</b> Process a markdown document to desired output</a></li>
-<li class="chapter" data-level="2.2.12" data-path="getting-started.html"><a href="getting-started.html#references"><i class="fa fa-check"></i><b>2.2.12</b> References</a></li>
-<li class="chapter" data-level="2.2.13" data-path="getting-started.html"><a href="getting-started.html#pandoc-knitr"><i class="fa fa-check"></i><b>2.2.13</b> Pandoc &amp; Knitr</a></li>
+<li class="chapter" data-level="2.2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
+<li class="chapter" data-level="2.2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#bold-and-italic-text"><i class="fa fa-check"></i><b>2.2.2</b> Bold and italic text</a></li>
+<li class="chapter" data-level="2.2.3" data-path="rmarkdown.html"><a href="rmarkdown.html#create-lists"><i class="fa fa-check"></i><b>2.2.3</b> Create Lists</a></li>
+<li class="chapter" data-level="2.2.4" data-path="rmarkdown.html"><a href="rmarkdown.html#manual-line-breaks"><i class="fa fa-check"></i><b>2.2.4</b> Manual line breaks</a></li>
+<li class="chapter" data-level="2.2.5" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-links"><i class="fa fa-check"></i><b>2.2.5</b> Insert links</a></li>
+<li class="chapter" data-level="2.2.6" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-figuresimages"><i class="fa fa-check"></i><b>2.2.6</b> Insert figures/images</a></li>
+<li class="chapter" data-level="2.2.7" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-block-quotes"><i class="fa fa-check"></i><b>2.2.7</b> Insert block quotes</a></li>
+<li class="chapter" data-level="2.2.8" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-code-chunks"><i class="fa fa-check"></i><b>2.2.8</b> Insert code chunks</a></li>
+<li class="chapter" data-level="2.2.9" data-path="rmarkdown.html"><a href="rmarkdown.html#create-tables"><i class="fa fa-check"></i><b>2.2.9</b> Create tables</a></li>
+<li class="chapter" data-level="2.2.10" data-path="rmarkdown.html"><a href="rmarkdown.html#page-breaks"><i class="fa fa-check"></i><b>2.2.10</b> Page breaks</a></li>
+<li class="chapter" data-level="2.2.11" data-path="rmarkdown.html"><a href="rmarkdown.html#process-a-markdown-document-to-desired-output"><i class="fa fa-check"></i><b>2.2.11</b> Process a markdown document to desired output</a></li>
+<li class="chapter" data-level="2.2.12" data-path="rmarkdown.html"><a href="rmarkdown.html#references"><i class="fa fa-check"></i><b>2.2.12</b> References</a></li>
+<li class="chapter" data-level="2.2.13" data-path="rmarkdown.html"><a href="rmarkdown.html#pandoc-knitr"><i class="fa fa-check"></i><b>2.2.13</b> Pandoc &amp; Knitr</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="napdown.html"><a href="napdown.html"><i class="fa fa-check"></i><b>3</b> NAPdown</a>
@@ -263,31 +268,31 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.1" data-path="working-excel-data.html"><a href="working-excel-data.html#static-table"><i class="fa fa-check"></i><b>5.2.1</b> Static table</a></li>
 <li class="chapter" data-level="5.2.2" data-path="working-excel-data.html"><a href="working-excel-data.html#interactive-table"><i class="fa fa-check"></i><b>5.2.2</b> Interactive table</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html"><i class="fa fa-check"></i><b>6</b> Generate Other Graphics</a>
+<li class="chapter" data-level="5.3" data-path="working-excel-data.html"><a href="working-excel-data.html#generate-other-graphics"><i class="fa fa-check"></i><b>5.3</b> Generate Other Graphics</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#a-bar-chart"><i class="fa fa-check"></i><b>6.0.1</b> A bar chart</a></li>
-<li class="chapter" data-level="6.0.2" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#a-donut-chart"><i class="fa fa-check"></i><b>6.0.2</b> A donut chart</a></li>
-<li class="chapter" data-level="6.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>6.1</b> Filter and plot select data</a>
+<li class="chapter" data-level="5.3.1" data-path="working-excel-data.html"><a href="working-excel-data.html#a-bar-chart"><i class="fa fa-check"></i><b>5.3.1</b> A bar chart</a></li>
+<li class="chapter" data-level="5.3.2" data-path="working-excel-data.html"><a href="working-excel-data.html#a-donut-chart"><i class="fa fa-check"></i><b>5.3.2</b> A donut chart</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="working-excel-data.html"><a href="working-excel-data.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>5.4</b> Filter and plot select data</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#pie-chart"><i class="fa fa-check"></i><b>6.1.1</b> Pie chart</a></li>
-<li class="chapter" data-level="6.1.2" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#build-treemap"><i class="fa fa-check"></i><b>6.1.2</b> Build Treemap</a></li>
+<li class="chapter" data-level="5.4.1" data-path="working-excel-data.html"><a href="working-excel-data.html#pie-chart"><i class="fa fa-check"></i><b>5.4.1</b> Pie chart</a></li>
+<li class="chapter" data-level="5.4.2" data-path="working-excel-data.html"><a href="working-excel-data.html#build-treemap"><i class="fa fa-check"></i><b>5.4.2</b> Build Treemap</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>7</b> Working Climate data</a>
+<li class="chapter" data-level="6" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>6</b> Working Climate data</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="working-climate-data.html"><a href="working-climate-data.html#historical-climate-data"><i class="fa fa-check"></i><b>7.1</b> Historical climate data</a>
+<li class="chapter" data-level="6.1" data-path="working-climate-data.html"><a href="working-climate-data.html#historical-climate-data"><i class="fa fa-check"></i><b>6.1</b> Historical climate data</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="working-climate-data.html"><a href="working-climate-data.html#install-packages-and-load-libraries"><i class="fa fa-check"></i><b>7.1.1</b> Install Packages and load libraries</a></li>
-<li class="chapter" data-level="7.1.2" data-path="working-climate-data.html"><a href="working-climate-data.html#load-data-from-cru-website"><i class="fa fa-check"></i><b>7.1.2</b> Load data from cru website</a></li>
-<li class="chapter" data-level="7.1.3" data-path="working-climate-data.html"><a href="working-climate-data.html#loaddefine-geometry"><i class="fa fa-check"></i><b>7.1.3</b> Load/define geometry</a></li>
-<li class="chapter" data-level="7.1.4" data-path="working-climate-data.html"><a href="working-climate-data.html#loadimport-your-data-into-r"><i class="fa fa-check"></i><b>7.1.4</b> Load/Import your data into r</a></li>
-<li class="chapter" data-level="7.1.5" data-path="working-climate-data.html"><a href="working-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><i class="fa fa-check"></i><b>7.1.5</b> Convert the raster stack created above into a dataframe and format date values</a></li>
-<li class="chapter" data-level="7.1.6" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-monthly-data"><i class="fa fa-check"></i><b>7.1.6</b> Plot Monthly data</a></li>
-<li class="chapter" data-level="7.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>7.1.7</b> Plot Annual data</a></li>
+<li class="chapter" data-level="6.1.1" data-path="working-climate-data.html"><a href="working-climate-data.html#install-packages-and-load-libraries"><i class="fa fa-check"></i><b>6.1.1</b> Install Packages and load libraries</a></li>
+<li class="chapter" data-level="6.1.2" data-path="working-climate-data.html"><a href="working-climate-data.html#load-data-from-cru-website"><i class="fa fa-check"></i><b>6.1.2</b> Load data from cru website</a></li>
+<li class="chapter" data-level="6.1.3" data-path="working-climate-data.html"><a href="working-climate-data.html#loaddefine-geometry"><i class="fa fa-check"></i><b>6.1.3</b> Load/define geometry</a></li>
+<li class="chapter" data-level="6.1.4" data-path="working-climate-data.html"><a href="working-climate-data.html#loadimport-your-data-into-r"><i class="fa fa-check"></i><b>6.1.4</b> Load/Import your data into r</a></li>
+<li class="chapter" data-level="6.1.5" data-path="working-climate-data.html"><a href="working-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><i class="fa fa-check"></i><b>6.1.5</b> Convert the raster stack created above into a dataframe and format date values</a></li>
+<li class="chapter" data-level="6.1.6" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-monthly-data"><i class="fa fa-check"></i><b>6.1.6</b> Plot Monthly data</a></li>
+<li class="chapter" data-level="6.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>6.1.7</b> Plot Annual data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>8</b> Further Reads</a></li>
+<li class="chapter" data-level="7" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>7</b> Further Reads</a></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -315,7 +320,7 @@ div.csl-indent {
 <h2><span class="header-section-number">3.1</span> Setting up an eNAP</h2>
 <p>We will use the package <code>bookdown</code> to generate NAP document in a book format. Journal articles or reports can be produced in the same way.
 We will also use the package <code>tinytex</code> to build pdf format of the book document.<br />
-1. First, launch the rstudio app in your pc.
+1. First, launch the rstudio app in your pc.<br />
 2. Install the bookdown and tinytex packages in case you have not installed them. Use any of the methods shown in the <a href="index.html#installing-packages">Installing packages</a> section.<br />
 3. Then from the menu bar go to <code>File-&gt;&gt;New Project-&gt;&gt;New Directory-&gt;&gt;Book Project using bookdown</code>.<br />
 A new window appears</p>
@@ -331,13 +336,19 @@ A new window appears</p>
 <li>After you select the directory location, you are returned to the ‘Create Book project…’ window. Click ‘create project.’<br />
 A new project session opens up, with skeleton chapters and other sections and metadata files.<br />
 <img src="tutorial_screenshots/bkdn_proj_window_label.png" alt="The window looks like this" /><br />
-Your project window might appear with panel arrangements different from mine/in screenshot. Your project files can be accessed from the Files tab in bottom right of the project window.<br />
-Each chapter is compiled from a single .rmd file, and always starts with a first level header sign ‘#.’<br />
-From the files pane, you can open any chapter, and edit it to your liking.<br />
-Lets take a look at the ’_bookdown.yml’ file.<br />
-</li>
+Your project window might appear with panel arrangements different from mine/in screenshot.<br />
+Your project files can be accessed from the Files tab in bottom right of the project window.</li>
+</ol>
+<div class="figure">
+<img src="tutorial_screenshots/files_panel.PNG" alt="" />
+<p class="caption">files</p>
+</div>
+<p>Each chapter is compiled from a single .rmd file, and always starts with a first level header sign ‘#.’<br />
+From the files pane, you can open any chapter, and edit it to your liking.</p>
+<p>Lets take a look at the ’_bookdown.yml’ file.</p>
+<ol start="7" style="list-style-type: decimal">
 <li>From the ‘Files’ tab, click on the _bookdown.yml’ file.<br />
-The file open up in your script/source pane. Notice, the book_filename takes the name of the folder we created when opening the project.<br />
+The file opens up in your script/source pane. Notice, the book_filename takes the name of the folder we created when opening the project.<br />
 </li>
 <li>Let’s add the line <code>output_dir: "docs"</code> to this file.
 See screenshot below;</li>
@@ -356,8 +367,8 @@ Ignore everything else for now :)<br />
 15. Delete all text, except the last code chunk.<br />
 16. Add a chapter named ‘Preliminaries’ before the code chunk.<br />
 Chapters are created using the first level header #.<br />
-17. Add sections to your chapter using second level header ##.<br />
-Your script should look more or less similar to this;</p>
+17. Add sections to your chapter using second level header ##.</p>
+<p>Your script should look more or less similar to this;</p>
 <div class="figure">
 <img src="tutorial_screenshots/edit_index.png" alt="" />
 <p class="caption">edit book title and author</p>
@@ -406,15 +417,23 @@ When the process is done, your book should open up in an html window as below;<b
 </div>
 <div id="integrating-code-evaluations-within-your-text-chapters" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Integrating code evaluations within your text/ chapters</h2>
-<p>To integrate a code (+ its evaluation), open a code chunk at your desired section or paragraph and write your code as below. Please refer to the section on <a href="getting-started.html#insert-code-chunks">Insert code chunks</a> if need be.</p>
+<p>To integrate a code (+ its evaluation), open a code chunk at your desired section or paragraph and write your code as below. Please refer to the section on <a href="rmarkdown.html#insert-code-chunks">Insert code chunks</a> if need be.</p>
 <p>For instance in the code below we use one of the in-built R datasets named <code>mtcars</code> to plot a bar chart of Car ‘Model’ against ‘mpg’ (miles per gallon).
 When this code is evaluated, the bar chart will be plotted within your document as specified. You may enter text before or after the plot.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="napdown.html#cb1-1" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">plot_ly</span>(mtcars,<span class="at">type =</span> <span class="st">&#39;bar&#39;</span>, </span>
-<span id="cb1-2"><a href="napdown.html#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">y=</span><span class="fu">row.names</span>(mtcars), <span class="at">x=</span><span class="sc">~</span>mpg)<span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href="napdown.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  plotly<span class="sc">::</span><span class="fu">layout</span>(<span class="at">yaxis=</span><span class="fu">list</span>(<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">26</span>)),</span>
-<span id="cb1-4"><a href="napdown.html#cb1-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">xaxis=</span><span class="fu">list</span>(<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">26</span>)))</span></code></pre></div>
-<div id="htmlwidget-346741b83b7f1ad1c8dd" style="width:2880px;height:1920px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-346741b83b7f1ad1c8dd">{"x":{"visdat":{"2ce06a9f712":["function () ","plotlyVisDat"]},"cur_data":"2ce06a9f712","attrs":{"2ce06a9f712":{"y":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"tickfont":{"size":26},"title":[],"type":"category","categoryorder":"array","categoryarray":["AMC Javelin","Cadillac Fleetwood","Camaro Z28","Chrysler Imperial","Datsun 710","Dodge Challenger","Duster 360","Ferrari Dino","Fiat 128","Fiat X1-9","Ford Pantera L","Honda Civic","Hornet 4 Drive","Hornet Sportabout","Lincoln Continental","Lotus Europa","Maserati Bora","Mazda RX4","Mazda RX4 Wag","Merc 230","Merc 240D","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Pontiac Firebird","Porsche 914-2","Toyota Corolla","Toyota Corona","Valiant","Volvo 142E"]},"xaxis":{"domain":[0,1],"automargin":true,"tickfont":{"size":26},"title":"mpg"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"y":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"x":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"type":"bar","orientation":"h","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="napdown.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb1-2"><a href="napdown.html#cb1-2" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">plot_ly</span>(mtcars,<span class="at">type =</span> <span class="st">&#39;bar&#39;</span>, </span>
+<span id="cb1-3"><a href="napdown.html#cb1-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">x=</span><span class="fu">row.names</span>(mtcars), <span class="at">y=</span><span class="sc">~</span>mpg)<span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="napdown.html#cb1-4" aria-hidden="true" tabindex="-1"></a>  plotly<span class="sc">::</span><span class="fu">layout</span>(<span class="at">yaxis=</span><span class="fu">list</span>(<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">10</span>)),</span>
+<span id="cb1-5"><a href="napdown.html#cb1-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">xaxis=</span><span class="fu">list</span>(<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">10</span>)))</span></code></pre></div>
+<div id="htmlwidget-ca914883ea880a14d169" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ca914883ea880a14d169">{"x":{"visdat":{"4db0443b4616":["function () ","plotlyVisDat"]},"cur_data":"4db0443b4616","attrs":{"4db0443b4616":{"x":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"y":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"tickfont":{"size":10},"title":"mpg"},"xaxis":{"domain":[0,1],"automargin":true,"tickfont":{"size":10},"title":[],"type":"category","categoryorder":"array","categoryarray":["AMC Javelin","Cadillac Fleetwood","Camaro Z28","Chrysler Imperial","Datsun 710","Dodge Challenger","Duster 360","Ferrari Dino","Fiat 128","Fiat X1-9","Ford Pantera L","Honda Civic","Hornet 4 Drive","Hornet Sportabout","Lincoln Continental","Lotus Europa","Maserati Bora","Mazda RX4","Mazda RX4 Wag","Merc 230","Merc 240D","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Pontiac Firebird","Porsche 914-2","Toyota Corolla","Toyota Corona","Valiant","Volvo 142E"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],"y":[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],"type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Below is another example using precipitation data from worldclim</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="napdown.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster) <span class="co"># library responsible for plotting the data</span></span>
+<span id="cb2-2"><a href="napdown.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="napdown.html#cb2-3" aria-hidden="true" tabindex="-1"></a>pr<span class="ot">&lt;-</span><span class="fu">getData</span>(<span class="st">&quot;worldclim&quot;</span>, <span class="at">var=</span><span class="st">&#39;prec&#39;</span>, <span class="at">res=</span><span class="dv">5</span>) <span class="co"># reading/accessing the data</span></span>
+<span id="cb2-4"><a href="napdown.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="napdown.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pr<span class="sc">$</span>prec1) <span class="co"># plot the first layer of the data (precipitation for the month of January)</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <div id="some-things-to-note" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Some things to note</h3>
 <ol style="list-style-type: decimal">
@@ -438,19 +457,19 @@ We will learn about advanced numbering and re-ordering chapters later.<br />
 <p>Creating pdf documents using LaTeX engines and distributions such as TinyTeX is not a straightforward task and may produce errors as the process involves multiple processing activities. However, most errors can be solved using suggestions contained in the error messages produced in the Environment or Console windows.<br />
 If, in any case, the LaTeX error generated is not clear, you may use any the commands options below to solve the problem.</p>
 <p><em>Remove the # sign to run code</em></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="napdown.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ##install the development version of tinytex</span></span>
-<span id="cb2-2"><a href="napdown.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="napdown.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) ## update your r and</span></span>
-<span id="cb2-4"><a href="napdown.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
-<span id="cb2-5"><a href="napdown.html#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="napdown.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
-<span id="cb2-7"><a href="napdown.html#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="napdown.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tinytex.verbose = TRUE) ## 4 set this option in an r code chunk.This helps provide more info on your problems. Remember to remove it after solving your problem</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="napdown.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;yihui/tinytex&#39;) ##install the development version of tinytex</span></span>
+<span id="cb3-2"><a href="napdown.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="napdown.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update.packages(ask = FALSE, checkBuilt = TRUE) ## update your r and</span></span>
+<span id="cb3-4"><a href="napdown.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::tlmgr_update() ## tinytex packages</span></span>
+<span id="cb3-5"><a href="napdown.html#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="napdown.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tinytex::reinstall_tinytex()  ## 3 reinstall tinytex</span></span>
+<span id="cb3-7"><a href="napdown.html#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="napdown.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># options(tinytex.verbose = TRUE) ## 4 set this option in an r code chunk.This helps provide more info on your problems. Remember to remove it after solving your problem</span></span></code></pre></div>
 <p>See more on <a href="https://yihui.org/tinytex/r/">TinyTex Debugging</a>.</p>
 <p>Additionally, quite often, LaTeX formatting is not very compatible with other output formats such as html. But with the use of <code>html widgets</code> and other advanced formatting options, this problem can be overcome.
 To produce a pdf document from a document with both LaTeX and html formats, it may be useful to install the package <code>webshot</code> from CRAN.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="napdown.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;webshot&quot;)  </span></span>
-<span id="cb3-2"><a href="napdown.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="napdown.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;webshot&quot;)  </span></span>
+<span id="cb4-2"><a href="napdown.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># webshot::install_phantomjs() </span></span></code></pre></div>
 <p>Further reading on <a href="https://bookdown.org/yihui/bookdown/html-widgets.html">html widgets here</a></p>
 
 </div>
@@ -466,7 +485,7 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
           </div>
         </div>
       </div>
-<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rmarkdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="github-github-pages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

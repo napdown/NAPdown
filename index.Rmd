@@ -21,12 +21,64 @@ knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 options(knitr.duplicate.label = "allow")
 ```
 
-# Prerequisites  
+# Getting started
+
+## Prerequisites  
 1. You have installed R (https://cran.microsoft.com/)
 2. You have installed RStudio (https://www.rstudio.com/products/rstudio/download/)
+3. You have signed up for an account on GitHub (https://github.com/)
 
-The installation prompts for installing both r and rstudio are straight-forward.
-However, should you require a step-by-step guide, you may refer to this [beginners guide](https://techvidvan.com/tutorials/install-r/)
+If you do not meet the above requirements, follow the steps outlined below to do so.  
+
+### Installing R
+1. Go to [CRAN](https://cran.microsoft.com/)
+
+2. Click on ‘Download R for Windows’  (or the OS you are using)  
+
+![](tutorial_screenshots/download_r.png)  
+3. On the next window click on ‘install R for the first time’
+
+![](tutorial_screenshots/install_r1.png)
+
+4. Click on ‘Download R x.x.x for windows’
+> x.x.x = current R version
+
+![](tutorial_screenshots/download_r_current.png)
+
+5. Navigate to your download folder and run the .exe file that you downloaded and follow the installation prompts   
+6. When prompted to ‘select components to install’, select all  
+![](tutorial_screenshots/install_r_components.png)
+
+### Install RStudio  
+1. Go to [RStudio](https://www.rstudio.com/products/rstudio/download/)  
+2. Click on the download button for free version of RStudio Desktop (or any other desired version)   
+
+![](tutorial_screenshots/download_rstudio.png)
+
+3. Click on ‘DOWNLOAD RSTUDIO FOR WINDOWS’
+
+![](tutorial_screenshots/download_rstudio2.png)
+
+4. Run the .exe file that you downloaded and follow the installation prompts 
+
+_Most of the installation settings may be left as default_
+
+
+### Signing up on GitHub
+1. Go to [GitHub.com](https://github.com/)  
+2. Enter you email address  
+3. Click 'Sign up for GitHub  
+
+![](tutorial_screenshots/gh_signup.png)
+
+3. Follow the prompts to create a password  and username  
+
+![](tutorial_screenshots/gh_set_profile.png)
+
+4. Continue with the prompts to verify identity and email and finish set up.
+
+
+***
 
 ## Opening a markdown file   
 1. Launch your r/studio app. 
@@ -66,13 +118,13 @@ This panel provides a shortcut/alternative to different functions such as to acc
 ## Installing packages
 Options:
 
-__1. From the console;__  
+__1. From the console__  
 After the greater than (>) sign, write command `install.packages("package name")` and hit enter on your keyboard.  
 See example;
 
   ![install packages from console](tutorial_screenshots/install_rmkdn_console.png)
 
-__2. In script window __ 
+__2. In script window __   
 Inside your script write command `install.packages("package name")`   
 Click on 'Run' (Run button is on the top right of your source panel).   
 Alternatively, if your write your command in a code chunk, you may hit the 'Play' button on far right of your code chunk. See example;
@@ -81,7 +133,7 @@ Alternatively, if your write your command in a code chunk, you may hit the 'Play
 
 *We see more about code chunks in the next chapter.   
 
-__3. From the menu bar __ 
+__3. From the menu bar __   
 From the menu bar, go the the tab 'Tools' and select 'Install Packages'.  
 You should see a window like this one:  
 
@@ -90,7 +142,7 @@ You should see a window like this one:
 In the 'Install from' field, select 'Repository (CRAN)', then enter the name(s) of packages to be installed.  
 Leave everything else as default. Click Install. 
 
-__4. From Files/Plots/Packages/Help Panel__    
+__4. From Files/Plots/Packages/Help Panel__     
 Click on the 'Packages' tab. There are 2 tabs under this, Install & Update.  
 Click on Install.  
 
@@ -100,17 +152,23 @@ If the 'Install from' is not set to 'Repository (CRAN)', set it so, and enter na
 Leave everything else as default. Click Install.
 
 
-__Note:__ _Packages can only be installed once. To mean, if you close your r/rstudio app and come back to it the next day/session, you do not need to install the packages you already installed in your previous session. You will only need to load their libraries (see next section)_
+__Note:Packages can only be installed once. To mean, if you close your r/rstudio app and come back to it the next day/session, you do not need to install the packages you already installed in your previous session. You will only need to load their libraries (see next section)__
 
 ### Removing/un-installing packages  
 To remove a package use command `remove.packages("package name")`
 
+![remove packages](tutorial_screenshots/remove_package.png)
+
+
 ## Loading Libraries
 To be able to make use of the packages installed, you need to call their libraries. Most libraries take the name of the package. For instance, for the package `rmakdown`, the respective library is `rmarkdown`.To call the  rmarkdown library, use command `library(rmarkdown)`.
-So in general to load/call libraries use command `library(name of library)`.  
+So in general to load/call libraries use command `library(name of library)`. 
+
+![load library](tutorial_screenshots/load_library.png)
+
 You may load libraries in the console or in your script.
 
-__Note:__ _Unlike packages,library functions expire when you close a project or end a session. Therefore, each time you open an r session, you have to load/call relevant libraries_
+__Note:Unlike packages,library functions expire when you close a project or end a session. Therefore, each time you open an r session, you have to load/call relevant libraries__   
 
 
 
@@ -120,6 +178,7 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
 
 
 

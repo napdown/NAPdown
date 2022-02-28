@@ -36,6 +36,12 @@ see screenshot below for all the steps above.
 
 ![exceldata](tutorial_screenshots/load_excel.png)
 
+```{r}
+
+gcf<-read_excel("C:\\Users\\Makabe\\NAP_Progress_Aggregate\\Open_NAPs_Database.xlsm", sheet = "GCF")
+
+```
+
 6.	Run code  
 7. Your data object appears in the environment window  
 8.	To view your data attributes and structure, click on the 'play' icon  
@@ -46,11 +52,7 @@ see screenshot below for all the steps above.
 
 ![view excel data](tutorial_screenshots/view_exel.png)
 
-```{r}
 
-gcf<-read_excel("C:\\Users\\Esther Makabe\\NAP_Progress_Aggregate\\Open_NAPs_Database.xlsm", sheet = "GCF")
-
-```
 ## Build Tables
 ### Static table  
 1.	Open a new code chunk
@@ -63,7 +65,7 @@ Hover over the function to see parameters required or go to the 'Help' tab and s
 
 ```{r, fig.width=0.1, fig.height=0.7}
 
-kable(head(gcf[,c(2,3,5,8)],10),caption = 'GCF Funding')%>%
+kable(head(gcf[,c(2,3,5,8)],5),caption = 'GCF Funding')%>%
 kable_styling(bootstrap_options = c('condensed', 'bordered'),
               fixed_thead = TRUE, font_size=10, repeat_header_continued = TRUE, full_width = F)%>%
   column_spec(1:4, width = "10em")
@@ -86,7 +88,7 @@ datatable(gcf_columns,filter = 'top',rownames = F, editable = F, style = 'jquery
 
 ```
 
-# Generate Other Graphics   
+## Generate Other Graphics   
 ### A bar chart       
 1.	Open a new code chunk
 2.	Install packages plotly & dplyr
@@ -94,21 +96,21 @@ datatable(gcf_columns,filter = 'top',rownames = F, editable = F, style = 'jquery
 4.	To plot the no of projects per region, first group your data by region, then count the no of projects (use a unique identifier, in our case the project ID)
 5.	Call the function 'plot_ly' and enter parameters as in below
 
-```{r fig.width=10, fig.height=10}
+```{r fig.width=8, fig.height=5}
 
 gcf %>% group_by(Region)%>% count(gcf$`Project Name`)%>%
   summarise("Projects"=sum(n))%>%   plot_ly(type = "bar", 
           y = ~Projects,  x = ~Region
           
                ) %>%
-plotly::layout(yaxis=list(title='No. of Projects',tickfont=list(size=20)),
-                 xaxis=list(title='Region', tickfont=list(size=20)))
+plotly::layout(yaxis=list(title='No. of Projects',tickfont=list(size=12)),
+                 xaxis=list(title='Region', tickfont=list(size=12)))
 
 ```
  
 ### A donut chart 
 To plot the same data as above but on a pie chart, the process the same, only the type of chart changes
-```{r, fig.width=10, fig.height=10}
+```{r, fig.width=8, fig.height=8}
 
 gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>%plot_ly(labels=~Region, values=~Total,sep = '\n')%>% add_pie(hole=0.5)%>%
     layout(title="GCF Funding by Region")
@@ -119,7 +121,7 @@ gcf%>%group_by(Region)%>%summarise('Total'=sum(`Total GCF Funding`))%>%plot_ly(l
 ### Pie chart         
 To plot projects for a select region (s), use the filter function to select only values that match your selection, then group the data by country and create count by unique identifier as above. Repeat the plotting steps as above. you may use any type of charts as may be preferred.
 
-```{r,fig.width=10, fig.height=10}
+```{r,fig.width=8, fig.height=8}
 
 gcf%>%filter(Region=="Asia-Pacific")%>%
   group_by(countryname)%>%count(`Project Name`)%>%
@@ -154,7 +156,7 @@ ggplot(gcf, aes(fill=countryname,
 ```
 
 #### Interactive            
-```{r,fig.dim=c(22,15)}
+```{r}
 
 gcf_sum<-gcf%>%filter(Region=="Africa")%>%
   group_by(countryname, Region)%>%summarise("Total"=sum(`Total GCF Funding`))

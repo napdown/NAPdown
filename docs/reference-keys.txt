@@ -1,12 +1,16 @@
 tab:kable
-tab:unnamed-chunk-8
+tab:unnamed-chunk-9
+getting-started
 prerequisites
+installing-r
+install-rstudio
+signing-up-on-github
 opening-a-markdown-file
 rstudio-windows-explained
 installing-packages
 removingun-installing-packages
 loading-libraries
-getting-started
+rmarkdown
 about-rmarkdown
 editing-in-markdown
 headers
@@ -22,6 +26,7 @@ insert-code-chunks
 create-tables
 option-1
 option-2
+option-3
 page-breaks
 process-a-markdown-document-to-desired-output
 references

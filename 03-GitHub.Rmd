@@ -1,9 +1,13 @@
 # GitHub & GitHub Pages
 Github is great for project collaboration, backup and version control.
-To use github as your repository manager, Create an account at (https://github.com/). 
+To use github as your repository manager, Create an account at (https://github.com/) 
+
+
 
 ## Sharing Repositories on GitHub
-### Via GitHub Desktop
+### Via GitHub Desktop  
+To use this option, download and install the gh desktop version [here](https://desktop.github.com/)
+
 1. Open GitHub desktop on your pc/laptop  
 2. On the main menu, click on `File` and select `Add local repository` from the dropdown list  
 ![add repository](tutorial_screenshots/gh_desktop_add_repo.png)    

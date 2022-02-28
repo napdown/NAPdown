@@ -36,7 +36,7 @@ Additional chapters are provided further reading material and references.</p>" /
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-28" />
+<meta name="date" content="2022-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -44,7 +44,7 @@ Additional chapters are provided further reading material and references.</p>" /
   
   
 <link rel="prev" href="github-github-pages.html"/>
-<link rel="next" href="generate-other-graphics.html"/>
+<link rel="next" href="working-climate-data.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -70,25 +70,24 @@ Additional chapters are provided further reading material and references.</p>" /
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.19/datatables.js"></script>
-<link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
-<script src="libs/dt-core-jqueryui-1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="libs/dt-core-jqueryui-1.10.20/js/dataTables.jqueryui.min.js"></script>
-<script src="libs/jszip-1.10.20/jszip.min.js"></script>
-<script src="libs/pdfmake-1.10.20/pdfmake.js"></script>
-<script src="libs/pdfmake-1.10.20/vfs_fonts.js"></script>
-<link href="libs/dt-ext-buttons-jqueryui-1.10.20/css/buttons.jqueryui.min.css" rel="stylesheet" />
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/dataTables.buttons.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.flash.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.html5.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.colVis.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.print.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.jqueryui.min.js"></script>
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-jqueryui-1.11.3/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-core-jqueryui-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/dt-core-jqueryui-1.11.3/js/dataTables.jqueryui.min.js"></script>
+<script src="libs/jszip-1.11.3/jszip.min.js"></script>
+<script src="libs/pdfmake-1.11.3/pdfmake.js"></script>
+<script src="libs/pdfmake-1.11.3/vfs_fonts.js"></script>
+<link href="libs/dt-ext-buttons-jqueryui-1.11.3/css/buttons.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/dataTables.buttons.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.html5.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.colVis.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.print.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.jqueryui.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
@@ -199,36 +198,42 @@ div.csl-indent {
 <li><a href="./">An Introduction to NAPdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#opening-a-markdown-file"><i class="fa fa-check"></i><b>1.1</b> Opening a markdown file</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.1</b> Prerequisites</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#rstudio-windows-explained"><i class="fa fa-check"></i><b>1.1.1</b> Rstudio windows explained:</a></li>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#installing-r"><i class="fa fa-check"></i><b>1.1.1</b> Installing R</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#install-rstudio"><i class="fa fa-check"></i><b>1.1.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#signing-up-on-github"><i class="fa fa-check"></i><b>1.1.3</b> Signing up on GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.2</b> Installing packages</a>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#opening-a-markdown-file"><i class="fa fa-check"></i><b>1.2</b> Opening a markdown file</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#removingun-installing-packages"><i class="fa fa-check"></i><b>1.2.1</b> Removing/un-installing packages</a></li>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#rstudio-windows-explained"><i class="fa fa-check"></i><b>1.2.1</b> Rstudio windows explained:</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#loading-libraries"><i class="fa fa-check"></i><b>1.3</b> Loading Libraries</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.3</b> Installing packages</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#removingun-installing-packages"><i class="fa fa-check"></i><b>1.3.1</b> Removing/un-installing packages</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#loading-libraries"><i class="fa fa-check"></i><b>1.4</b> Loading Libraries</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>2</b> RMarkdown</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
-<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
+<li class="chapter" data-level="2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
+<li class="chapter" data-level="2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
-<li class="chapter" data-level="2.2.2" data-path="getting-started.html"><a href="getting-started.html#bold-and-italic-text"><i class="fa fa-check"></i><b>2.2.2</b> Bold and italic text</a></li>
-<li class="chapter" data-level="2.2.3" data-path="getting-started.html"><a href="getting-started.html#create-lists"><i class="fa fa-check"></i><b>2.2.3</b> Create Lists</a></li>
-<li class="chapter" data-level="2.2.4" data-path="getting-started.html"><a href="getting-started.html#manual-line-breaks"><i class="fa fa-check"></i><b>2.2.4</b> Manual line breaks</a></li>
-<li class="chapter" data-level="2.2.5" data-path="getting-started.html"><a href="getting-started.html#insert-links"><i class="fa fa-check"></i><b>2.2.5</b> Insert links</a></li>
-<li class="chapter" data-level="2.2.6" data-path="getting-started.html"><a href="getting-started.html#insert-figuresimages"><i class="fa fa-check"></i><b>2.2.6</b> Insert figures/images</a></li>
-<li class="chapter" data-level="2.2.7" data-path="getting-started.html"><a href="getting-started.html#insert-block-quotes"><i class="fa fa-check"></i><b>2.2.7</b> Insert block quotes</a></li>
-<li class="chapter" data-level="2.2.8" data-path="getting-started.html"><a href="getting-started.html#insert-code-chunks"><i class="fa fa-check"></i><b>2.2.8</b> Insert code chunks</a></li>
-<li class="chapter" data-level="2.2.9" data-path="getting-started.html"><a href="getting-started.html#create-tables"><i class="fa fa-check"></i><b>2.2.9</b> Create tables</a></li>
-<li class="chapter" data-level="2.2.10" data-path="getting-started.html"><a href="getting-started.html#page-breaks"><i class="fa fa-check"></i><b>2.2.10</b> Page breaks</a></li>
-<li class="chapter" data-level="2.2.11" data-path="getting-started.html"><a href="getting-started.html#process-a-markdown-document-to-desired-output"><i class="fa fa-check"></i><b>2.2.11</b> Process a markdown document to desired output</a></li>
-<li class="chapter" data-level="2.2.12" data-path="getting-started.html"><a href="getting-started.html#references"><i class="fa fa-check"></i><b>2.2.12</b> References</a></li>
-<li class="chapter" data-level="2.2.13" data-path="getting-started.html"><a href="getting-started.html#pandoc-knitr"><i class="fa fa-check"></i><b>2.2.13</b> Pandoc &amp; Knitr</a></li>
+<li class="chapter" data-level="2.2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
+<li class="chapter" data-level="2.2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#bold-and-italic-text"><i class="fa fa-check"></i><b>2.2.2</b> Bold and italic text</a></li>
+<li class="chapter" data-level="2.2.3" data-path="rmarkdown.html"><a href="rmarkdown.html#create-lists"><i class="fa fa-check"></i><b>2.2.3</b> Create Lists</a></li>
+<li class="chapter" data-level="2.2.4" data-path="rmarkdown.html"><a href="rmarkdown.html#manual-line-breaks"><i class="fa fa-check"></i><b>2.2.4</b> Manual line breaks</a></li>
+<li class="chapter" data-level="2.2.5" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-links"><i class="fa fa-check"></i><b>2.2.5</b> Insert links</a></li>
+<li class="chapter" data-level="2.2.6" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-figuresimages"><i class="fa fa-check"></i><b>2.2.6</b> Insert figures/images</a></li>
+<li class="chapter" data-level="2.2.7" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-block-quotes"><i class="fa fa-check"></i><b>2.2.7</b> Insert block quotes</a></li>
+<li class="chapter" data-level="2.2.8" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-code-chunks"><i class="fa fa-check"></i><b>2.2.8</b> Insert code chunks</a></li>
+<li class="chapter" data-level="2.2.9" data-path="rmarkdown.html"><a href="rmarkdown.html#create-tables"><i class="fa fa-check"></i><b>2.2.9</b> Create tables</a></li>
+<li class="chapter" data-level="2.2.10" data-path="rmarkdown.html"><a href="rmarkdown.html#page-breaks"><i class="fa fa-check"></i><b>2.2.10</b> Page breaks</a></li>
+<li class="chapter" data-level="2.2.11" data-path="rmarkdown.html"><a href="rmarkdown.html#process-a-markdown-document-to-desired-output"><i class="fa fa-check"></i><b>2.2.11</b> Process a markdown document to desired output</a></li>
+<li class="chapter" data-level="2.2.12" data-path="rmarkdown.html"><a href="rmarkdown.html#references"><i class="fa fa-check"></i><b>2.2.12</b> References</a></li>
+<li class="chapter" data-level="2.2.13" data-path="rmarkdown.html"><a href="rmarkdown.html#pandoc-knitr"><i class="fa fa-check"></i><b>2.2.13</b> Pandoc &amp; Knitr</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="napdown.html"><a href="napdown.html"><i class="fa fa-check"></i><b>3</b> NAPdown</a>
@@ -263,31 +268,31 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.1" data-path="working-excel-data.html"><a href="working-excel-data.html#static-table"><i class="fa fa-check"></i><b>5.2.1</b> Static table</a></li>
 <li class="chapter" data-level="5.2.2" data-path="working-excel-data.html"><a href="working-excel-data.html#interactive-table"><i class="fa fa-check"></i><b>5.2.2</b> Interactive table</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html"><i class="fa fa-check"></i><b>6</b> Generate Other Graphics</a>
+<li class="chapter" data-level="5.3" data-path="working-excel-data.html"><a href="working-excel-data.html#generate-other-graphics"><i class="fa fa-check"></i><b>5.3</b> Generate Other Graphics</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#a-bar-chart"><i class="fa fa-check"></i><b>6.0.1</b> A bar chart</a></li>
-<li class="chapter" data-level="6.0.2" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#a-donut-chart"><i class="fa fa-check"></i><b>6.0.2</b> A donut chart</a></li>
-<li class="chapter" data-level="6.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>6.1</b> Filter and plot select data</a>
+<li class="chapter" data-level="5.3.1" data-path="working-excel-data.html"><a href="working-excel-data.html#a-bar-chart"><i class="fa fa-check"></i><b>5.3.1</b> A bar chart</a></li>
+<li class="chapter" data-level="5.3.2" data-path="working-excel-data.html"><a href="working-excel-data.html#a-donut-chart"><i class="fa fa-check"></i><b>5.3.2</b> A donut chart</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="working-excel-data.html"><a href="working-excel-data.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>5.4</b> Filter and plot select data</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#pie-chart"><i class="fa fa-check"></i><b>6.1.1</b> Pie chart</a></li>
-<li class="chapter" data-level="6.1.2" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#build-treemap"><i class="fa fa-check"></i><b>6.1.2</b> Build Treemap</a></li>
+<li class="chapter" data-level="5.4.1" data-path="working-excel-data.html"><a href="working-excel-data.html#pie-chart"><i class="fa fa-check"></i><b>5.4.1</b> Pie chart</a></li>
+<li class="chapter" data-level="5.4.2" data-path="working-excel-data.html"><a href="working-excel-data.html#build-treemap"><i class="fa fa-check"></i><b>5.4.2</b> Build Treemap</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>7</b> Working Climate data</a>
+<li class="chapter" data-level="6" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>6</b> Working Climate data</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="working-climate-data.html"><a href="working-climate-data.html#historical-climate-data"><i class="fa fa-check"></i><b>7.1</b> Historical climate data</a>
+<li class="chapter" data-level="6.1" data-path="working-climate-data.html"><a href="working-climate-data.html#historical-climate-data"><i class="fa fa-check"></i><b>6.1</b> Historical climate data</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="working-climate-data.html"><a href="working-climate-data.html#install-packages-and-load-libraries"><i class="fa fa-check"></i><b>7.1.1</b> Install Packages and load libraries</a></li>
-<li class="chapter" data-level="7.1.2" data-path="working-climate-data.html"><a href="working-climate-data.html#load-data-from-cru-website"><i class="fa fa-check"></i><b>7.1.2</b> Load data from cru website</a></li>
-<li class="chapter" data-level="7.1.3" data-path="working-climate-data.html"><a href="working-climate-data.html#loaddefine-geometry"><i class="fa fa-check"></i><b>7.1.3</b> Load/define geometry</a></li>
-<li class="chapter" data-level="7.1.4" data-path="working-climate-data.html"><a href="working-climate-data.html#loadimport-your-data-into-r"><i class="fa fa-check"></i><b>7.1.4</b> Load/Import your data into r</a></li>
-<li class="chapter" data-level="7.1.5" data-path="working-climate-data.html"><a href="working-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><i class="fa fa-check"></i><b>7.1.5</b> Convert the raster stack created above into a dataframe and format date values</a></li>
-<li class="chapter" data-level="7.1.6" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-monthly-data"><i class="fa fa-check"></i><b>7.1.6</b> Plot Monthly data</a></li>
-<li class="chapter" data-level="7.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>7.1.7</b> Plot Annual data</a></li>
+<li class="chapter" data-level="6.1.1" data-path="working-climate-data.html"><a href="working-climate-data.html#install-packages-and-load-libraries"><i class="fa fa-check"></i><b>6.1.1</b> Install Packages and load libraries</a></li>
+<li class="chapter" data-level="6.1.2" data-path="working-climate-data.html"><a href="working-climate-data.html#load-data-from-cru-website"><i class="fa fa-check"></i><b>6.1.2</b> Load data from cru website</a></li>
+<li class="chapter" data-level="6.1.3" data-path="working-climate-data.html"><a href="working-climate-data.html#loaddefine-geometry"><i class="fa fa-check"></i><b>6.1.3</b> Load/define geometry</a></li>
+<li class="chapter" data-level="6.1.4" data-path="working-climate-data.html"><a href="working-climate-data.html#loadimport-your-data-into-r"><i class="fa fa-check"></i><b>6.1.4</b> Load/Import your data into r</a></li>
+<li class="chapter" data-level="6.1.5" data-path="working-climate-data.html"><a href="working-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><i class="fa fa-check"></i><b>6.1.5</b> Convert the raster stack created above into a dataframe and format date values</a></li>
+<li class="chapter" data-level="6.1.6" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-monthly-data"><i class="fa fa-check"></i><b>6.1.6</b> Plot Monthly data</a></li>
+<li class="chapter" data-level="6.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>6.1.7</b> Plot Annual data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>8</b> Further Reads</a></li>
+<li class="chapter" data-level="7" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>7</b> Further Reads</a></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -316,19 +321,19 @@ div.csl-indent {
 <p>Steps;</p>
 <div id="install-packages" class="section level3" number="5.1.1">
 <h3><span class="header-section-number">5.1.1</span> Install packages</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="working-excel-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(c(&quot;readxl&quot;, &quot;magrittr&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;DT&quot;, &quot;plotly&quot;, &quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;treemapify&quot;))</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="working-excel-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(c(&quot;readxl&quot;, &quot;magrittr&quot;, &quot;knitr&quot;, &quot;kableExtra&quot;, &quot;DT&quot;, &quot;plotly&quot;, &quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;treemapify&quot;))</span></span></code></pre></div>
 </div>
 <div id="call-libraries-for-the-installed-packages" class="section level3" number="5.1.2">
 <h3><span class="header-section-number">5.1.2</span> Call libraries for the installed packages</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="working-excel-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb5-2"><a href="working-excel-data.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
-<span id="cb5-3"><a href="working-excel-data.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb5-4"><a href="working-excel-data.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb5-5"><a href="working-excel-data.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb5-6"><a href="working-excel-data.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
-<span id="cb5-7"><a href="working-excel-data.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb5-8"><a href="working-excel-data.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-9"><a href="working-excel-data.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemapify)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="working-excel-data.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb6-2"><a href="working-excel-data.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb6-3"><a href="working-excel-data.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb6-4"><a href="working-excel-data.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb6-5"><a href="working-excel-data.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb6-6"><a href="working-excel-data.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb6-7"><a href="working-excel-data.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb6-8"><a href="working-excel-data.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-9"><a href="working-excel-data.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(treemapify)</span></code></pre></div>
 </div>
 <div id="import-excel-table-from-local-drive" class="section level3" number="5.1.3">
 <h3><span class="header-section-number">5.1.3</span> Import excel table from local drive</h3>
@@ -348,6 +353,7 @@ see screenshot below for all the steps above.</li>
 <img src="tutorial_screenshots/load_excel.png" alt="" />
 <p class="caption">exceldata</p>
 </div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="working-excel-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">&quot;C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">Makabe</span><span class="sc">\\</span><span class="st">NAP_Progress_Aggregate</span><span class="sc">\\</span><span class="st">Open_NAPs_Database.xlsm&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;GCF&quot;</span>)</span></code></pre></div>
 <ol start="6" style="list-style-type: decimal">
 <li>Run code<br />
 </li>
@@ -366,7 +372,6 @@ see screenshot below for all the steps above.</li>
 <img src="tutorial_screenshots/view_exel.png" alt="" />
 <p class="caption">view excel data</p>
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="working-excel-data.html#cb6-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">&quot;C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">Esther Makabe</span><span class="sc">\\</span><span class="st">NAP_Progress_Aggregate</span><span class="sc">\\</span><span class="st">Open_NAPs_Database.xlsm&quot;</span>, <span class="at">sheet =</span> <span class="st">&quot;GCF&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="build-tables" class="section level2" number="5.2">
@@ -383,13 +388,13 @@ see screenshot below for all the steps above.</li>
 <p class="caption">kable table</p>
 </div>
 <p>Hover over the function to see parameters required or go to the ‘Help’ tab and search ‘datatable’ to see further details on its application.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="working-excel-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)],<span class="dv">10</span>),<span class="at">caption =</span> <span class="st">&#39;GCF Funding&#39;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="working-excel-data.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&#39;condensed&#39;</span>, <span class="st">&#39;bordered&#39;</span>),</span>
-<span id="cb7-3"><a href="working-excel-data.html#cb7-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>, <span class="at">font_size=</span><span class="dv">10</span>, <span class="at">repeat_header_continued =</span> <span class="cn">TRUE</span>, <span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="working-excel-data.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">width =</span> <span class="st">&quot;10em&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="working-excel-data.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)],<span class="dv">5</span>),<span class="at">caption =</span> <span class="st">&#39;GCF Funding&#39;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="working-excel-data.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">&#39;condensed&#39;</span>, <span class="st">&#39;bordered&#39;</span>),</span>
+<span id="cb8-3"><a href="working-excel-data.html#cb8-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>, <span class="at">font_size=</span><span class="dv">10</span>, <span class="at">repeat_header_continued =</span> <span class="cn">TRUE</span>, <span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="working-excel-data.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">width =</span> <span class="st">&quot;10em&quot;</span>)</span></code></pre></div>
 <table class="table table-condensed table-bordered" style="font-size: 10px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-8">Table 5.1: </span>GCF Funding
+<span id="tab:unnamed-chunk-9">Table 5.1: </span>GCF Funding
 </caption>
 <thead>
 <tr>
@@ -478,76 +483,6 @@ Enhancing adaptive capacities of coastal communities, especially women, to cope 
 24980000
 </td>
 </tr>
-<tr>
-<td style="text-align:left;width: 10em; ">
-Bangladesh
-</td>
-<td style="text-align:left;width: 10em; ">
-Asia-Pacific
-</td>
-<td style="text-align:left;width: 10em; ">
-Extended Community Climate Change Project-Flood (ECCCP-Flood)
-</td>
-<td style="text-align:right;width: 10em; ">
-9681340
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 10em; ">
-Belize
-</td>
-<td style="text-align:left;width: 10em; ">
-Latin America and the Caribbean
-</td>
-<td style="text-align:left;width: 10em; ">
-Resilient Rural Belize (Be-Resilient)
-</td>
-<td style="text-align:right;width: 10em; ">
-8000000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 10em; ">
-Benin
-</td>
-<td style="text-align:left;width: 10em; ">
-Africa
-</td>
-<td style="text-align:left;width: 10em; ">
-Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes
-</td>
-<td style="text-align:right;width: 10em; ">
-9000000
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 10em; ">
-Bhutan
-</td>
-<td style="text-align:left;width: 10em; ">
-Asia-Pacific
-</td>
-<td style="text-align:left;width: 10em; ">
-Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan
-</td>
-<td style="text-align:right;width: 10em; ">
-25347194
-</td>
-</tr>
-<tr>
-<td style="text-align:left;width: 10em; ">
-Burkina Faso
-</td>
-<td style="text-align:left;width: 10em; ">
-Africa
-</td>
-<td style="text-align:left;width: 10em; ">
-Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project
-</td>
-<td style="text-align:right;width: 10em; ">
-22500000
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -562,11 +497,97 @@ Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Afri
 <li>Hover over the function to see parameters required or go to the ‘Help’ tab and search ‘datatable’ to see further details on its application.</li>
 <li>Fill in details as below</li>
 </ol>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="working-excel-data.html#cb8-1" aria-hidden="true" tabindex="-1"></a>gcf_columns<span class="ot">&lt;-</span>gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)] <span class="co"># selects only the columns we want to see in our table</span></span>
-<span id="cb8-2"><a href="working-excel-data.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(gcf_columns,<span class="at">filter =</span> <span class="st">&#39;top&#39;</span>,<span class="at">rownames =</span> F, <span class="at">editable =</span> F, <span class="at">style =</span> <span class="st">&#39;jqueryui&#39;</span>, <span class="at">class =</span> <span class="st">&#39;display responsive&#39;</span>, <span class="at">width =</span> <span class="st">&#39;100%&#39;</span>, <span class="at">caption =</span> <span class="st">&quot;GCF Project Funding&quot;</span>, <span class="at">extensions =</span> <span class="st">&#39;Buttons&#39;</span>, <span class="at">options=</span><span class="fu">list</span>(<span class="at">pageLength=</span> <span class="dv">5</span>, <span class="at">dom=</span><span class="st">&#39;lfrtipB&#39;</span>, <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">&#39;copy&#39;</span>, <span class="st">&#39;csv&#39;</span>, <span class="st">&#39;excel&#39;</span>, <span class="st">&#39;pdf&#39;</span>)))<span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="working-excel-data.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">formatStyle</span>(<span class="at">columns =</span> <span class="fu">colnames</span>(gcf_columns),<span class="at">fontSize=</span> <span class="st">&#39;10px&#39;</span>)</span></code></pre></div>
-<div id="htmlwidget-1e4390ee3fef2d5e2d81" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1e4390ee3fef2d5e2d81">{"x":{"style":"jqueryui","filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2320388\" data-max=\"120116959.06\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"caption":"<caption>GCF Project Funding<\/caption>","data":[["Antigua and Barbuda","Antigua and BarbudaDominicaGrenada","Bahrain","Bangladesh","Bangladesh","Bangladesh","Belize","Benin","Bhutan","Burkina Faso","Colombia","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Fiji","Gambia","Georgia","Grenada","Guatemala","GuatemalaEl SalvadorHondurasNicaraguaCosta RicaPanamaDominican Republic (the)","India","Kenya","Kyrgyzstan","Lao People's Democratic Republic","Malawi","Maldives","Mali","Marshall Islands","Marshall Islands","Morocco","Morocco","Mozambique","Namibia","Namibia","Namibia","Namibia","Pakistan","Pakistan","Philippines","Samoa","Senegal","Senegal","Senegal","Sri Lanka","Sri Lanka","Sudan","Tajikistan","Tajikistan","Tajikistan","Tanzania United Republic of","TanzaniaMadagascarSouth AfricaMozambique","Timor-Leste","Tuvalu","Uganda","UgandaGhanaNigeriaKenya","UzbekistanTajikistan","Vanuatu","Viet Nam","Zambia","Zimbabwe","Zimbabwe"],["Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Latin America and the Caribbean","Africa","Asia-Pacific","Africa","Latin America and the Caribbean","Africa","Africa","Africa","Africa","Asia-Pacific","Africa","Eastern Europe","Latin America and the Caribbean","Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa"],["Resilience to hurricanes in the building sector in Antigua and Barbuda","Integrated physical adaptation and community resilience through an enhanced direct access pilot in the public, private, and civil society sectors of three Eastern Caribbean small island developing states","Enhancing climate resilience of the water sector in Bahrain","Climate Resilient Infrastructure Mainstreaming (CRIM)","Enhancing adaptive capacities of coastal communities, especially women, to cope with climate change induced salinity","Extended Community Climate Change Project-Flood (ECCCP-Flood)","Resilient Rural Belize (Be-Resilient)","Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes","Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project","Scaling up climate resilient water management practices for vulnerable communities in La Mojana","Ensuring climate resilient water supplies in the Comoros Islands","Ecosystem-based Adaptation in the Indian Ocean – EBA IO","Enhancing climate change adaptation in the North coast and Nile Delta Regions in Egypt","Responding to the increasing risk of drought: building gender-responsive resilience of the most vulnerable communities","Fiji Urban Water Supply and Wastewater Management Project","Large-scale Ecosystem-based Adaptation in The Gambia: developing a climate-resilient, natural resource-based economy","Scaling-up Multi-Hazard Early Warning System and the Use of Climate Information in Georgia","Climate Resilient Water Sector in Grenada (G-CREWS)-","Building livelihood resilience to climate change in the upper basins of Guatemala’s highlands","Productive Investment Initiative for Adaptation to Climate Change (CAMBio II)","Ground Water Recharge and Solar Micro Irrigation to Ensure Food Security and Enhance Resilience in Vulnerable Tribal Areas of Odisha","TWENDE: Towards Ending Drought Emergencies: Ecosystem Based Adaptation in Kenya’s Arid and Semi-Arid Rangelands","Climate services and diversification of climate sensitive livelihoods to empower food insecure and vulnerable communities in the Kyrgyz Republic.","Building resilience of urban populations with ecosystem-based solutions in Lao PDR","Scaling up the use of Modernized Climate information and Early Warning Systems in Malawi","Supporting vulnerable communities in Maldives to manage climate change-induced water shortages","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Mali Country Project","Pacific Resilience Project Phase II for RMI","Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands","Irrigation development and adaptation of irrigated agriculture to climate change in semi-arid Morocco","The Saïss Water Conservation Project","Climate-resilient food security for women and men smallholders in Mozambique through integrated risk management","Climate Resilient Agriculture in three of the Vulnerable Extreme northern crop growing regions (CRAVE)","Enpower to Adapt: Creating Climate-Change Resilient Livelihoods through  Community-Based Natural Resource Management (CBNRM) in Namibia","Improving rangeland and ecosystem management practices of smallholder farmers under conditions of climate change in Sesfontein, Fransfontein, and Warmquelle areas of the Republic of Namibia","Building resilience of communities living in landscapes threatened under climate change through an ecosystems-based adaptation approach","Scaling-up of Glacial Lake Outburst Flood (GLOF) risk reduction in Northern Pakistan","Transforming the Indus Basin with Climate Resilient Agriculture and Water Management","Multi-Hazard Impact-Based Forecasting and Early Warning System  for the Philippines","Integrated Flood Management to Enhance Climate Resilience of the Vaisigano River Catchment in Samoa","Increasing the resilience of ecosystems and communities through\r\n the restoration of the productive bases of salinized lands","Senegal Integrated Urban Flood Management Project","Building the climate resilience of food insecure smallholder farmers through integrated management of climate risk (R4)","Strengthening the resilience of smallholder farmers in the Dry Zone to climate variability and extreme events through an integrated approach to water management","Strengthening Climate Resilience of Subsistence Farmers and Agricultural Plantation Communities residing in the vulnerable river basins, watershed areas and downstream of the Knuckles Mountain Range Catchment of Sri Lanka","Building resilience in the face of climate change within traditional rain fed agricultural and pastoral systems in Sudan","Tajikistan: Scaling Up Hydropower Sector Climate Resilience","Building climate resilience of vulnerable and food insecure communities through capacity strengthening and livelihood diversification in mountainous regions of Tajikistan","Institutional Development of the State Agency for Hydrometeorology of Tajikistan","Simiyu Climate Resilient Project","Blue Action Fund (BAF): GCF Ecosystem Based Adaptation Programme in the Western Indian Ocean","Safeguarding rural communities and their physical and economic assets from climate  induced disasters in Timor-Leste","Tuvalu Coastal Adaptation Project (TCAP)","Building Resilient Communities, Wetland Ecosystems and Associated Catchments in Uganda","Acumen Resilient Agriculture Fund (ARAF)","Climate Adaptation and Mitigation Program For the Aral Sea Basin (CAMP4ASB)","Climate Information Services for Resilient Development Planning in Vanuatu (Van-CIS-RDP)","Strengthening the resilience of smallholder agriculture to climate change-induced water insecurity in the Central Highlands and South-Central Coast regions of Vietnam","Strengthening climate resilience of agricultural livelihoods in Agro-Ecological Regions I and II in Zambia","Building Climate Resilience of Vulnerable Agricultural Livelihoods in Southern Zimbabwe","Integrated Climate Risk Management for Food Security and Livelihoods in Zimbabwe focusing on Masvingo and Rushinga Districts"],[32706595,20000000,2320388,40000000,24980000,9681340,8000000,9000000,25347194,22500000,38496000,41919808,38000000,31385000,45002759,31040000,20546756,27053598,41274964.91,22035512,15500000,34357000,23152082,8576108,10000000,12295000,23640000,22750000,25000000,18631216,23391812.87,37391812.87,9250000,9500000,10000000,9300000,8904000,36960000,34990832,9999042.27,57718000,7610000,17543859.65,9983521,38084000,39775000,25645114,50000000,9273586,5000000,120116959.06,35087719.3,22356805,36010000,24140000,26000000,19000000,22953000,30205367,32000000,26574567,8858316]],"container":"<table class=\"display responsive\">\n  <thead>\n    <tr>\n      <th>countryname<\/th>\n      <th>Region<\/th>\n      <th>Project Name<\/th>\n      <th>Total GCF Funding<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"lfrtipB","buttons":["copy","csv","excel","pdf"],"columnDefs":[{"className":"dt-right","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'10px'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'10px'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'10px'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'10px'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="working-excel-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>gcf_columns<span class="ot">&lt;-</span>gcf[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>)] <span class="co"># selects only the columns we want to see in our table</span></span>
+<span id="cb9-2"><a href="working-excel-data.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(gcf_columns,<span class="at">filter =</span> <span class="st">&#39;top&#39;</span>,<span class="at">rownames =</span> F, <span class="at">editable =</span> F, <span class="at">style =</span> <span class="st">&#39;jqueryui&#39;</span>, <span class="at">class =</span> <span class="st">&#39;display responsive&#39;</span>, <span class="at">width =</span> <span class="st">&#39;100%&#39;</span>, <span class="at">caption =</span> <span class="st">&quot;GCF Project Funding&quot;</span>, <span class="at">extensions =</span> <span class="st">&#39;Buttons&#39;</span>, <span class="at">options=</span><span class="fu">list</span>(<span class="at">pageLength=</span> <span class="dv">5</span>, <span class="at">dom=</span><span class="st">&#39;lfrtipB&#39;</span>, <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">&#39;copy&#39;</span>, <span class="st">&#39;csv&#39;</span>, <span class="st">&#39;excel&#39;</span>, <span class="st">&#39;pdf&#39;</span>)))<span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="working-excel-data.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  DT<span class="sc">::</span><span class="fu">formatStyle</span>(<span class="at">columns =</span> <span class="fu">colnames</span>(gcf_columns),<span class="at">fontSize=</span> <span class="st">&#39;10px&#39;</span>)</span></code></pre></div>
+<div id="htmlwidget-b514b3a6a8a0661c144f" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b514b3a6a8a0661c144f">{"x":{"style":"jqueryui","filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2320388\" data-max=\"120116959.06\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["Buttons"],"caption":"<caption>GCF Project Funding<\/caption>","data":[["Antigua and Barbuda","Antigua and BarbudaDominicaGrenada","Bahrain","Bangladesh","Bangladesh","Bangladesh","Belize","Benin","Bhutan","Burkina Faso","Colombia","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Fiji","Gambia","Georgia","Grenada","Guatemala","GuatemalaEl SalvadorHondurasNicaraguaCosta RicaPanamaDominican Republic (the)","India","Kenya","Kyrgyzstan","Lao People's Democratic Republic","Malawi","Maldives","Mali","Marshall Islands","Marshall Islands","Morocco","Morocco","Mozambique","Namibia","Namibia","Namibia","Namibia","Pakistan","Pakistan","Philippines","Samoa","Senegal","Senegal","Senegal","Sri Lanka","Sri Lanka","Sudan","Tajikistan","Tajikistan","Tajikistan","United Republic of Tanzania","TanzaniaMadagascarSouth AfricaMozambique","Timor-Leste","Tuvalu","Uganda","UgandaGhanaNigeriaKenya","UzbekistanTajikistan","Vanuatu","Viet Nam","Zambia","Zimbabwe","Zimbabwe"],["Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Latin America and the Caribbean","Africa","Asia-Pacific","Africa","Latin America and the Caribbean","Africa","Africa","Africa","Africa","Asia-Pacific","Africa","Eastern Europe","Latin America and the Caribbean","Latin America and the Caribbean","Latin America and the Caribbean","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Africa","Africa","Asia-Pacific","Asia-Pacific","Asia-Pacific","Africa","Africa","Africa"],["Resilience to hurricanes in the building sector in Antigua and Barbuda","Integrated physical adaptation and community resilience through an enhanced direct access pilot in the public, private, and civil society sectors of three Eastern Caribbean small island developing states","Enhancing climate resilience of the water sector in Bahrain","Climate Resilient Infrastructure Mainstreaming (CRIM)","Enhancing adaptive capacities of coastal communities, especially women, to cope with climate change induced salinity","Extended Community Climate Change Project-Flood (ECCCP-Flood)","Resilient Rural Belize (Be-Resilient)","Enhanced climate resilience of rural communities in central and north Benin through the implementation of ecosystem-based adaptation (EbA) in forest and agricultural landscapes","Supporting Climate Resilience and Transformational Change in the Agriculture Sector in Bhutan","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Burkina Faso Country Project","Scaling up climate resilient water management practices for vulnerable communities in La Mojana","Ensuring climate resilient water supplies in the Comoros Islands","Ecosystem-based Adaptation in the Indian Ocean – EBA IO","Enhancing climate change adaptation in the North coast and Nile Delta Regions in Egypt","Responding to the increasing risk of drought: building gender-responsive resilience of the most vulnerable communities","Fiji Urban Water Supply and Wastewater Management Project","Large-scale Ecosystem-based Adaptation in The Gambia: developing a climate-resilient, natural resource-based economy","Scaling-up Multi-Hazard Early Warning System and the Use of Climate Information in Georgia","Climate Resilient Water Sector in Grenada (G-CREWS)-","Building livelihood resilience to climate change in the upper basins of Guatemala’s highlands","Productive Investment Initiative for Adaptation to Climate Change (CAMBio II)","Ground Water Recharge and Solar Micro Irrigation to Ensure Food Security and Enhance Resilience in Vulnerable Tribal Areas of Odisha","TWENDE: Towards Ending Drought Emergencies: Ecosystem Based Adaptation in Kenya’s Arid and Semi-Arid Rangelands","Climate services and diversification of climate sensitive livelihoods to empower food insecure and vulnerable communities in the Kyrgyz Republic.","Building resilience of urban populations with ecosystem-based solutions in Lao PDR","Scaling up the use of Modernized Climate information and Early Warning Systems in Malawi","Supporting vulnerable communities in Maldives to manage climate change-induced water shortages","Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Africa: Mali Country Project","Pacific Resilience Project Phase II for RMI","Addressing Climate Vulnerability in the Water Sector (ACWA) in the Marshall Islands","Irrigation development and adaptation of irrigated agriculture to climate change in semi-arid Morocco","The Saïss Water Conservation Project","Climate-resilient food security for women and men smallholders in Mozambique through integrated risk management","Climate Resilient Agriculture in three of the Vulnerable Extreme northern crop growing regions (CRAVE)","Enpower to Adapt: Creating Climate-Change Resilient Livelihoods through  Community-Based Natural Resource Management (CBNRM) in Namibia","Improving rangeland and ecosystem management practices of smallholder farmers under conditions of climate change in Sesfontein, Fransfontein, and Warmquelle areas of the Republic of Namibia","Building resilience of communities living in landscapes threatened under climate change through an ecosystems-based adaptation approach","Scaling-up of Glacial Lake Outburst Flood (GLOF) risk reduction in Northern Pakistan","Transforming the Indus Basin with Climate Resilient Agriculture and Water Management","Multi-Hazard Impact-Based Forecasting and Early Warning System  for the Philippines","Integrated Flood Management to Enhance Climate Resilience of the Vaisigano River Catchment in Samoa","Increasing the resilience of ecosystems and communities through\r\n the restoration of the productive bases of salinized lands","Senegal Integrated Urban Flood Management Project","Building the climate resilience of food insecure smallholder farmers through integrated management of climate risk (R4)","Strengthening the resilience of smallholder farmers in the Dry Zone to climate variability and extreme events through an integrated approach to water management","Strengthening Climate Resilience of Subsistence Farmers and Agricultural Plantation Communities residing in the vulnerable river basins, watershed areas and downstream of the Knuckles Mountain Range Catchment of Sri Lanka","Building resilience in the face of climate change within traditional rain fed agricultural and pastoral systems in Sudan","Tajikistan: Scaling Up Hydropower Sector Climate Resilience","Building climate resilience of vulnerable and food insecure communities through capacity strengthening and livelihood diversification in mountainous regions of Tajikistan","Institutional Development of the State Agency for Hydrometeorology of Tajikistan","Simiyu Climate Resilient Project","Blue Action Fund (BAF): GCF Ecosystem Based Adaptation Programme in the Western Indian Ocean","Safeguarding rural communities and their physical and economic assets from climate  induced disasters in Timor-Leste","Tuvalu Coastal Adaptation Project (TCAP)","Building Resilient Communities, Wetland Ecosystems and Associated Catchments in Uganda","Acumen Resilient Agriculture Fund (ARAF)","Climate Adaptation and Mitigation Program For the Aral Sea Basin (CAMP4ASB)","Climate Information Services for Resilient Development Planning in Vanuatu (Van-CIS-RDP)","Strengthening the resilience of smallholder agriculture to climate change-induced water insecurity in the Central Highlands and South-Central Coast regions of Vietnam","Strengthening climate resilience of agricultural livelihoods in Agro-Ecological Regions I and II in Zambia","Building Climate Resilience of Vulnerable Agricultural Livelihoods in Southern Zimbabwe","Integrated Climate Risk Management for Food Security and Livelihoods in Zimbabwe focusing on Masvingo and Rushinga Districts"],[32706595,20000000,2320388,40000000,24980000,9681340,8000000,9000000,25347194,22500000,38496000,41919808,38000000,31385000,45002759,31040000,20546756,27053598,41274964.91,22035512,15500000,34357000,23152082,8576108,10000000,12295000,23640000,22750000,25000000,18631216,23391812.87,37391812.87,9250000,9500000,10000000,9300000,8904000,36960000,34990832,9999042.27,57718000,7610000,17543859.65,9983521,38084000,39775000,25645114,50000000,9273586,5000000,120116959.06,35087719.3,22356805,36010000,24140000,26000000,19000000,22953000,30205367,32000000,26574567,8858316]],"container":"<table class=\"display responsive\">\n  <thead>\n    <tr>\n      <th>countryname<\/th>\n      <th>Region<\/th>\n      <th>Project Name<\/th>\n      <th>Total GCF Funding<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"dom":"lfrtipB","buttons":["copy","csv","excel","pdf"],"columnDefs":[{"className":"dt-right","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'font-size':'10px'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'font-size':'10px'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'font-size':'10px'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'font-size':'10px'});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="generate-other-graphics" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Generate Other Graphics</h2>
+<div id="a-bar-chart" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> A bar chart</h3>
+<ol style="list-style-type: decimal">
+<li>Open a new code chunk</li>
+<li>Install packages plotly &amp; dplyr</li>
+<li>Call their respective libraries</li>
+<li>To plot the no of projects per region, first group your data by region, then count the no of projects (use a unique identifier, in our case the project ID)</li>
+<li>Call the function ‘plot_ly’ and enter parameters as in below</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="working-excel-data.html#cb10-1" aria-hidden="true" tabindex="-1"></a>gcf <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(Region)<span class="sc">%&gt;%</span> <span class="fu">count</span>(gcf<span class="sc">$</span><span class="st">`</span><span class="at">Project Name</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="working-excel-data.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="st">&quot;Projects&quot;</span><span class="ot">=</span><span class="fu">sum</span>(n))<span class="sc">%&gt;%</span>   <span class="fu">plot_ly</span>(<span class="at">type =</span> <span class="st">&quot;bar&quot;</span>, </span>
+<span id="cb10-3"><a href="working-excel-data.html#cb10-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">y =</span> <span class="sc">~</span>Projects,  <span class="at">x =</span> <span class="sc">~</span>Region</span>
+<span id="cb10-4"><a href="working-excel-data.html#cb10-4" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb10-5"><a href="working-excel-data.html#cb10-5" aria-hidden="true" tabindex="-1"></a>               ) <span class="sc">%&gt;%</span></span>
+<span id="cb10-6"><a href="working-excel-data.html#cb10-6" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">layout</span>(<span class="at">yaxis=</span><span class="fu">list</span>(<span class="at">title=</span><span class="st">&#39;No. of Projects&#39;</span>,<span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">12</span>)),</span>
+<span id="cb10-7"><a href="working-excel-data.html#cb10-7" aria-hidden="true" tabindex="-1"></a>                 <span class="at">xaxis=</span><span class="fu">list</span>(<span class="at">title=</span><span class="st">&#39;Region&#39;</span>, <span class="at">tickfont=</span><span class="fu">list</span>(<span class="at">size=</span><span class="dv">12</span>)))</span></code></pre></div>
+<div id="htmlwidget-00a1bb4def477264909c" style="width:768px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-00a1bb4def477264909c">{"x":{"visdat":{"4db022192ad9":["function () ","plotlyVisDat"]},"cur_data":"4db022192ad9","attrs":{"4db022192ad9":{"y":{},"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"No. of Projects","tickfont":{"size":12}},"xaxis":{"domain":[0,1],"automargin":true,"title":"Region","tickfont":{"size":12},"type":"category","categoryorder":"array","categoryarray":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"y":[28,26,1,7],"x":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"],"type":"bar","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="a-donut-chart" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> A donut chart</h3>
+<p>To plot the same data as above but on a pie chart, the process the same, only the type of chart changes</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="working-excel-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="sc">%&gt;%</span><span class="fu">group_by</span>(Region)<span class="sc">%&gt;%</span><span class="fu">summarise</span>(<span class="st">&#39;Total&#39;</span><span class="ot">=</span><span class="fu">sum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>))<span class="sc">%&gt;%</span><span class="fu">plot_ly</span>(<span class="at">labels=</span><span class="sc">~</span>Region, <span class="at">values=</span><span class="sc">~</span>Total,<span class="at">sep =</span> <span class="st">&#39;</span><span class="sc">\n</span><span class="st">&#39;</span>)<span class="sc">%&gt;%</span> <span class="fu">add_pie</span>(<span class="at">hole=</span><span class="fl">0.5</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="working-excel-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title=</span><span class="st">&quot;GCF Funding by Region&quot;</span>)</span></code></pre></div>
+<div id="htmlwidget-5c7a8c1d5841ce0f50a8" style="width:768px;height:768px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5c7a8c1d5841ce0f50a8">{"x":{"visdat":{"4db013345599":["function () ","plotlyVisDat"]},"cur_data":"4db013345599","attrs":{"4db013345599":{"labels":{},"values":{},"sep":"<br />","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","hole":0.5,"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"GCF Funding by Region","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Africa","Asia-Pacific","Eastern Europe","Latin America and the Caribbean"],"values":[707849086.75,665898878.27,27053598,178013071.91],"sep":"<br />","type":"pie","hole":0.5,"marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="filter-and-plot-select-data" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Filter and plot select data</h2>
+<div id="pie-chart" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Pie chart</h3>
+<p>To plot projects for a select region (s), use the filter function to select only values that match your selection, then group the data by country and create count by unique identifier as above. Repeat the plotting steps as above. you may use any type of charts as may be preferred.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="working-excel-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a>gcf<span class="sc">%&gt;%</span><span class="fu">filter</span>(Region<span class="sc">==</span><span class="st">&quot;Asia-Pacific&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="working-excel-data.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(countryname)<span class="sc">%&gt;%</span><span class="fu">count</span>(<span class="st">`</span><span class="at">Project Name</span><span class="st">`</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="working-excel-data.html#cb12-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">plot_ly</span>(<span class="at">labels=</span><span class="sc">~</span>countryname, <span class="at">values=</span><span class="sc">~</span>n)<span class="sc">%&gt;%</span></span>
+<span id="cb12-4"><a href="working-excel-data.html#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_pie</span>()<span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="working-excel-data.html#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title=</span><span class="st">&quot; GCF Projects in Asia-Pacific&quot;</span>,</span>
+<span id="cb12-6"><a href="working-excel-data.html#cb12-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">legend=</span><span class="fu">list</span>(<span class="at">orientation=</span><span class="st">&#39;h&#39;</span>))</span></code></pre></div>
+<div id="htmlwidget-c18e915c6afe5a6255a0" style="width:768px;height:768px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c18e915c6afe5a6255a0">{"x":{"visdat":{"4db05088576c":["function () ","plotlyVisDat"]},"cur_data":"4db05088576c","attrs":{"4db05088576c":{"labels":{},"values":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":" GCF Projects in Asia-Pacific","legend":{"orientation":"h"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Bahrain","Bangladesh","Bangladesh","Bangladesh","Bhutan","Fiji","India","Kyrgyzstan","Lao People's Democratic Republic","Maldives","Marshall Islands","Marshall Islands","Pakistan","Pakistan","Philippines","Samoa","Sri Lanka","Sri Lanka","Tajikistan","Tajikistan","Tajikistan","Timor-Leste","Tuvalu","UzbekistanTajikistan","Vanuatu","Viet Nam"],"values":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"type":"pie","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="build-treemap" class="section level3" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Build Treemap</h3>
+<div id="static" class="section level4" number="5.4.2.1">
+<h4><span class="header-section-number">5.4.2.1</span> Static</h4>
+<ol style="list-style-type: decimal">
+<li>Open a new code chunk</li>
+<li>Install packages ggplot2 &amp; treemapify</li>
+<li>Call the respective libraries</li>
+<li>To plot amount of grant in Region x, filter values for only that region,
+then summarise the data by country using the functions ‘group-by’ and ‘sum’</li>
+<li>Call the function ‘ggplot’ and enter parameters as shown in screenshot above</li>
+<li>Run code</li>
+</ol>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="working-excel-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gcf, <span class="fu">aes</span>(<span class="at">fill=</span>countryname, </span>
+<span id="cb13-2"><a href="working-excel-data.html#cb13-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">area=</span>gcf<span class="sc">$</span><span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>, </span>
+<span id="cb13-3"><a href="working-excel-data.html#cb13-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">label =</span> <span class="fu">paste</span>(countryname,<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>,<span class="fu">prettyNum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>,</span>
+<span id="cb13-4"><a href="working-excel-data.html#cb13-4" aria-hidden="true" tabindex="-1"></a>                                                <span class="at">big.mark =</span> <span class="st">&quot;,&quot;</span>))))<span class="sc">+</span></span>
+<span id="cb13-5"><a href="working-excel-data.html#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap</span>()<span class="sc">+</span></span>
+<span id="cb13-6"><a href="working-excel-data.html#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_treemap_text</span>(<span class="at">colour=</span><span class="st">&#39;black&#39;</span>, <span class="at">place=</span><span class="st">&#39;centre&#39;</span>)<span class="sc">+</span></span>
+<span id="cb13-7"><a href="working-excel-data.html#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">&#39;GCF Funding in Latin America &amp; Caribbean&#39;</span>)<span class="sc">+</span></span>
+<span id="cb13-8"><a href="working-excel-data.html#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&#39;none&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="interactive" class="section level4" number="5.4.2.2">
+<h4><span class="header-section-number">5.4.2.2</span> Interactive</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="working-excel-data.html#cb14-1" aria-hidden="true" tabindex="-1"></a>gcf_sum<span class="ot">&lt;-</span>gcf<span class="sc">%&gt;%</span><span class="fu">filter</span>(Region<span class="sc">==</span><span class="st">&quot;Africa&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="working-excel-data.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(countryname, Region)<span class="sc">%&gt;%</span><span class="fu">summarise</span>(<span class="st">&quot;Total&quot;</span><span class="ot">=</span><span class="fu">sum</span>(<span class="st">`</span><span class="at">Total GCF Funding</span><span class="st">`</span>))</span>
+<span id="cb14-3"><a href="working-excel-data.html#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="working-excel-data.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(</span>
+<span id="cb14-5"><a href="working-excel-data.html#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> gcf_sum,</span>
+<span id="cb14-6"><a href="working-excel-data.html#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">type=</span> <span class="st">&quot;treemap&quot;</span>,</span>
+<span id="cb14-7"><a href="working-excel-data.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> <span class="sc">~</span>Total,</span>
+<span id="cb14-8"><a href="working-excel-data.html#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels=</span> <span class="sc">~</span>countryname,</span>
+<span id="cb14-9"><a href="working-excel-data.html#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">parents=</span> <span class="sc">~</span>Region,</span>
+<span id="cb14-10"><a href="working-excel-data.html#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;GCF Funding&quot;</span>,</span>
+<span id="cb14-11"><a href="working-excel-data.html#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">textinfo=</span><span class="st">&quot;label+value+percent parent&quot;</span>)</span></code></pre></div>
+<div id="htmlwidget-8159a3571980e1cb93e4" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8159a3571980e1cb93e4">{"x":{"visdat":{"4db051112c43":["function () ","plotlyVisDat"]},"cur_data":"4db051112c43","attrs":{"4db051112c43":{"values":{},"labels":{},"parents":{},"textinfo":"label+value+percent parent","name":"GCF Funding","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"treemap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"values":[9000000,22500000,41919808,38000000,31385000,45002759,20546756,23152082,12295000,22750000,60783625.74,9250000,37704000,35137380.65,25645114,35087719.3,24140000,26000000,120116959.06,32000000,35432883],"labels":["Benin","Burkina Faso","Comoros","Comoros (the)MadagascarMauritiusSeychelles","Egypt","Ethiopia","Gambia","Kenya","Malawi","Mali","Morocco","Mozambique","Namibia","Senegal","Sudan","TanzaniaMadagascarSouth AfricaMozambique","Uganda","UgandaGhanaNigeriaKenya","United Republic of Tanzania","Zambia","Zimbabwe"],"parents":["Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa","Africa"],"textinfo":"label+value+percent parent","name":"GCF Funding","type":"treemap","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(255,255,255,1)"}},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+</div>
 </div>
 </div>
 </div>
@@ -576,7 +597,7 @@ Africa Hydromet Program – Strengthening Climate Resilience in Sub-Saharan Afri
         </div>
       </div>
 <a href="github-github-pages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="generate-other-graphics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-climate-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

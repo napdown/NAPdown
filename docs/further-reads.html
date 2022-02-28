@@ -4,7 +4,7 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Further Reads | An introduction to NAPdown</title>
+  <title>Chapter 7 Further Reads | An introduction to NAPdown</title>
   <meta name="description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
 of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
 on sharing and collaboration with GitHub. The subsequent chapters go into detail
@@ -12,7 +12,7 @@ about working with different types of data and data sources.
 Additional chapters are provided further reading material and references.</p>" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Further Reads | An introduction to NAPdown" />
+  <meta property="og:title" content="Chapter 7 Further Reads | An introduction to NAPdown" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://napdown.github.io/NAPdown/" />
   
@@ -24,7 +24,7 @@ Additional chapters are provided further reading material and references.</p>" /
   <meta name="github-repo" content="napdown/NAPdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Further Reads | An introduction to NAPdown" />
+  <meta name="twitter:title" content="Chapter 7 Further Reads | An introduction to NAPdown" />
   
   <meta name="twitter:description" content="<p>This is an introduction to NAPdown.Chapter1 introduces you to the basics
 of R and RStudio, Chapter2 introduces napdown, a bookdown concept and Chapter3
@@ -36,7 +36,7 @@ Additional chapters are provided further reading material and references.</p>" /
 <meta name="author" content="A Team" />
 
 
-<meta name="date" content="2021-10-28" />
+<meta name="date" content="2022-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -70,25 +70,24 @@ Additional chapters are provided further reading material and references.</p>" /
 <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.19/datatables.js"></script>
-<link href="libs/dt-core-jqueryui-1.10.20/css/dataTables.jqueryui.min.css" rel="stylesheet" />
-<script src="libs/dt-core-jqueryui-1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="libs/dt-core-jqueryui-1.10.20/js/dataTables.jqueryui.min.js"></script>
-<script src="libs/jszip-1.10.20/jszip.min.js"></script>
-<script src="libs/pdfmake-1.10.20/pdfmake.js"></script>
-<script src="libs/pdfmake-1.10.20/vfs_fonts.js"></script>
-<link href="libs/dt-ext-buttons-jqueryui-1.10.20/css/buttons.jqueryui.min.css" rel="stylesheet" />
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/dataTables.buttons.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.flash.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.html5.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.colVis.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.print.min.js"></script>
-<script src="libs/dt-ext-buttons-jqueryui-1.10.20/js/buttons.jqueryui.min.js"></script>
+<script src="libs/datatables-binding-0.20/datatables.js"></script>
+<link href="libs/dt-core-jqueryui-1.11.3/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-core-jqueryui-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/dt-core-jqueryui-1.11.3/js/dataTables.jqueryui.min.js"></script>
+<script src="libs/jszip-1.11.3/jszip.min.js"></script>
+<script src="libs/pdfmake-1.11.3/pdfmake.js"></script>
+<script src="libs/pdfmake-1.11.3/vfs_fonts.js"></script>
+<link href="libs/dt-ext-buttons-jqueryui-1.11.3/css/buttons.jqueryui.min.css" rel="stylesheet" />
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/dataTables.buttons.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.html5.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.colVis.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.print.min.js"></script>
+<script src="libs/dt-ext-buttons-jqueryui-1.11.3/js/buttons.jqueryui.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
@@ -199,36 +198,42 @@ div.csl-indent {
 <li><a href="./">An Introduction to NAPdown</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Getting started</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#opening-a-markdown-file"><i class="fa fa-check"></i><b>1.1</b> Opening a markdown file</a>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.1</b> Prerequisites</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#rstudio-windows-explained"><i class="fa fa-check"></i><b>1.1.1</b> Rstudio windows explained:</a></li>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#installing-r"><i class="fa fa-check"></i><b>1.1.1</b> Installing R</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#install-rstudio"><i class="fa fa-check"></i><b>1.1.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#signing-up-on-github"><i class="fa fa-check"></i><b>1.1.3</b> Signing up on GitHub</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.2</b> Installing packages</a>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#opening-a-markdown-file"><i class="fa fa-check"></i><b>1.2</b> Opening a markdown file</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#removingun-installing-packages"><i class="fa fa-check"></i><b>1.2.1</b> Removing/un-installing packages</a></li>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#rstudio-windows-explained"><i class="fa fa-check"></i><b>1.2.1</b> Rstudio windows explained:</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#loading-libraries"><i class="fa fa-check"></i><b>1.3</b> Loading Libraries</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#installing-packages"><i class="fa fa-check"></i><b>1.3</b> Installing packages</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#removingun-installing-packages"><i class="fa fa-check"></i><b>1.3.1</b> Removing/un-installing packages</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#loading-libraries"><i class="fa fa-check"></i><b>1.4</b> Loading Libraries</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>2</b> RMarkdown</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
-<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
+<li class="chapter" data-level="2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#about-rmarkdown"><i class="fa fa-check"></i><b>2.1</b> About RMarkdown</a></li>
+<li class="chapter" data-level="2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#editing-in-markdown"><i class="fa fa-check"></i><b>2.2</b> Editing in markdown</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
-<li class="chapter" data-level="2.2.2" data-path="getting-started.html"><a href="getting-started.html#bold-and-italic-text"><i class="fa fa-check"></i><b>2.2.2</b> Bold and italic text</a></li>
-<li class="chapter" data-level="2.2.3" data-path="getting-started.html"><a href="getting-started.html#create-lists"><i class="fa fa-check"></i><b>2.2.3</b> Create Lists</a></li>
-<li class="chapter" data-level="2.2.4" data-path="getting-started.html"><a href="getting-started.html#manual-line-breaks"><i class="fa fa-check"></i><b>2.2.4</b> Manual line breaks</a></li>
-<li class="chapter" data-level="2.2.5" data-path="getting-started.html"><a href="getting-started.html#insert-links"><i class="fa fa-check"></i><b>2.2.5</b> Insert links</a></li>
-<li class="chapter" data-level="2.2.6" data-path="getting-started.html"><a href="getting-started.html#insert-figuresimages"><i class="fa fa-check"></i><b>2.2.6</b> Insert figures/images</a></li>
-<li class="chapter" data-level="2.2.7" data-path="getting-started.html"><a href="getting-started.html#insert-block-quotes"><i class="fa fa-check"></i><b>2.2.7</b> Insert block quotes</a></li>
-<li class="chapter" data-level="2.2.8" data-path="getting-started.html"><a href="getting-started.html#insert-code-chunks"><i class="fa fa-check"></i><b>2.2.8</b> Insert code chunks</a></li>
-<li class="chapter" data-level="2.2.9" data-path="getting-started.html"><a href="getting-started.html#create-tables"><i class="fa fa-check"></i><b>2.2.9</b> Create tables</a></li>
-<li class="chapter" data-level="2.2.10" data-path="getting-started.html"><a href="getting-started.html#page-breaks"><i class="fa fa-check"></i><b>2.2.10</b> Page breaks</a></li>
-<li class="chapter" data-level="2.2.11" data-path="getting-started.html"><a href="getting-started.html#process-a-markdown-document-to-desired-output"><i class="fa fa-check"></i><b>2.2.11</b> Process a markdown document to desired output</a></li>
-<li class="chapter" data-level="2.2.12" data-path="getting-started.html"><a href="getting-started.html#references"><i class="fa fa-check"></i><b>2.2.12</b> References</a></li>
-<li class="chapter" data-level="2.2.13" data-path="getting-started.html"><a href="getting-started.html#pandoc-knitr"><i class="fa fa-check"></i><b>2.2.13</b> Pandoc &amp; Knitr</a></li>
+<li class="chapter" data-level="2.2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>2.2.1</b> Headers</a></li>
+<li class="chapter" data-level="2.2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#bold-and-italic-text"><i class="fa fa-check"></i><b>2.2.2</b> Bold and italic text</a></li>
+<li class="chapter" data-level="2.2.3" data-path="rmarkdown.html"><a href="rmarkdown.html#create-lists"><i class="fa fa-check"></i><b>2.2.3</b> Create Lists</a></li>
+<li class="chapter" data-level="2.2.4" data-path="rmarkdown.html"><a href="rmarkdown.html#manual-line-breaks"><i class="fa fa-check"></i><b>2.2.4</b> Manual line breaks</a></li>
+<li class="chapter" data-level="2.2.5" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-links"><i class="fa fa-check"></i><b>2.2.5</b> Insert links</a></li>
+<li class="chapter" data-level="2.2.6" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-figuresimages"><i class="fa fa-check"></i><b>2.2.6</b> Insert figures/images</a></li>
+<li class="chapter" data-level="2.2.7" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-block-quotes"><i class="fa fa-check"></i><b>2.2.7</b> Insert block quotes</a></li>
+<li class="chapter" data-level="2.2.8" data-path="rmarkdown.html"><a href="rmarkdown.html#insert-code-chunks"><i class="fa fa-check"></i><b>2.2.8</b> Insert code chunks</a></li>
+<li class="chapter" data-level="2.2.9" data-path="rmarkdown.html"><a href="rmarkdown.html#create-tables"><i class="fa fa-check"></i><b>2.2.9</b> Create tables</a></li>
+<li class="chapter" data-level="2.2.10" data-path="rmarkdown.html"><a href="rmarkdown.html#page-breaks"><i class="fa fa-check"></i><b>2.2.10</b> Page breaks</a></li>
+<li class="chapter" data-level="2.2.11" data-path="rmarkdown.html"><a href="rmarkdown.html#process-a-markdown-document-to-desired-output"><i class="fa fa-check"></i><b>2.2.11</b> Process a markdown document to desired output</a></li>
+<li class="chapter" data-level="2.2.12" data-path="rmarkdown.html"><a href="rmarkdown.html#references"><i class="fa fa-check"></i><b>2.2.12</b> References</a></li>
+<li class="chapter" data-level="2.2.13" data-path="rmarkdown.html"><a href="rmarkdown.html#pandoc-knitr"><i class="fa fa-check"></i><b>2.2.13</b> Pandoc &amp; Knitr</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="napdown.html"><a href="napdown.html"><i class="fa fa-check"></i><b>3</b> NAPdown</a>
@@ -263,31 +268,31 @@ div.csl-indent {
 <li class="chapter" data-level="5.2.1" data-path="working-excel-data.html"><a href="working-excel-data.html#static-table"><i class="fa fa-check"></i><b>5.2.1</b> Static table</a></li>
 <li class="chapter" data-level="5.2.2" data-path="working-excel-data.html"><a href="working-excel-data.html#interactive-table"><i class="fa fa-check"></i><b>5.2.2</b> Interactive table</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html"><i class="fa fa-check"></i><b>6</b> Generate Other Graphics</a>
+<li class="chapter" data-level="5.3" data-path="working-excel-data.html"><a href="working-excel-data.html#generate-other-graphics"><i class="fa fa-check"></i><b>5.3</b> Generate Other Graphics</a>
 <ul>
-<li class="chapter" data-level="6.0.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#a-bar-chart"><i class="fa fa-check"></i><b>6.0.1</b> A bar chart</a></li>
-<li class="chapter" data-level="6.0.2" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#a-donut-chart"><i class="fa fa-check"></i><b>6.0.2</b> A donut chart</a></li>
-<li class="chapter" data-level="6.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>6.1</b> Filter and plot select data</a>
+<li class="chapter" data-level="5.3.1" data-path="working-excel-data.html"><a href="working-excel-data.html#a-bar-chart"><i class="fa fa-check"></i><b>5.3.1</b> A bar chart</a></li>
+<li class="chapter" data-level="5.3.2" data-path="working-excel-data.html"><a href="working-excel-data.html#a-donut-chart"><i class="fa fa-check"></i><b>5.3.2</b> A donut chart</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="working-excel-data.html"><a href="working-excel-data.html#filter-and-plot-select-data"><i class="fa fa-check"></i><b>5.4</b> Filter and plot select data</a>
 <ul>
-<li class="chapter" data-level="6.1.1" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#pie-chart"><i class="fa fa-check"></i><b>6.1.1</b> Pie chart</a></li>
-<li class="chapter" data-level="6.1.2" data-path="generate-other-graphics.html"><a href="generate-other-graphics.html#build-treemap"><i class="fa fa-check"></i><b>6.1.2</b> Build Treemap</a></li>
+<li class="chapter" data-level="5.4.1" data-path="working-excel-data.html"><a href="working-excel-data.html#pie-chart"><i class="fa fa-check"></i><b>5.4.1</b> Pie chart</a></li>
+<li class="chapter" data-level="5.4.2" data-path="working-excel-data.html"><a href="working-excel-data.html#build-treemap"><i class="fa fa-check"></i><b>5.4.2</b> Build Treemap</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>7</b> Working Climate data</a>
+<li class="chapter" data-level="6" data-path="working-climate-data.html"><a href="working-climate-data.html"><i class="fa fa-check"></i><b>6</b> Working Climate data</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="working-climate-data.html"><a href="working-climate-data.html#historical-climate-data"><i class="fa fa-check"></i><b>7.1</b> Historical climate data</a>
+<li class="chapter" data-level="6.1" data-path="working-climate-data.html"><a href="working-climate-data.html#historical-climate-data"><i class="fa fa-check"></i><b>6.1</b> Historical climate data</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="working-climate-data.html"><a href="working-climate-data.html#install-packages-and-load-libraries"><i class="fa fa-check"></i><b>7.1.1</b> Install Packages and load libraries</a></li>
-<li class="chapter" data-level="7.1.2" data-path="working-climate-data.html"><a href="working-climate-data.html#load-data-from-cru-website"><i class="fa fa-check"></i><b>7.1.2</b> Load data from cru website</a></li>
-<li class="chapter" data-level="7.1.3" data-path="working-climate-data.html"><a href="working-climate-data.html#loaddefine-geometry"><i class="fa fa-check"></i><b>7.1.3</b> Load/define geometry</a></li>
-<li class="chapter" data-level="7.1.4" data-path="working-climate-data.html"><a href="working-climate-data.html#loadimport-your-data-into-r"><i class="fa fa-check"></i><b>7.1.4</b> Load/Import your data into r</a></li>
-<li class="chapter" data-level="7.1.5" data-path="working-climate-data.html"><a href="working-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><i class="fa fa-check"></i><b>7.1.5</b> Convert the raster stack created above into a dataframe and format date values</a></li>
-<li class="chapter" data-level="7.1.6" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-monthly-data"><i class="fa fa-check"></i><b>7.1.6</b> Plot Monthly data</a></li>
-<li class="chapter" data-level="7.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>7.1.7</b> Plot Annual data</a></li>
+<li class="chapter" data-level="6.1.1" data-path="working-climate-data.html"><a href="working-climate-data.html#install-packages-and-load-libraries"><i class="fa fa-check"></i><b>6.1.1</b> Install Packages and load libraries</a></li>
+<li class="chapter" data-level="6.1.2" data-path="working-climate-data.html"><a href="working-climate-data.html#load-data-from-cru-website"><i class="fa fa-check"></i><b>6.1.2</b> Load data from cru website</a></li>
+<li class="chapter" data-level="6.1.3" data-path="working-climate-data.html"><a href="working-climate-data.html#loaddefine-geometry"><i class="fa fa-check"></i><b>6.1.3</b> Load/define geometry</a></li>
+<li class="chapter" data-level="6.1.4" data-path="working-climate-data.html"><a href="working-climate-data.html#loadimport-your-data-into-r"><i class="fa fa-check"></i><b>6.1.4</b> Load/Import your data into r</a></li>
+<li class="chapter" data-level="6.1.5" data-path="working-climate-data.html"><a href="working-climate-data.html#convert-the-raster-stack-created-above-into-a-dataframe-and-format-date-values"><i class="fa fa-check"></i><b>6.1.5</b> Convert the raster stack created above into a dataframe and format date values</a></li>
+<li class="chapter" data-level="6.1.6" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-monthly-data"><i class="fa fa-check"></i><b>6.1.6</b> Plot Monthly data</a></li>
+<li class="chapter" data-level="6.1.7" data-path="working-climate-data.html"><a href="working-climate-data.html#plot-annual-data"><i class="fa fa-check"></i><b>6.1.7</b> Plot Annual data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>8</b> Further Reads</a></li>
+<li class="chapter" data-level="7" data-path="further-reads.html"><a href="further-reads.html"><i class="fa fa-check"></i><b>7</b> Further Reads</a></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -309,8 +314,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="further-reads" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Further Reads</h1>
+<div id="further-reads" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Further Reads</h1>
 <p>Here we include a list of links to articles and other material that might be useful for this exercise.</p>
 <ol style="list-style-type: decimal">
 <li><a href="https://bookdown.org/yihui/rmarkdown/">R mardown basics</a></li>
