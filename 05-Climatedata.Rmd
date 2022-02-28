@@ -82,8 +82,8 @@ At this point you can already plot individual precipitation and temperature laye
 
 ```{r}
 par(mfrow=c(1,2))
-plot(prstack$X2011.10.16, main='Precipitation')
-plot(temp$X2011.10.16, main='Temperature')
+print(plot(prstack$X2011.10.16, main='Precipitation'))
+print(plot(temp$X2011.10.16, main='Temperature'))
 ```
 
 
