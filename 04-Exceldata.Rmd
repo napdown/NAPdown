@@ -142,7 +142,7 @@ then summarise the data by country using the functions 'group-by' and 'sum'
 5. Call the function 'ggplot' and enter parameters as shown in screenshot above
 6. Run code 
 
-```{r, fig.ext='png', fig.show='asis'}
+```{r static-treemap, fig.ext='PNG', fig.show='asis'}
 
 tm<-ggplot(gcf, aes(fill=countryname, 
        area=`Total GCF Funding`, 
@@ -157,7 +157,7 @@ tm
 ```
 
 #### Interactive            
-```{r}
+```{r interactive-treemap}
 
 gcf_sum<-gcf%>%filter(Region=="Africa")%>%
   group_by(countryname, Region)%>%summarise("Total"=sum(`Total GCF Funding`))
